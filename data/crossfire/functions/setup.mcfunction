@@ -37,9 +37,10 @@ tag @a remove spectateplayer8
 tag @a remove spectateplayer9
 tag @a remove spectateplayer10
 tag @a remove spectateplayer11
+tag @a remove hit
 
 gamemode adventure @a[tag=!admin]
-tp @a[tag=!admin] 326.5 23 249.5
+tp @a[tag=!admin] 328.5 23 249.5 90 0
 
 bossbar set crossfire:timer players
 

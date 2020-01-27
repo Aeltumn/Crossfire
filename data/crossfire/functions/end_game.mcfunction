@@ -1,4 +1,4 @@
-tp @a[tag=!admin] 328 23 248 90 0
+tp @a[tag=!admin] 328.5 23 249.5 90 0
 bossbar set crossfire:timer players
 
 tag @a[tag=player1] remove player1

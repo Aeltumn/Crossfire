@@ -30,7 +30,7 @@ execute if entity @s[tag=green] as @e[distance=..2.5,type=minecraft:player] if e
 execute as @a[tag=hit] run title @s times 20 50 20
 execute as @a[tag=hit] run tag @s add died
 execute as @a[tag=hit] run effect give @s minecraft:levitation 1 40 true
-execute as @a[tag=hit] run effect give @s minecraft:speed 40 127 true
+execute as @a[tag=hit] run effect give @s minecraft:slowness 40 127 true
 execute as @a[tag=hit] at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
 execute as @a[tag=hit] run tag @s remove hit
 
