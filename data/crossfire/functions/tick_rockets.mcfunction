@@ -1,6 +1,5 @@
 scoreboard players add @e[type=arrow] age 1
-execute as @e[tag=!dead,type=arrow] at @s run particle minecraft:firework ^ ^ ^ 0 0 0 0.03 1
-execute as @e[tag=!dead,type=arrow] at @s run particle minecraft:firework ^ ^ ^1 0 0 0 0.03 1
+execute as @e[tag=!dead,type=arrow] at @s run particle minecraft:firework ~ ~ ~ 0 0 0 0.03 2
 
 execute as @e[tag=!dead,type=arrow,tag=green] at @s if entity @e[type=player,distance=..2.5,team=!green,tag=!died] run function crossfire:hit
 execute as @e[tag=!dead,type=arrow,tag=red] at @s if entity @e[type=player,distance=..2.5,team=!red,tag=!died] run function crossfire:hit
