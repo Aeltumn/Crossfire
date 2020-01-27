@@ -1,5 +1,8 @@
+gamerule sendCommandFeedback false
 gamemode spectator @a[tag=spectating,tag=!admin]
 gamemode adventure @a[tag=!spectating,tag=!admin]
+gamerule sendCommandFeedback true
+
 
 execute if score started started matches 1 as @a[tag=!spectating,tag=!joined] run tag @s add spectating
 

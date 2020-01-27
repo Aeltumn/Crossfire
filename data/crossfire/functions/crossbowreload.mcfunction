@@ -2,7 +2,7 @@ scoreboard players add @a wins 0
 
 execute as @a[tag=joined] at @s if block ~ ~ ~ water run function crossfire:touch_water
 
-execute if score started started matches 1 as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 0..1 at @s run particle minecraft:cloud ~ ~ ~ 0.1 0.3 0.1 0 3
+execute if score started started matches 1 as @a[tag=died,tag=!waterdead,tag=!spectating] at @s run particle minecraft:cloud ~ ~ ~ 0.1 0.3 0.1 0 3
 
 execute if score started started matches 1.. as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run data merge entity @s {PickupDelay:0}
 
