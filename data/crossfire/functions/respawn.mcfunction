@@ -9,5 +9,5 @@ execute as @a[tag=died,tag=!waterdead] if entity @s[team=blue] if score @s deadt
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 2 at @s run playsound minecraft:item.trident.return master @s ~ ~ ~ 100 0
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 2 at @s run tag @s add spectating
 
-execute as @a[tag=died] if score @s deadtimer matches 10.. run function crossfire:respawn2
-execute as @a if score @s deadtimer matches 10.. run scoreboard players set @s deadtimer 0
+execute as @a[tag=died] if score @s deadtimer matches 5.. run function crossfire:respawn2
+execute as @a if score @s deadtimer matches 5.. run scoreboard players set @s deadtimer 0
