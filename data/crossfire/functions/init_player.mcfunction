@@ -7,4 +7,5 @@ effect give @s minecraft:resistance 1000000 255 true
 effect give @s minecraft:saturation 1000000 255 true
 effect give @s minecraft:jump_boost 1000000 1 true
 
+clear @s
 gamemode adventure @s

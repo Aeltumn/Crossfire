@@ -22,3 +22,31 @@ execute if score joined joined matches 2.. as @a[tag=player3] run say player3
 
 execute if score joined joined matches 2.. run scoreboard players set starttimer starttimer 5
 execute if score joined joined matches 2.. run function crossfire:timer
+
+# Create the cages
+# Red cage
+fill 293 22 232 287 26 232 barrier replace air
+fill 287 22 229 287 26 232 barrier replace air
+fill 287 22 229 293 26 229 barrier replace air
+fill 293 22 229 293 26 232 barrier replace air
+fill 293 26 232 287 26 229 barrier replace air
+
+# Yellow cage
+fill 293 22 269 287 26 269 barrier replace air
+fill 287 22 269 287 26 266 barrier replace air
+fill 287 22 266 293 26 266 barrier replace air
+fill 293 22 266 293 26 269 barrier replace air
+fill 287 26 266 293 26 269 barrier replace air
+
+# Green cage
+fill 307 22 246 307 26 252 barrier replace air
+fill 307 22 252 309 26 252 barrier replace air
+fill 307 22 246 309 22 246 barrier replace air
+fill 307 26 252 309 26 246 barrier replace air
+
+# Blue cage
+fill 270 22 246 273 26 246 barrier replace air
+fill 273 22 246 273 26 252 barrier replace air
+fill 273 22 252 270 26 252 barrier replace air
+fill 270 22 252 270 26 246 barrier replace air
+fill 270 26 252 273 26 246  barrier replace air

@@ -1,5 +1,5 @@
 tp @a 328 23 248 90 0
-bossbar set minecraft:test players
+bossbar set crossfire:timer players
 
 tag @a[tag=player1] remove player1
 tag @a[tag=player2] remove player2
@@ -43,3 +43,4 @@ scoreboard players set started started 0
 scoreboard players set joined joined 0
 scoreboard players set playerscore player 0
 clear @a
+gamemode adventure @a
