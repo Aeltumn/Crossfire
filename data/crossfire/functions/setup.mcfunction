@@ -7,32 +7,12 @@ scoreboard objectives add age dummy
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 
 difficulty peaceful
-tp @a[tag=!admin] 326.5 23 249.5
+
+# Kick everyone out of spectator target
+execute as @a[tag=spectating] run spectate @s
 
 tag @a remove died
 tag @a remove joined
-bossbar set crossfire:timer players
-
-kill @e[tag=cleanup]
-
-function crossfire:remove_kill_tag
-
-scoreboard players set gametimer gametimer -1
-scoreboard players set starttimer starttimer -1
-scoreboard players set started started 0
-scoreboard players set playerscore player 0
-scoreboard players set joined joined 0
-
-team add red
-team add yellow
-team add green
-team add blue
-
-team empty blue
-team empty red
-team empty yellow
-team empty green
-
 tag @a remove player1
 tag @a remove player2
 tag @a remove player3
@@ -57,4 +37,29 @@ tag @a remove spectateplayer8
 tag @a remove spectateplayer9
 tag @a remove spectateplayer10
 tag @a remove spectateplayer11
+
+tp @a[tag=!admin] 326.5 23 249.5
+
+bossbar set crossfire:timer players
+
+kill @e[tag=cleanup]
+
+function crossfire:remove_kill_tag
+
+scoreboard players set gametimer gametimer -1
+scoreboard players set starttimer starttimer -1
+scoreboard players set started started 0
+scoreboard players set playerscore player 0
+scoreboard players set joined joined 0
+
+team add red
+team add yellow
+team add green
+team add blue
+
+team empty blue
+team empty red
+team empty yellow
+team empty green
+
 scoreboard players set @e[tag=playerscore] player 0
