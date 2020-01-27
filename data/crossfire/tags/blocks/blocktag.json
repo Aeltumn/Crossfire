@@ -1,0 +1,10 @@
+{
+"values": [
+"minecraft:air",
+"#minecraft:carpets",
+"#minecraft:signs",
+"minecraft:sandstone_stairs",
+"minecraft:iron_bars",
+"minecraft:glass_pane"
+]
+}
