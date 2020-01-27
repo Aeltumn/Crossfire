@@ -12,24 +12,29 @@ execute if entity @s[tag=yellow] as @e[distance=..2.5,type=minecraft:player,team
 # blue killscreen
 execute if entity @s[tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!blue] run title @s subtitle {"text":"\uE004"}
 execute if entity @s[tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!blue] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"aqua"},{"text":"\uE005"}]
+execute if entity @s[tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!blue] run tag @s add hit
+
 # red killscreen
 execute if entity @s[tag=red] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!red] run title @s subtitle {"text":"\uE004"}
 execute if entity @s[tag=red] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!red] run title @s title ["",{"text":" \uE006 "},{"text":"Sploded! ","bold":true,"color":"red"},{"text":"\uE006"}]
+execute if entity @s[tag=red] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!red] run tag @s add hit
 
 # yellow killscreen
 execute if entity @s[tag=yellow] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!yellow] run title @s subtitle {"text":"\uE004"}
 execute if entity @s[tag=yellow] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!yellow] run title @s title ["",{"text":" \uE007 "},{"text":"Sploded! ","bold":true,"color":"yellow"},{"text":"\uE007"}]
+execute if entity @s[tag=yellow] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!yellow] run tag @s add hit
+
 # green killscreen
 execute if entity @s[tag=green] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!green] run title @s subtitle {"text":"\uE004"}
 execute if entity @s[tag=green] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!green] run title @s title ["",{"text":" \uE008 "},{"text":"Sploded! ","bold":true,"color":"green"},{"text":"\uE008"}]
+execute if entity @s[tag=green] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!green] run tag @s add hit
 
-
-execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run title @s times 20 50 20
-execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run tag @s add died
-execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run tag @s add spectating
-execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:levitation 1 40 true
-execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:speed 40 127 true
-execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
+execute if entity @s[tag=hit] as @e[distance=..2.5,type=minecraft:player] if entity @s run title @s times 20 50 20
+execute if entity @s[tag=hit] as @e[distance=..2.5,type=minecraft:player] if entity @s run tag @s add died
+execute if entity @s[tag=hit] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:levitation 1 40 true
+execute if entity @s[tag=hit] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:speed 40 127 true
+execute if entity @s[tag=hit] as @e[distance=..2.5,type=minecraft:player] if entity @s at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
+execute if entity @s[tag=hit] as @e[distance=..2.5,type=minecraft:player] if entity @s run tag @s remove hit
 
 
 execute if entity @s[tag=player1] as @e[distance=..2.5,type=minecraft:player] if entity @s[tag=!player1] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player1,limit=1]"}]

@@ -10,5 +10,5 @@ function crossfire:timer2
 # Open cages
 fill 293 22 232 287 26 229 minecraft:air replace minecraft:barrier
 fill 287 22 266 293 26 269 minecraft:air replace minecraft:barrier
-fill 307 22 252 310 26 246 minecraft:air replace minecraft:barrier
+fill 307 22 252 309 26 246 minecraft:air replace minecraft:barrier
 fill 270 22 246 273 26 252 minecraft:air replace minecraft:barrier
