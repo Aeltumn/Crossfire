@@ -1,4 +1,4 @@
-execute as @a[tag=!died] run scoreboard players set @s deadtimer 10
+execute as @a[tag=!died] run scoreboard players set @s deadtimer 5
 
 schedule function crossfire:respawn 1s
 
