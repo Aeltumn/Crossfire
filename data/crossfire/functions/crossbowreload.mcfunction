@@ -1,9 +1,9 @@
 scoreboard players add @a wins 0
 
 execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tellraw @a ["",{"selector":"@s"},{"text":" tried to swim.."}]
-execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run spectate @e[limit=1,tag=spectate] @s
 execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run gamemode spectator @s
 execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tag @s add waterdead
+execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tag @s add spectatenone
 execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tag @s add died
 
 execute if score started started matches 1 as @a[tag=!joined] run spectate @e[limit=1,tag=spectate] @s
