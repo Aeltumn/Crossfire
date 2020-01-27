@@ -7,6 +7,7 @@ scoreboard objectives add age dummy
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 
 difficulty peaceful
+tp @a[tag=!admin] 326.5 23 249.5
 
 tag @a remove died
 tag @a remove joined
@@ -44,4 +45,16 @@ tag @a remove player9
 tag @a remove player10
 tag @a remove player11
 tag @a remove selected
+tag @a remove spectating
+tag @a remove spectateplayer1
+tag @a remove spectateplayer2
+tag @a remove spectateplayer3
+tag @a remove spectateplayer4
+tag @a remove spectateplayer5
+tag @a remove spectateplayer6
+tag @a remove spectateplayer7
+tag @a remove spectateplayer8
+tag @a remove spectateplayer9
+tag @a remove spectateplayer10
+tag @a remove spectateplayer11
 scoreboard players set @e[tag=playerscore] player 0

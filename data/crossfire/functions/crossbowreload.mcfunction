@@ -1,28 +1,8 @@
 scoreboard players add @a wins 0
 
-execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tellraw @a ["",{"selector":"@s"},{"text":" tried to swim.."}]
-execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run gamemode spectator @s
-execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tag @s add waterdead
-execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tag @s add spectatenone
-execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run tag @s add died
+execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water run function crossfire:touch_water
 
-execute if score started started matches 1 as @a[tag=!joined] run spectate @e[limit=1,tag=spectate] @s
 execute if score started started matches 1 as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 0..1 at @s run particle minecraft:cloud ~ ~ ~ 0.1 0.3 0.1 0 3
-
-execute if score started started matches 1 as @a[tag=died,tag=spectatenone] run spectate @e[limit=1,tag=spectate] @s
-execute if score started started matches 1 as @a[tag=spectateplayer1] run spectate @e[limit=1,tag=player1] @s
-execute if score started started matches 1 as @a[tag=spectateplayer2] run spectate @e[limit=1,tag=player2] @s
-execute if score started started matches 1 as @a[tag=spectateplayer3] run spectate @e[limit=1,tag=player3] @s
-execute if score started started matches 1 as @a[tag=spectateplayer4] run spectate @e[limit=1,tag=player4] @s
-execute if score started started matches 1 as @a[tag=spectateplayer5] run spectate @e[limit=1,tag=player5] @s
-execute if score started started matches 1 as @a[tag=spectateplayer6] run spectate @e[limit=1,tag=player6] @s
-execute if score started started matches 1 as @a[tag=spectateplayer7] run spectate @e[limit=1,tag=player7] @s
-execute if score started started matches 1 as @a[tag=spectateplayer8] run spectate @e[limit=1,tag=player8] @s
-execute if score started started matches 1 as @a[tag=spectateplayer9] run spectate @e[limit=1,tag=player9] @s
-execute if score started started matches 1 as @a[tag=spectateplayer10] run spectate @e[limit=1,tag=player10] @s
-execute if score started started matches 1 as @a[tag=spectateplayer11] run spectate @e[limit=1,tag=player11] @s
-
-
 
 execute if score started started matches 1.. as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run data merge entity @s {PickupDelay:0}
 

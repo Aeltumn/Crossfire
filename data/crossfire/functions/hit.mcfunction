@@ -24,11 +24,12 @@ execute if entity @s[tag=green] as @e[distance=..2.5,type=minecraft:player] if e
 execute if entity @s[tag=green] as @e[distance=..2.5,type=minecraft:player] if entity @s[team=!green] run title @s title ["",{"text":" \uE008 "},{"text":"Sploded! ","bold":true,"color":"green"},{"text":"\uE008"}]
 
 
-execute if entity @s[tag=red.tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run title @s times 20 50 20
-execute if entity @s[tag=red.tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run tag @s add died
-execute if entity @s[tag=red.tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:levitation 1 40 true
-execute if entity @s[tag=red.tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:speed 40 127 true
-execute if entity @s[tag=red.tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
+execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run title @s times 20 50 20
+execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run tag @s add died
+execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run tag @s add spectating
+execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:levitation 1 40 true
+execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s run effect give @s minecraft:speed 40 127 true
+execute if entity @s[tag=red,tag=yellow,tag=green,tag=blue] as @e[distance=..2.5,type=minecraft:player] if entity @s at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
 
 
 execute if entity @s[tag=player1] as @e[distance=..2.5,type=minecraft:player] if entity @s[tag=!player1] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player1,limit=1]"}]

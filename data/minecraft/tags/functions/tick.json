@@ -3,6 +3,7 @@
 		"crossfire:shoot_bow",
         "crossfire:tick_rockets",
 		"crossfire:team_join",
-		"crossfire:crossbowreload"
+		"crossfire:crossbowreload",
+        "crossfire:checkgamemode"
 	]
 }

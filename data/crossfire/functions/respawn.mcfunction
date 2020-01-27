@@ -1,6 +1,5 @@
 schedule function crossfire:respawn 1s
 
-execute as @a[tag=died] if score @s deadtimer matches 0 run gamemode spectator @s
 execute as @a[tag=died] run scoreboard players add @s deadtimer 1
 
 execute as @a[tag=died,tag=!waterdead] if entity @s[team=red] if score @s deadtimer matches 2 at @s run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:1,Colors:[I;11743532]}],Flight:1}}}}

@@ -2,17 +2,16 @@ execute if score joined joined matches ..1 run tellraw @a {"text":"Not enough pl
 
 execute if score joined joined matches 2.. as @a run function crossfire:init_player
 execute if score joined joined matches 2.. run scoreboard players set started started 1
-execute if score joined joined matches 2.. run gamemode spectator @a[tag=!joined]
 
-execute if score joined joined matches 2.. if score playerscore player matches 0 as @r[tag=!selected] if entity @s[tag=joined] run tag @s add player1
+execute if score joined joined matches 2.. if score playerscore player matches 0 as @a[tag=!selected,limit=1] if entity @s[tag=joined] run tag @s add player1
 execute if score joined joined matches 2.. as @a[tag=player1] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
-execute if score joined joined matches 2.. if score playerscore player matches 1 as @r[tag=!selected] if entity @s[tag=joined] run tag @s add player2
+execute if score joined joined matches 2.. if score playerscore player matches 1 as @a[tag=!selected,limit=1] if entity @s[tag=joined] run tag @s add player2
 execute if score joined joined matches 2.. as @a[tag=player2] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
-execute if score joined joined matches 2.. if score playerscore player matches 2 as @r[tag=!selected] if entity @s[tag=joined] run tag @s add player3
+execute if score joined joined matches 2.. if score playerscore player matches 2 as @a[tag=!selected,limit=1] if entity @s[tag=joined] run tag @s add player3
 execute if score joined joined matches 2.. as @a[tag=player3] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
@@ -41,7 +40,7 @@ fill 287 26 266 293 26 269 barrier replace air
 # Green cage
 fill 307 22 246 307 26 252 barrier replace air
 fill 307 22 252 309 26 252 barrier replace air
-fill 307 22 246 309 22 246 barrier replace air
+fill 307 22 246 309 26 246 barrier replace air
 fill 307 26 252 309 26 246 barrier replace air
 
 # Blue cage
