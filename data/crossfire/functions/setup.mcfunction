@@ -1,9 +1,18 @@
+scoreboard objectives add gametimer dummy
+scoreboard objectives add starttimer dummy
+scoreboard objectives add started dummy
+scoreboard objectives add playerscore dummy
+scoreboard objectives add joined dummy
 scoreboard objectives add age dummy
+scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
+
 difficulty peaceful
 
 tag @a remove died
 tag @a remove joined
 bossbar set crossfire:timer players
+
+kill @e[tag=cleanup]
 
 function crossfire:remove_kill_tag
 
@@ -12,6 +21,11 @@ scoreboard players set starttimer starttimer -1
 scoreboard players set started started 0
 scoreboard players set playerscore player 0
 scoreboard players set joined joined 0
+
+team add red
+team add yellow
+team add green
+team add blue
 
 team empty blue
 team empty red

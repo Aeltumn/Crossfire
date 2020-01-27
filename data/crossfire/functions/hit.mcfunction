@@ -87,4 +87,4 @@ execute if entity @s[tag=player11] as @e[distance=..2.5,type=minecraft:player] i
 execute if entity @s[tag=player11] as @e[distance=..2.5,type=minecraft:player] if entity @s[tag=!player11] run scoreboard players add @a[tag=player11,limit=1] kills 1
 
 # Kill the firework
-kill @s[type=arrow]
+kill @s
