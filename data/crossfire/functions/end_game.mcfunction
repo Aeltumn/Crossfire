@@ -42,5 +42,5 @@ execute if score Green kills >= Red kills if score Green kills >= Yellow kills i
 scoreboard players set started started 0
 scoreboard players set joined joined 0
 scoreboard players set playerscore player 0
-clear @a
-gamemode adventure @a
+clear @a[tag=!admin]
+gamemode adventure @a[tag=!admin]
