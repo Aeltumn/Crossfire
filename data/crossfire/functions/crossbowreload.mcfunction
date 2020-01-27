@@ -9,8 +9,6 @@ execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ water
 execute if score started started matches 1 as @a[tag=!joined] run spectate @e[limit=1,tag=spectate] @s
 execute if score started started matches 1 as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 0..1 at @s run particle minecraft:cloud ~ ~ ~ 0.1 0.3 0.1 0 3
 
-effect give @a minecraft:jump_boost 1000000 1 true
-
 execute if score started started matches 1 as @a[tag=died,tag=spectatenone] run spectate @e[limit=1,tag=spectate] @s
 execute if score started started matches 1 as @a[tag=spectateplayer1] run spectate @e[limit=1,tag=player1] @s
 execute if score started started matches 1 as @a[tag=spectateplayer2] run spectate @e[limit=1,tag=player2] @s

@@ -1,8 +1,9 @@
 scoreboard objectives add age dummy
+difficulty peaceful
 
 tag @a remove died
 tag @a remove joined
-bossbar set minecraft:test players
+bossbar set crossfire:timer players
 
 function crossfire:remove_kill_tag
 
@@ -17,16 +18,16 @@ team empty red
 team empty yellow
 team empty green
 
-execute as @a run tag @a[tag=player1] remove player1
-execute as @a run tag @a[tag=player2] remove player2
-execute as @a run tag @a[tag=player3] remove player3
-execute as @a run tag @a[tag=player4] remove player4
-execute as @a run tag @a[tag=player5] remove player5
-execute as @a run tag @a[tag=player6] remove player6
-execute as @a run tag @a[tag=player7] remove player7
-execute as @a run tag @a[tag=player8] remove player8
-execute as @a run tag @a[tag=player9] remove player9
-execute as @a run tag @a[tag=player10] remove player10
-execute as @a run tag @a[tag=player11] remove player11
-execute as @a[tag=selected] run tag @s remove selected
-execute as @e[tag=playerscore] run scoreboard players set @s player 0
+tag @a remove player1
+tag @a remove player2
+tag @a remove player3
+tag @a remove player4
+tag @a remove player5
+tag @a remove player6
+tag @a remove player7
+tag @a remove player8
+tag @a remove player9
+tag @a remove player10
+tag @a remove player11
+tag @a remove selected
+scoreboard players set @e[tag=playerscore] player 0

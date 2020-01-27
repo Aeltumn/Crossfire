@@ -13,8 +13,7 @@ execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 2 at @s run
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 2 run spectate @e[limit=1,tag=spectate] @s
 
 execute as @a[tag=died] if score @s deadtimer matches 10.. run function crossfire:remove_kill_tag
-execute as @a[tag=died] if score @s deadtimer matches 10.. run gamemode adventure @s
-execute as @a[tag=died] if score @s deadtimer matches 10.. run function crossfire:tp
+execute as @a[tag=died] if score @s deadtimer matches 10.. run function crossfire:init_player
 execute as @a[tag=died] if score @s deadtimer matches 10.. run tag @s remove waterdead
 execute as @a[tag=died] if score @s deadtimer matches 10.. run tag @s remove died
 execute as @a if score @s deadtimer matches 10.. run scoreboard players set @s deadtimer 0

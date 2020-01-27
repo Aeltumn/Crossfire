@@ -21,5 +21,3 @@ execute as @a at @s if block ~ ~-1 ~ minecraft:light_blue_concrete if entity @s[
 execute as @a at @s if block ~ ~-1 ~ minecraft:light_blue_concrete if entity @s[team=!blue] if entity @s[tag=!joined] run scoreboard players add joined joined 1
 execute as @a at @s if block ~ ~-1 ~ minecraft:light_blue_concrete if entity @s[team=!blue] run tag @s add joined
 execute as @a at @s if block ~ ~-1 ~ minecraft:light_blue_concrete if entity @s[team=!blue] run team join blue @s
-
-effect give @a minecraft:resistance 1000000 255 true

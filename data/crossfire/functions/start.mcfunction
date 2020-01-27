@@ -1,10 +1,8 @@
 execute if score joined joined matches ..1 run tellraw @a {"text":"Not enough players have chosen a team yet!"}
 
-
-execute if score joined joined matches 2.. as @a run function crossfire:tp
+execute if score joined joined matches 2.. as @a run function crossfire:init_player
 execute if score joined joined matches 2.. run scoreboard players set started started 1
 execute if score joined joined matches 2.. run gamemode spectator @a[tag=!joined]
-
 
 execute if score joined joined matches 2.. if score playerscore player matches 0 as @r[tag=!selected] if entity @s[tag=joined] run tag @s add player1
 execute if score joined joined matches 2.. as @a[tag=player1] run tag @s add selected
