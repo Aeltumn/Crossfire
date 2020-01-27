@@ -2,9 +2,9 @@
 execute as @a at @s run playsound minecraft:event.raid.horn master @s ~ ~ ~ 100 1
 execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.2 1
 title @a title {"text":"GO","bold":true,"color":"gold"}
-bossbar set crossfire:timer players @a
+bossbar set minecraft:timer players @a
 scoreboard players set gametimer gametimer 300
-execute store result bossbar crossfire:timer max run scoreboard players get gametimer gametimer
+execute store result bossbar minecraft:timer max run scoreboard players get gametimer gametimer
 function crossfire:timer2
 
 # Open cages

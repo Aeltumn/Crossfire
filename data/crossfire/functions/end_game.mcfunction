@@ -1,5 +1,5 @@
 tp @a[tag=!admin] 328.5 23 249.5 90 0
-bossbar set crossfire:timer players
+bossbar set minecraft:timer players
 
 tag @a remove player1
 tag @a remove player2

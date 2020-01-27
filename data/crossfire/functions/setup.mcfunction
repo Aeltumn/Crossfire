@@ -49,7 +49,7 @@ clear @a[tag=!admin]
 effect clear @s
 tp @a[tag=!admin] 328.5 23 249.5 90 0
 
-bossbar set crossfire:timer players
+bossbar set minecraft:timer players
 
 kill @e[tag=cleanup]
 

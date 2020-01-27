@@ -1,7 +1,7 @@
 # Send bossbar to players
-execute if score gametimer gametimer matches 0.. run execute store result bossbar crossfire:timer value run scoreboard players get gametimer gametimer
-execute if score gametimer gametimer matches 2.. run bossbar set crossfire:timer name ["",{"text":"Game ends in: "},{"score":{"name":"gametimer","objective":"gametimer"},"bold":true,"color":"gold"},{"text":" seconds."}]
-execute if score gametimer gametimer matches 1 run bossbar set crossfire:timer name ["",{"text":"Game ends in: "},{"score":{"name":"gametimer","objective":"gametimer"},"bold":true,"color":"gold"},{"text":" second."}]
+execute if score gametimer gametimer matches 0.. run execute store result bossbar minecraft:timer value run scoreboard players get gametimer gametimer
+execute if score gametimer gametimer matches 2.. run bossbar set minecraft:timer name ["",{"text":"Game ends in: "},{"score":{"name":"gametimer","objective":"gametimer"},"bold":true,"color":"gold"},{"text":" seconds."}]
+execute if score gametimer gametimer matches 1 run bossbar set minecraft:timer name ["",{"text":"Game ends in: "},{"score":{"name":"gametimer","objective":"gametimer"},"bold":true,"color":"gold"},{"text":" second."}]
 
 # Run game end
 execute if score gametimer gametimer matches 0 run function crossfire:end_game
