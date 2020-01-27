@@ -1,5 +1,7 @@
 effect clear @s
+gamerule sendCommandFeedback false
 gamemode adventure @s
+gamerule sendCommandFeedback true
 clear @s
 
 effect give @s minecraft:resistance 1000000 255 true

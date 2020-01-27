@@ -43,4 +43,6 @@ scoreboard players set started started 0
 scoreboard players set joined joined 0
 scoreboard players set playerscore player 0
 clear @a[tag=!admin]
+gamerule sendCommandFeedback false
 gamemode adventure @a[tag=!admin]
+gamerule sendCommandFeedback true

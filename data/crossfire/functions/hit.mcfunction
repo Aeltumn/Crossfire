@@ -28,49 +28,49 @@ execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if enti
 execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died] run tag @s add hit
 
 # Chat message and kill count
-execute if entity @s[tag=player1] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player1,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player1,limit=1]"}]
-execute if entity @s[tag=player1] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player1,tag=!died] run tag @s add spectateplayer1
-execute if entity @s[tag=player1] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player1,tag=!died] run scoreboard players add @a[tag=player1,limit=1] kills 1
+execute if entity @s[tag=player1] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player1,limit=1]"}]
+execute if entity @s[tag=player1] as @e[tag=hit] run tag @s add spectateplayer1
+execute if entity @s[tag=player1] as @e[tag=hit] run scoreboard players add @a[tag=player1] kills 1
 
-execute if entity @s[tag=player2] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player2,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player2,limit=1]"}]
-execute if entity @s[tag=player2] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player2,tag=!died] run tag @s add spectateplayer2
-execute if entity @s[tag=player2] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player2,tag=!died] run scoreboard players add @a[tag=player2,limit=1] kills 1
+execute if entity @s[tag=player2] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player2,limit=1]"}]
+execute if entity @s[tag=player2] as @e[tag=hit] run tag @s add spectateplayer2
+execute if entity @s[tag=player2] as @e[tag=hit] run scoreboard players add @a[tag=player2] kills 1
 
-execute if entity @s[tag=player3] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player3,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player3,limit=1]"}]
-execute if entity @s[tag=player3] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player3,tag=!died] run tag @s add spectateplayer3
-execute if entity @s[tag=player3] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player3,tag=!died] run scoreboard players add @a[tag=player3,limit=1] kills 1
+execute if entity @s[tag=player3] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player3,limit=1]"}]
+execute if entity @s[tag=player3] as @e[tag=hit] run tag @s add spectateplayer3
+execute if entity @s[tag=player3] as @e[tag=hit] run scoreboard players add @a[tag=player3] kills 1
 
-execute if entity @s[tag=player4] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player4,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player4,limit=1]"}]
-execute if entity @s[tag=player4] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player4,tag=!died] run tag @s add spectateplayer4
-execute if entity @s[tag=player4] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player4,tag=!died] run scoreboard players add @a[tag=player4,limit=1] kills 1
+execute if entity @s[tag=player4] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player4,limit=1]"}]
+execute if entity @s[tag=player4] as @e[tag=hit] run tag @s add spectateplayer4
+execute if entity @s[tag=player4] as @e[tag=hit] run scoreboard players add @a[tag=player4] kills 1
 
-execute if entity @s[tag=player5] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player5,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player5,limit=1]"}]
-execute if entity @s[tag=player5] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player5,tag=!died] run tag @s add spectateplayer5
-execute if entity @s[tag=player5] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player5,tag=!died] run scoreboard players add @a[tag=player5,limit=1] kills 1
+execute if entity @s[tag=player5] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player5,limit=1]"}]
+execute if entity @s[tag=player5] as @e[tag=hit] run tag @s add spectateplayer5
+execute if entity @s[tag=player5] as @e[tag=hit] run scoreboard players add @a[tag=player5] kills 1
 
-execute if entity @s[tag=player6] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player6,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player6,limit=1]"}]
-execute if entity @s[tag=player6] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player6,tag=!died] run tag @s add spectateplayer6
-execute if entity @s[tag=player6] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player6,tag=!died] run scoreboard players add @a[tag=player6,limit=1] kills 1
+execute if entity @s[tag=player6] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player6,limit=1]"}]
+execute if entity @s[tag=player6] as @e[tag=hit] run tag @s add spectateplayer6
+execute if entity @s[tag=player6] as @e[tag=hit] run scoreboard players add @a[tag=player6] kills 1
 
-execute if entity @s[tag=player7] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player7,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player7,limit=1]"}]
-execute if entity @s[tag=player7] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player7,tag=!died] run tag @s add spectateplayer7
-execute if entity @s[tag=player7] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player7,tag=!died] run scoreboard players add @a[tag=player7,limit=1] kills 1
+execute if entity @s[tag=player7] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player7,limit=1]"}]
+execute if entity @s[tag=player7] as @e[tag=hit] run tag @s add spectateplayer7
+execute if entity @s[tag=player7] as @e[tag=hit] run scoreboard players add @a[tag=player7] kills 1
 
-execute if entity @s[tag=player8] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player8,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player8,limit=1]"}]
-execute if entity @s[tag=player8] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player8,tag=!died] run tag @s add spectateplayer8
-execute if entity @s[tag=player8] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player8,tag=!died] run scoreboard players add @a[tag=player8,limit=1] kills 1
+execute if entity @s[tag=player8] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player8,limit=1]"}]
+execute if entity @s[tag=player8] as @e[tag=hit] run tag @s add spectateplayer8
+execute if entity @s[tag=player8] as @e[tag=hit] run scoreboard players add @a[tag=player8] kills 1
 
-execute if entity @s[tag=player9] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player9,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player9,limit=1]"}]
-execute if entity @s[tag=player9] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player9,tag=!died] run tag @s add spectateplayer9
-execute if entity @s[tag=player9] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player9,tag=!died] run scoreboard players add @a[tag=player9,limit=1] kills 1
+execute if entity @s[tag=player9] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player9,limit=1]"}]
+execute if entity @s[tag=player9] as @e[tag=hit] run tag @s add spectateplayer9
+execute if entity @s[tag=player9] as @e[tag=hit] run scoreboard players add @a[tag=player9] kills 1
 
-execute if entity @s[tag=player10] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player10,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player10,limit=1]"}]
-execute if entity @s[tag=player10] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player10,tag=!died] run tag @s add spectateplayer10
-execute if entity @s[tag=player10] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player10,tag=!died] run scoreboard players add @a[tag=player10,limit=1] kills 1
+execute if entity @s[tag=player10] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player10,limit=1]"}]
+execute if entity @s[tag=player10] as @e[tag=hit] run tag @s add spectateplayer10
+execute if entity @s[tag=player10] as @e[tag=hit] run scoreboard players add @a[tag=player10] kills 1
 
-execute if entity @s[tag=player11] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player11,tag=!died] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player11,limit=1]"}]
-execute if entity @s[tag=player11] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player11,tag=!died] run tag @s add spectateplayer11
-execute if entity @s[tag=player11] as @e[distance=..3,type=minecraft:player] if entity @s[tag=!player11,tag=!died] run scoreboard players add @a[tag=player11,limit=1] kills 1
+execute if entity @s[tag=player11] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player11,limit=1]"}]
+execute if entity @s[tag=player11] as @e[tag=hit] run tag @s add spectateplayer11
+execute if entity @s[tag=player11] as @e[tag=hit] run scoreboard players add @a[tag=player11] kills 1
 
 # Make hit effects work
 execute as @a[tag=hit] run title @s times 20 50 20
