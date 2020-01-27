@@ -4,6 +4,9 @@ scoreboard objectives add started dummy
 scoreboard objectives add playerscore dummy
 scoreboard objectives add joined dummy
 scoreboard objectives add age dummy
+scoreboard objectives add kills dummy {"text":"Kills"}
+scoreboard objectives setdisplay belowName kills
+scoreboard objectives add roundKills dummy
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 
 difficulty peaceful
