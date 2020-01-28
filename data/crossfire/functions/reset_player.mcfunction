@@ -46,6 +46,7 @@ gamerule sendCommandFeedback true
 clear @s[tag=!admin]
 effect clear @s
 execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 328.5 23 249.5 90 0
+execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 290.5 16 249.5 -90 0
 
 # Quality of life!
 effect give @s minecraft:instant_health 1 20 true

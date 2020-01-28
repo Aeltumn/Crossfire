@@ -28,3 +28,4 @@ bossbar set minecraft:timer players
 bossbar set crossfire:postgame players @a
 scoreboard players set postgametimer postgametimer 25
 execute as @a run function crossfire:reset_player
+function crossfire:timer3
