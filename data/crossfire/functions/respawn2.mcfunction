@@ -12,7 +12,7 @@ tag @s remove spectateplayer8
 tag @s remove spectateplayer9
 tag @s remove spectateplayer10
 tag @s remove spectateplayer11
-scoreboard players set @s deadtimer 8
+scoreboard players set @s deadtimer 6
 scoreboard players set @s respawnshield 5
 
 # Remove from currently spectated entity

@@ -17,6 +17,7 @@ team add red
 team add yellow
 team add green
 team add blue
+team add lobby
 
 difficulty peaceful
 
