@@ -7,5 +7,5 @@ execute if score gametimer gametimer matches 1 run bossbar set minecraft:timer n
 execute if score gametimer gametimer matches 0 run function crossfire:end_game
 
 # Re-run the timer
-execute if score gametimer gametimer matches 1.. run scoreboard players remove gametimer gametimer 1
+execute if score gametimer gametimer matches 0.. run scoreboard players remove gametimer gametimer 1
 execute if score gametimer gametimer matches 0.. run schedule function crossfire:timer2 1s replace
