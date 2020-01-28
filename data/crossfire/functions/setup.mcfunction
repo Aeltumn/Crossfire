@@ -11,6 +11,7 @@ scoreboard objectives add spectateSuccess dummy
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add kills dummy {"text":"Kills"}
 scoreboard objectives setdisplay belowName kills
+scoreboard objectives setdisplay list kills
 
 team add red
 team add yellow

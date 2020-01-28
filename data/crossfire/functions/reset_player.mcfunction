@@ -1,5 +1,5 @@
 # Kick everyone out of spectator target
-execute as @s[tag=spectating] run spectate @s
+execute as @s[tag=spectating] run spectate
 
 # Cleanup
 kill @e[tag=cleanup]
