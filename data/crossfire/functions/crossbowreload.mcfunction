@@ -1,4 +1,4 @@
-execute as @a[tag=joined] at @s if block ~ ~ ~ water run function crossfire:touch_water
+execute as @a[tag=joined,tag=!waterdead] at @s if block ~ ~ ~ water run function crossfire:touch_water
 
 execute if score started started matches 1 as @a[tag=died,tag=!waterdead,tag=!spectating] at @s run particle minecraft:cloud ~ ~ ~ 0.1 0.3 0.1 0 3
 
