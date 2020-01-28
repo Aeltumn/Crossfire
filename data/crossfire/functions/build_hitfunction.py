@@ -45,7 +45,7 @@ s("")
 s("# Message informing you of respawn shield")
 for i in range(1, 12):
     name = "player" + str(i)
-    s("execute if entity @s[tag=red,tag="+name+"] if entity @e[distance=..3,type=minecraft:player,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag="+name+"] actionbar[\"\",{\"text\":\"You've hit a player that was still respawning!\",\"color\":\"yellow\"}]")
+    s("execute if entity @s[tag=red,tag="+name+"] if entity @e[distance=..3,type=minecraft:player,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag="+name+"] actionbar [\"\",{\"text\":\"You've hit a player that was still respawning!\",\"color\":\"yellow\"}]")
     s("execute if entity @s[tag=yellow,tag="+name+"] if entity @e[distance=..3,type=minecraft:player,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag="+name+"] actionbar [\"\",{\"text\":\"You've hit a player that was still respawning!\",\"color\":\"yellow\"}]")
     s("execute if entity @s[tag=green,tag="+name+"] if entity @e[distance=..3,type=minecraft:player,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag="+name+"] actionbar [\"\",{\"text\":\"You've hit a player that was still respawning!\",\"color\":\"yellow\"}]")
     s("execute if entity @s[tag=blue,tag="+name+"] if entity @e[distance=..3,type=minecraft:player,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag="+name+"] actionbar [\"\",{\"text\":\"You've hit a player that was still respawning!\",\"color\":\"yellow\"}]")
