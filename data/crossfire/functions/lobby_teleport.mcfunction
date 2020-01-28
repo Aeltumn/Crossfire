@@ -11,4 +11,5 @@ scoreboard players set playerscore player 0
 scoreboard players set started started 0
 scoreboard players set joined joined 0
 scoreboard players set gametimer gametimer -1
+scoreboard players set postgametimer postgametimer -1
 scoreboard players set starttimer starttimer -1

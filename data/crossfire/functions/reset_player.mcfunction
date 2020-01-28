@@ -45,7 +45,7 @@ gamemode adventure @s[tag=!admin]
 gamerule sendCommandFeedback true
 clear @s[tag=!admin]
 effect clear @s
-tp @s[tag=!admin] 328.5 23 249.5 90 0
+execute if score postgametimer postgametimer matches -1 tp @s[tag=!admin] 328.5 23 249.5 90 0
 
 # Quality of life!
 effect give @s minecraft:instant_health 1 20 true

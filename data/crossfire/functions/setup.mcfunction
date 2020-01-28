@@ -13,6 +13,10 @@ scoreboard objectives add kills dummy {"text":"Kills"}
 scoreboard objectives setdisplay belowName kills
 scoreboard objectives setdisplay list kills
 
+# Create Bossbars
+bossbar add crossfire:postgame
+bossbar add minecraft:timer
+
 team add red
 team add yellow
 team add green
