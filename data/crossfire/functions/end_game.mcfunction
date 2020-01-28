@@ -10,6 +10,9 @@ scoreboard players operation Green kills += @a[team=green] roundKills
 execute as @a run scoreboard players operation @s kills += @s roundKills
 scoreboard players set @a roundKills 0
 
+scoreboard players add round round 1
+scoreboard players add @a round 1
+
 execute if score Red kills > Blue kills if score Red kills > Yellow kills if score Red kills > Green kills run say Red won!
 execute if score Blue kills > Red kills if score Blue kills > Yellow kills if score Blue kills > Green kills run say Blue won!
 execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if score Yellow kills > Green kills run say Yellow won!
