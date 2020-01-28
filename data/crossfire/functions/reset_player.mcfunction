@@ -48,6 +48,7 @@ effect clear @s
 tp @s[tag=!admin] 328.5 23 249.5 90 0
 
 # Quality of life!
+effect give @s minecraft:instant_health 1 20 true
 effect give @s minecraft:jump_boost 1000000 1 true
 effect give @s minecraft:speed 1000000 0 true
 
