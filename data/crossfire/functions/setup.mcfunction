@@ -18,4 +18,5 @@ team add blue
 
 difficulty peaceful
 
+execute as @a run function crossfire:reset_player
 function crossfire:lobby_teleport

@@ -15,4 +15,5 @@ execute if score Blue kills > Red kills if score Blue kills > Yellow kills if sc
 execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if score Yellow kills > Green kills run say Yellow won!
 execute if score Green kills > Red kills if score Green kills > Yellow kills if score Green kills > Green kills run say Green won!
 
+execute as @a run function crossfire:reset_player
 function crossfire:lobby_teleport
