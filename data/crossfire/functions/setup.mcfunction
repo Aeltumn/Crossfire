@@ -1,4 +1,5 @@
 scoreboard objectives add gametimer dummy
+scoreboard objectives add postgametimer dummy
 scoreboard objectives add starttimer dummy
 scoreboard objectives add started dummy
 scoreboard objectives add playerscore dummy
@@ -14,8 +15,10 @@ scoreboard objectives setdisplay belowName kills
 scoreboard objectives setdisplay list kills
 
 # Create Bossbars
-bossbar add crossfire:postgame
-bossbar add minecraft:timer
+bossbar add crossfire:postgame {"text":""}
+bossbar set crossfire:postgame color blue
+bossbar add minecraft:timer {"text":""}
+bossbar set minecraft:timer color yellow
 
 team add red
 team add yellow
