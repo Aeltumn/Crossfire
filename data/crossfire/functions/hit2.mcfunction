@@ -15,5 +15,5 @@ execute if entity @s[tag=player11] run tag @a remove spectateplayer11
 clear @s
 effect give @s minecraft:levitation 1 40 true
 effect give @s minecraft:slowness 40 127 true
-executeat @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
+execute at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
 tag @s remove hit

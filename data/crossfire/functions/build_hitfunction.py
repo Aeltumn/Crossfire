@@ -33,6 +33,9 @@ s("execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if e
 s("execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run title @s title [\"\",{\"text\":\" \\uE005 \"},{\"text\":\"Sploded! \",\"bold\":true,\"color\":\"blue\"},{\"text\":\"\\uE005\"}]")
 s("execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run tag @s add hit")
 s("")
+s("# Remove hit tags")
+s("tag @e[type=!player] remove hit")
+s("")
 s("# Message informing you of teamkilling:")
 for i in range(1, 12):
     name = "player" + str(i)

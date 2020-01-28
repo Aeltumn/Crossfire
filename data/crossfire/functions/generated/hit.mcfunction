@@ -28,6 +28,9 @@ execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if enti
 execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"blue"},{"text":"\uE005"}]
 execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run tag @s add hit
 
+# Remove hit tags
+tag @e[type=!player] remove hit
+
 # Message informing you of teamkilling:
 execute if entity @s[tag=red,tag=player1] if entity @e[distance=..3,type=minecraft:player,team=red,limit=1] run title @a[tag=player1] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player1] if entity @e[distance=..3,type=minecraft:player,team=yellow,limit=1] run title @a[tag=player1] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
