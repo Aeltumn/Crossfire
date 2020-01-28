@@ -14,6 +14,7 @@ difficulty peaceful
 # Kick everyone out of spectator target
 execute as @a[tag=spectating] run spectate @s
 
+tag @a remove waterdead
 tag @a remove died
 tag @a remove joined
 tag @a remove player1
