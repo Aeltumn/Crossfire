@@ -58,6 +58,8 @@ s("# Death messages per player")
 for i in range(1, 12):
     name = "player" + str(i)
     spec = "spectateplayer" + str(i)
+    s("title @a[tag="+name+"] subtitle [\"\",{\"text\":\"You've killed: \"},{\"selector\":\"@s\"}]")
+    s("title @a[tag="+name+"] title {\"text\":\" \"}")
     s("execute if entity @s[tag="+name+"] as @e[tag=hit] run tellraw @a [\"\",{\"selector\":\"@s\"},{\"text\":\" was sploded by \"},{\"selector\":\"@a[tag="+name+",limit=1]\"}]")
     s("execute if entity @s[tag="+name+"] as @e[tag=hit] run tag @s add "+spec)
     s("execute if entity @s[tag="+name+"] as @e[tag=hit] run scoreboard players add @a[tag="+name+"] roundKills 1")
