@@ -27,11 +27,11 @@ execute if score Blue kills > Red kills if score Blue kills > Yellow kills if sc
 execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if score Yellow kills > Green kills run scoreboard players set Yellow winner 1
 execute if score Green kills > Red kills if score Green kills > Yellow kills if score Green kills > Green kills run scoreboard players set Green winner 1
 
-execite if score Red winner matches 1.. run tellraw @a ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
-execite if score Red winner matches 1.. run title @a title ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
-execite if score Blue winner matches 1.. run tellraw @a ["",{"text":"Blue","bold":true,"color":"aqua"},{"text":" won the game!"}]
-execite if score Blue winner matches 1.. run title @a title ["",{"text":"Blue","bold":true,"color":"aqua"},{"text":" won the game!"}]
-execite if score Yellow winner matches 1.. run tellraw @a ["",{"text":"Yellow","bold":true,"color":"yellow"},{"text":" won the game!"}]
-execite if score Yellow winner matches 1.. run title @a title ["",{"text":"Yellow","bold":true,"color":"yellow"},{"text":" won the game!"}]
-execite if score Green winner matches 1.. run tellraw @a ["",{"text":"Green","bold":true,"color":"green"},{"text":" won the game!"}]
-execite if score Green winner matches 1.. run title @a title ["",{"text":"Green","bold":true,"color":"green"},{"text":" won the game!"}]
+execute if score Red winner matches 1.. run tellraw @a ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
+execute if score Red winner matches 1.. run title @a title ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
+execute if score Blue winner matches 1.. run tellraw @a ["",{"text":"Blue","bold":true,"color":"aqua"},{"text":" won the game!"}]
+execute if score Blue winner matches 1.. run title @a title ["",{"text":"Blue","bold":true,"color":"aqua"},{"text":" won the game!"}]
+execute if score Yellow winner matches 1.. run tellraw @a ["",{"text":"Yellow","bold":true,"color":"yellow"},{"text":" won the game!"}]
+execute if score Yellow winner matches 1.. run title @a title ["",{"text":"Yellow","bold":true,"color":"yellow"},{"text":" won the game!"}]
+execute if score Green winner matches 1.. run tellraw @a ["",{"text":"Green","bold":true,"color":"green"},{"text":" won the game!"}]
+execute if score Green winner matches 1.. run title @a title ["",{"text":"Green","bold":true,"color":"green"},{"text":" won the game!"}]
