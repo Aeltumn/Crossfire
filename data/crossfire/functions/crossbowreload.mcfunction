@@ -4,7 +4,7 @@ execute if score started started matches 1 as @a[tag=died,tag=!waterdead,tag=!sp
 
 execute as @a[tag=!died] if score started started matches 1.. as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run data merge entity @s {PickupDelay:0}
 
-clear @a[tag=!admin] crossfire:illegalitems
+clear @a[tag=!admin] #crossfire:illegalitems
 execute as @a[tag=died] run clear @s minecraft:crossbow
 execute as @a[tag=!died] if score started started matches 1.. run execute as @s store result score @s item run clear @s minecraft:crossbow 0
 execute as @a[tag=!died] if score started started matches 1.. run execute as @s if score @s item matches 2.. run clear @s minecraft:crossbow
