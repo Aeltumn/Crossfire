@@ -1,6 +1,10 @@
+# Give everyone some invulnerability
+scoreboard players set @a respawnshield 5
+
 # Start the game!
 execute as @a at @s run playsound minecraft:event.raid.horn master @s ~ ~ ~ 100 1
 execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.2 1
+title @a clear
 title @a title {"text":"GO","bold":true,"color":"gold"}
 bossbar set minecraft:timer players @a
 scoreboard players set gametimer gametimer 300
