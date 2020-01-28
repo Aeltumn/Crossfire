@@ -1,4 +1,5 @@
 bossbar set minecraft:timer players
+bossbar set crossfire:postgame players
 
 # Empty teams
 team empty blue

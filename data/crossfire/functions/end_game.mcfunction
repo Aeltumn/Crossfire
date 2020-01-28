@@ -22,6 +22,9 @@ execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if 
 execute if score Green kills > Red kills if score Green kills > Yellow kills if score Green kills > Green kills run tellraw @a ["",{"text":"Green","bold":true,"color":"green"},{"text":" won the game!"}]
 execute if score Green kills > Red kills if score Green kills > Yellow kills if score Green kills > Green kills run title @a title ["",{"text":"Green","bold":true,"color":"green"},{"text":" won the game!"}]
 
-# Start the post-game timer
+# Start the post-game timer also set started to 0 to stop crossbow giving
+scoreboard players set started started 0
+bossbar set minecraft:timer players
+bossbar set crossfire:postgame players @a
 scoreboard players set postgametimer postgametimer 25
 execute as @a run function crossfire:reset_player
