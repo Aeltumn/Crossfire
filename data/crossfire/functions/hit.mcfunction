@@ -8,24 +8,24 @@ execute if entity @s[tag=green] at @s run summon firework_rocket ~ ~ ~ {Tags:["c
 execute if entity @s[tag=blue] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;6719955]}],Flight:1}}}}
 
 # Red killscreen
-execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=0}] run title @s title ["",{"text":" \uE006 "},{"text":"Sploded! ","bold":true,"color":"red"},{"text":"\uE006"}]
-execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=0}] run tag @s add hit
+execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE006 "},{"text":"Sploded! ","bold":true,"color":"red"},{"text":"\uE006"}]
+execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=..0}] run tag @s add hit
 
 # Yellow killscreen
-execute if entity @s[tag=yellow] as @e[distance=..3,type=minecraft:player] if entity @s[team=!yellow,tag=!died,scores={respawnshield=0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=yellow] as @e[distance=..3,type=minecraft:player] if entity @s[team=!yellow,tag=!died,scores={respawnshield=0}] run title @s title ["",{"text":" \uE007 "},{"text":"Sploded! ","bold":true,"color":"yellow"},{"text":"\uE007"}]
-execute if entity @s[tag=yellow] as @e[distance=..3,type=minecraft:player] if entity @s[team=!yellow,tag=!died,scores={respawnshield=0}] run tag @s add hit
+execute if entity @s[tag=yellow] as @e[distance=..3,type=minecraft:player] if entity @s[team=!yellow,tag=!died,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=yellow] as @e[distance=..3,type=minecraft:player] if entity @s[team=!yellow,tag=!died,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE007 "},{"text":"Sploded! ","bold":true,"color":"yellow"},{"text":"\uE007"}]
+execute if entity @s[tag=yellow] as @e[distance=..3,type=minecraft:player] if entity @s[team=!yellow,tag=!died,scores={respawnshield=..0}] run tag @s add hit
 
 # Green killscreen
-execute if entity @s[tag=green] as @e[distance=..3,type=minecraft:player] if entity @s[team=!green,tag=!died,scores={respawnshield=0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=green] as @e[distance=..3,type=minecraft:player] if entity @s[team=!green,tag=!died,scores={respawnshield=0}] run title @s title ["",{"text":" \uE008 "},{"text":"Sploded! ","bold":true,"color":"green"},{"text":"\uE008"}]
-execute if entity @s[tag=green] as @e[distance=..3,type=minecraft:player] if entity @s[team=!green,tag=!died,scores={respawnshield=0}] run tag @s add hit
+execute if entity @s[tag=green] as @e[distance=..3,type=minecraft:player] if entity @s[team=!green,tag=!died,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=green] as @e[distance=..3,type=minecraft:player] if entity @s[team=!green,tag=!died,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE008 "},{"text":"Sploded! ","bold":true,"color":"green"},{"text":"\uE008"}]
+execute if entity @s[tag=green] as @e[distance=..3,type=minecraft:player] if entity @s[team=!green,tag=!died,scores={respawnshield=..0}] run tag @s add hit
 
 # Blue killscreen
-execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=0}] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"aqua"},{"text":"\uE005"}]
-execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=0}] run tag @s add hit
+execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"aqua"},{"text":"\uE005"}]
+execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run tag @s add hit
 
 # Chat message and kill count
 execute if entity @s[tag=player1] as @e[tag=hit] run tellraw @a ["",{"selector":"@s"},{"text":" was sploded by "},{"selector":"@a[tag=player1,limit=1]"}]

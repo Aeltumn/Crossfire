@@ -1,7 +1,7 @@
 schedule function crossfire:respawn 1s
 
 execute as @a[tag=died] run scoreboard players remove @s deadtimer 1
-execute as @a[scores={respawnshield=0..}] run scoreboard players remove @s respawnshield 1
+execute as @a[scores={respawnshield=1..}] run scoreboard players remove @s respawnshield 1
 
 execute as @a[tag=died] if score @s deadtimer matches ..6 run title @a times 0 24 0
 execute as @a[tag=died] if score @s deadtimer matches ..6 run title @s title {"text":" "}
