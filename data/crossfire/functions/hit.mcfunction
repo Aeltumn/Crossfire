@@ -7,6 +7,18 @@ execute if entity @s[tag=yellow] at @s run summon firework_rocket ~ ~ ~ {Tags:["
 execute if entity @s[tag=green] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;4312372]}],Flight:1}}}}
 execute if entity @s[tag=blue] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;6719955]}],Flight:1}}}}
 
+# Send message if you hit someone who was immune
+execute if entity @s[tag=red] if @e[limit=1,distance=..3,type=minecraft:player,team=!red,tag=!died,scores={respawnshield=1..}] run title @s actionbar ["",{"text":"You've hit a player that was still respawning!","color":"dark_gray"}]
+execute if entity @s[tag=yellow] if @e[limit=1,distance=..3,type=minecraft:player,team=!yellow,tag=!died,scores={respawnshield=1..}] run title @s actionbar ["",{"text":"You've hit a player that was still respawning!","color":"dark_gray"}]
+execute if entity @s[tag=green] if @e[limit=1,distance=..3,type=minecraft:player,team=!green,tag=!died,scores={respawnshield=1..}] run title @s actionbar ["",{"text":"You've hit a player that was still respawning!","color":"dark_gray"}]
+execute if entity @s[tag=blue] if @e[limit=1,distance=..3,type=minecraft:player,team=!blue,tag=!died,scores={respawnshield=1..}] run title @s actionbar ["",{"text":"You've hit a player that was still respawning!","color":"dark_gray"}]
+
+# Send message if you hit a teammate
+execute if entity @s[tag=red] if @e[limit=1,distance=..3,type=minecraft:player,team=red] run title @s actionbar ["",{"text":"Don't attack your teammates!","color":"dark_gray"}]
+execute if entity @s[tag=yellow] if @e[limit=1,distance=..3,type=minecraft:player,team=yellow] run title @s actionbar ["",{"text":"Don't attack your teammates!","color":"dark_gray"}]
+execute if entity @s[tag=green] if @e[limit=1,distance=..3,type=minecraft:player,team=green] run title @s actionbar ["",{"text":"Don't attack your teammates!","color":"dark_gray"}]
+execute if entity @s[tag=blue] if @e[limit=1,distance=..3,type=minecraft:player,team=blue] run title @s actionbar ["",{"text":"Don't attack your teammates!","color":"dark_gray"}]
+
 # Red killscreen
 execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
 execute if entity @s[tag=red] as @e[distance=..3,type=minecraft:player] if entity @s[team=!red,tag=!died,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE006 "},{"text":"Sploded! ","bold":true,"color":"red"},{"text":"\uE006"}]

@@ -11,7 +11,7 @@ execute as @a[tag=!died] if score started started matches 1.. run execute as @s 
 execute as @a[tag=!died] if score started started matches 1.. run execute as @s if score @s item matches 0 run give @s minecraft:crossbow
 
 execute as @a[tag=!died] if score started started matches 1.. run execute as @s[nbt={Inventory:[{id:"minecraft:crossbow",tag:{Charged:0b}}]}] as @s run scoreboard players set @s enabledtimer 1
-execute as @a[tag=!died] if entity @s[tag=crossbowreload,scores={respawnshield=..2}] if score started started matches 1.. run execute as @s if score @s enabledtimer matches 1.. run scoreboard players add @s timer 1
+execute as @a[tag=!died] if entity @s[tag=crossbowreload,scores={respawnshield=..3}] if score started started matches 1.. run execute as @s if score @s enabledtimer matches 1.. run scoreboard players add @s timer 1
 
 execute as @a[tag=!died] if score started started matches 1.. run execute as @s if score @s timer matches 1..10 run replaceitem entity @s container.0 crossbow{CustomModelData:17,HideFlags:63} 1
 execute as @a[tag=!died] if score started started matches 1.. run execute as @s if score @s timer matches 11..20 run replaceitem entity @s container.0 crossbow{CustomModelData:18,HideFlags:63} 1
