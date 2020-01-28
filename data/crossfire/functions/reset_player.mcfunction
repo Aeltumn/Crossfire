@@ -4,6 +4,10 @@ execute as @s[tag=spectating] run spectate @s
 # Cleanup
 kill @e[tag=cleanup]
 
+# Cleanup timers
+scoreboard players reset @s enabledtimer
+scoreboard players reset @s timer
+
 # Remove tags
 tag @s remove player1
 tag @s remove player2
