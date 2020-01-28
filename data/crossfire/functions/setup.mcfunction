@@ -14,6 +14,10 @@ scoreboard objectives add kills dummy {"text":"Kills"}
 scoreboard objectives setdisplay belowName kills
 scoreboard objectives setdisplay list kills
 
+scoreboard objectives add map dummy
+# Default Map
+#scoreboard players set map map 0
+
 # Create Bossbars
 bossbar add crossfire:postgame {"text":""}
 bossbar set crossfire:postgame color blue
