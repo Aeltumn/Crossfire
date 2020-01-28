@@ -5,6 +5,7 @@
 		"crossfire:team_join",
 		"crossfire:crossbowreload",
         "crossfire:check_gamemode",
-		"crossfire:give_armor"
+		"crossfire:give_armor",
+		"crossfire:detect_round"
 	]
 }
