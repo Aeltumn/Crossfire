@@ -10,8 +10,7 @@ execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master 
 title @a subtitle {"text":""}
 title @a title {"text":"GO","bold":true,"color":"gold"}
 bossbar set minecraft:timer players @a
-scoreboard players set gametimer gametimer 20
-execute store result bossbar minecraft:timer max run scoreboard players get gametimer gametimer
+scoreboard players set gametimer gametimer 300
 function crossfire:timer2
 
 # Open cages

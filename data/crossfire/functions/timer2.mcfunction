@@ -14,5 +14,6 @@ execute if score postgametimer postgametimer matches 0 run function crossfire:fi
 # Re-run the timer
 execute if score gametimer gametimer matches 1.. run scoreboard players remove gametimer gametimer 1
 execute if score postgametimer postgametimer matches 1.. run scoreboard players remove postgametimer postgametimer 1
-execute if score gametimer gametimer matches 0.. run schedule function crossfire:timer2 1s
-execute unless score gametimer gametimer matches 0.. if score postgametimer postgametimer matches 0.. run schedule function crossfire:timer2 1s
+
+execute if score gametimer gametimer matches 0.. run schedule function crossfire:timer2 1s replace
+execute if score postgametimer postgametimer matches 0.. run schedule function crossfire:timer2 1s replace

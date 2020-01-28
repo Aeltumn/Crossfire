@@ -20,6 +20,9 @@ bossbar set crossfire:postgame color blue
 bossbar add minecraft:timer {"text":""}
 bossbar set minecraft:timer color yellow
 
+bossbar set crossfire:postgame max 25
+bossbar set minecraft:timer max 300
+
 team add red
 team add yellow
 team add green
