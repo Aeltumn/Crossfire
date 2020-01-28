@@ -8,7 +8,7 @@ effect give @s minecraft:resistance 1000000 255 true
 effect give @s minecraft:saturation 1000000 255 true
 effect give @s minecraft:jump_boost 1000000 1 true
 
-scoreboard players set @s deadtimer 8
+scoreboard players set @s deadtimer 6
 scoreboard players reset @s enabledtimer
 scoreboard players reset @s timer
 
