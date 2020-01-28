@@ -2,6 +2,8 @@ scoreboard objectives add gametimer dummy
 scoreboard objectives add starttimer dummy
 scoreboard objectives add started dummy
 scoreboard objectives add playerscore dummy
+scoreboard objectives add deathtimer dummy
+scoreboard objectives add respawnshield dummy
 scoreboard objectives add joined dummy
 scoreboard objectives add age dummy
 scoreboard objectives add roundKills dummy
