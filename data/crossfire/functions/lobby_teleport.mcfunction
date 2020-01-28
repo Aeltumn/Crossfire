@@ -33,6 +33,7 @@ tag @a remove spectateplayer9
 tag @a remove spectateplayer10
 tag @a remove spectateplayer11
 tag @a remove hit
+tag @a remove crossbowreload
 
 # Empty teams
 team empty blue
@@ -45,9 +46,13 @@ gamerule sendCommandFeedback false
 gamemode adventure @a[tag=!admin]
 gamerule sendCommandFeedback true
 clear @a[tag=!admin]
-effect clear @s
+effect clear @a
 tp @a[tag=!admin] 328.5 23 249.5 90 0
 bossbar set minecraft:timer players
+
+# Quality of life!
+effect give @a minecraft:jump_boost 1000000 1 true
+effect give @a minecraft:speed 1000000 0 true
 
 # Reset some scoreboard values
 scoreboard players set playerscore player 0
