@@ -14,6 +14,7 @@ scoreboard players add round round 1
 scoreboard players add @a round 1
 
 title @a clear
+title @a subtitle {"text":""}
 title @a times 20 100 20
 execute if score Red kills > Blue kills if score Red kills > Yellow kills if score Red kills > Green kills run tellraw @a ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
 execute if score Red kills > Blue kills if score Red kills > Yellow kills if score Red kills > Green kills run title @a title ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
