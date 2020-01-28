@@ -9,6 +9,8 @@ effect give @s minecraft:saturation 1000000 255 true
 effect give @s minecraft:jump_boost 1000000 1 true
 
 scoreboard players set @s deadtimer 8
+scoreboard players reset @s enabledtimer
+scoreboard players reset @s timer
 
 tp @s[team=blue] 272 24 249 -90 0
 tp @s[team=yellow] 290 24 267 180 0
