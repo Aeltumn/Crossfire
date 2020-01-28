@@ -1,5 +1,5 @@
 # Give proper player shooter tags
-data modify entity @e[type=arrow,distance=..4,tag=!red,tag=!green,tag=!yellow,tag=!blue] Tags set from entity @s Tags
+data modify entity @e[type=arrow,distance=..4,tag=!red,tag=!green,tag=!yellow,tag=!blue,limit=1] Tags set from entity @s Tags
 
 # Give the arrows tags from the player that shot them
 execute if entity @s[team=red] at @s run tag @e[type=arrow,distance=..4,tag=!red,tag=!green,tag=!yellow,tag=!blue] add red
