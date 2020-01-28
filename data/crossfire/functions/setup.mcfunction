@@ -20,9 +20,32 @@ team add blue
 team add lobby
 
 # Setup Teams
-team modify blue color blue
+team modify blue color aqua
+team modify green color green
+team modify yellow color yellow
+team modify red color red
+team modify lobby color gray
+team modify lobby collisionRule never
+team modify lobby friendlyFire false
+team modify red friendlyFire false
+team modify yellow friendlyFire false
+team modify green friendlyFire false
+team modify blue friendlyFire false
 
+# Setup gamestate
 difficulty peaceful
+gamerule announceAdvancements false
+gamerule disableRaids true
+gamerule doInsomnia false
+gamerule doPatrolSpawning false
+gamerule doTraderSpawning false
+gamerule doWeatherCycle false
+gamerule drowningDamage false
+gamerule fireDamage false
+gamerule fallDamage false
+gamerule mobGriefing false
+gamerule doMobSpawning false
+gamerule naturalRegeneration false
 
 execute as @a run function crossfire:reset_player
 function crossfire:lobby_teleport

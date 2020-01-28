@@ -30,7 +30,7 @@ s("execute if entity @s[tag=green] as @e[distance=..3,type=minecraft:player] if 
 s("")
 s("# Blue killscreen")
 s("execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run title @s subtitle {\"text\":\"\\uE004\"}")
-s("execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run title @s title [\"\",{\"text\":\" \\uE005 \"},{\"text\":\"Sploded! \",\"bold\":true,\"color\":\"blue\"},{\"text\":\"\\uE005\"}]")
+s("execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run title @s title [\"\",{\"text\":\" \\uE005 \"},{\"text\":\"Sploded! \",\"bold\":true,\"color\":\"aqua\"},{\"text\":\"\\uE005\"}]")
 s("execute if entity @s[tag=blue] as @e[distance=..3,type=minecraft:player] if entity @s[team=!blue,tag=!died,scores={respawnshield=..0}] run tag @s add hit")
 s("")
 s("# Remove hit tags")
