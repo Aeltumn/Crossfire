@@ -1,5 +1,3 @@
-execute as @a[tag=!died] run scoreboard players set @s deadtimer 8
-
 schedule function crossfire:respawn 1s
 
 execute as @a[tag=died] run scoreboard players remove @s deadtimer 1
@@ -15,5 +13,4 @@ execute as @a[tag=died,tag=!waterdead] if entity @s[team=blue] if score @s deadt
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 6 at @s run playsound minecraft:item.trident.return master @s ~ ~ ~ 100 0
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 6 at @s run tag @s add spectating
 
-execute as @a[tag=died] if score @s deadtimer matches ..0 run tag @a remove waterdead
 execute as @a[tag=died] if score @s deadtimer matches ..0 run function crossfire:respawn2
