@@ -37,13 +37,15 @@ tag @s remove spectateplayer9
 tag @s remove spectateplayer10
 tag @s remove spectateplayer11
 tag @s remove hit
-tag @s remove crossbowreload
+tag @s remove reloadcrossbow
+tag @s remove givecrossbow
 
 # Teleport people back
 gamerule sendCommandFeedback false
 gamemode adventure @s[tag=!admin]
 gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
+function crossfire:give_armor
 effect clear @s
 execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 461.5 35 150.5 90 0
 execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 290.5 16 249.5 -90 0
