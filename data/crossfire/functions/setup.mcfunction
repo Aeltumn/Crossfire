@@ -33,9 +33,13 @@ team add lobby
 
 # Setup Teams
 team modify blue color aqua
+team modify blue collisionRule never
 team modify green color green
+team modify green collisionRule never
 team modify yellow color yellow
+team modify yellow collisionRule never
 team modify red color red
+team modify red collisionRule never
 team modify lobby color gray
 team modify lobby collisionRule never
 

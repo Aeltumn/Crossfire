@@ -12,8 +12,8 @@ effect give @s minecraft:instant_health 1 20 true
 effect give @s minecraft:weakness 1000000 255 true
 
 scoreboard players set @s deadtimer 6
-scoreboard players reset @s enabledtimer
-scoreboard players reset @s timer
+scoreboard players set @s isreloading 0
+scoreboard players set @s timer 0
 
 tp @s[team=blue] 397.5 27 124.5 0 0
 tp @s[team=yellow] 423.5 27 150.5 90 0
