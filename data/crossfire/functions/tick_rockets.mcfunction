@@ -18,4 +18,4 @@ execute as @e[tag=!dead,type=arrow,tag=blue] at @s if entity @e[type=player,dist
 
 # Trigger hits if the arrow hits the ground or the arrow is too old
 execute as @e[tag=!dead,type=minecraft:arrow,nbt={inGround:1b}] at @s run function crossfire:generated/hit
-execute as @e[tag=!dead,type=minecraft:arrow] if entity @s[scores={age=15..}] at @s run function crossfire:generated/hit
+execute as @e[tag=!dead,type=minecraft:arrow] if entity @s[scores={age=19..}] at @s run function crossfire:generated/hit
