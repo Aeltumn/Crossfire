@@ -45,5 +45,8 @@ file.write("fill 273 22 246 273 26 252 barrier replace air\n")
 file.write("fill 273 22 252 270 26 252 barrier replace air\n")
 file.write("fill 270 22 252 270 26 246 barrier replace air\n")
 file.write("fill 270 26 252 273 26 246 barrier replace air\n")
+file.write("\n")
+file.write("# Remove the logo\n")
+file.write("fill 393 42 132 396 62 169 air")
 
 file.close()
