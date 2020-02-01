@@ -4,10 +4,6 @@ execute as @s[tag=spectating] run spectate
 # Cleanup
 kill @e[tag=cleanup]
 
-# Cleanup timers
-scoreboard players reset @s enabledtimer
-scoreboard players reset @s timer
-
 # Remove tags
 tag @s remove player1
 tag @s remove player2
@@ -46,7 +42,7 @@ gamemode adventure @s[tag=!admin]
 gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
 function crossfire:give_armor
-effect clear @s
+effect clear @s[tag=!admin]
 execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 461.5 35 150.5 90 0
 execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 290.5 16 249.5 -90 0
 

@@ -2,7 +2,7 @@
 scoreboard players set @a respawnshield 5
 
 # Give everyone the tag to allow crossbow reloading
-tag @a add crossbowreload
+tag @a add reloadcrossbow
 
 # Start the game!
 execute as @a at @s run playsound minecraft:event.raid.horn master @s ~ ~ ~ 100 1
