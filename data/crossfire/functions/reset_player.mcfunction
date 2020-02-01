@@ -49,7 +49,7 @@ execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 46
 execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 290.5 16 249.5 -90 0
 
 # Quality of life!
-effect give @s minecraft:instant_health 1 20 true
-effect give @s minecraft:jump_boost 1000000 1 true
-effect give @s minecraft:speed 1000000 0 true
-effect give @s minecraft:weakness 1000000 255 true
+effect give @s[tag=!admin] minecraft:instant_health 1 20 true
+effect give @s[tag=!admin] minecraft:jump_boost 1000000 1 true
+effect give @s[tag=!admin] minecraft:speed 1000000 0 true
+effect give @s[tag=!admin] minecraft:weakness 1000000 255 true
