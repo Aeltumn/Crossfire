@@ -43,7 +43,7 @@ tag @s remove crossbowreload
 gamerule sendCommandFeedback false
 gamemode adventure @s[tag=!admin]
 gamerule sendCommandFeedback true
-clear @s[tag=!admin]
+clear @s[tag=!admin] #crossfire:obtainableitems
 effect clear @s
 execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 328.5 23 249.5 90 0
 execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 290.5 16 249.5 -90 0
@@ -52,4 +52,4 @@ execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin
 effect give @s minecraft:instant_health 1 20 true
 effect give @s minecraft:jump_boost 1000000 1 true
 effect give @s minecraft:speed 1000000 0 true
-
+effect give @s minecraft:weakness 1000000 255 true

@@ -4,8 +4,8 @@
         "crossfire:tick_rockets",
 		"crossfire:team_join",
 		"crossfire:crossbowreload",
+		"crossfire:detect_round",
         "crossfire:check_gamemode",
-		"crossfire:give_armor",
-		"crossfire:detect_round"
+		"crossfire:check_water"
 	]
 }
