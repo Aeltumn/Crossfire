@@ -13,8 +13,12 @@ bossbar set minecraft:timer players @a
 scoreboard players set gametimer gametimer 300
 function crossfire:timer2
 
-# Open cages
-fill 293 22 232 287 26 229 minecraft:air replace minecraft:barrier
-fill 287 22 266 293 26 269 minecraft:air replace minecraft:barrier
-fill 307 22 252 309 26 246 minecraft:air replace minecraft:barrier
-fill 270 22 246 273 26 252 minecraft:air replace minecraft:barrier
+# Open cages (take positive X/Z corner)
+# Green - 395 26 174
+# Yellow - 421 26 148
+# Red - 369 26 148
+# Blue - 295 26 122
+clone 323 30 167 319 40 163 395 26 174
+clone 329 30 167 325 40 163 369 26 148
+clone 318 30 167 313 40 163 395 26 122
+clone 335 30 167 331 40 163 421 26 148

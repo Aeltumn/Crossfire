@@ -52,32 +52,10 @@ execute if score joined joined matches 2.. run scoreboard players set starttimer
 execute if score joined joined matches 2.. run function crossfire:timer
 
 # Create the cages
-# Red cage
-fill 293 22 232 287 26 232 barrier replace air
-fill 287 22 229 287 26 232 barrier replace air
-fill 287 22 229 293 26 229 barrier replace air
-fill 293 22 229 293 26 232 barrier replace air
-fill 293 26 232 287 26 229 barrier replace air
-
-# Yellow cage
-fill 293 22 269 287 26 269 barrier replace air
-fill 287 22 269 287 26 266 barrier replace air
-fill 287 22 266 293 26 266 barrier replace air
-fill 293 22 266 293 26 269 barrier replace air
-fill 287 26 266 293 26 269 barrier replace air
-
-# Green cage
-fill 307 22 246 307 26 252 barrier replace air
-fill 307 22 252 309 26 252 barrier replace air
-fill 307 22 246 309 26 246 barrier replace air
-fill 307 26 252 309 26 246 barrier replace air
-
-# Blue cage
-fill 270 22 246 273 26 246 barrier replace air
-fill 273 22 246 273 26 252 barrier replace air
-fill 273 22 252 270 26 252 barrier replace air
-fill 270 22 252 270 26 246 barrier replace air
-fill 270 26 252 273 26 246 barrier replace air
+clone 323 30 161 319 40 157 395 26 174
+clone 329 30 161 325 40 157 369 26 148
+clone 318 30 161 313 40 157 395 26 122
+clone 335 30 161 331 40 157 421 26 148
 
 # Remove the logo
 fill 393 42 132 396 62 169 air
