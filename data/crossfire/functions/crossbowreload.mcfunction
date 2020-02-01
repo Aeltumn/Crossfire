@@ -3,7 +3,7 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run kill @s
 
 # Set `item` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it
-execute as @a unless @s[tag=!died,tag=givecrossbow] run clear @s minecraft:crossbow
+execute as @a unless entity @s[tag=!died,tag=givecrossbow] run clear @s minecraft:crossbow
 execute as @a[tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0
 execute as @a[tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 2.. run clear @s minecraft:crossbow
 execute as @a[tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0

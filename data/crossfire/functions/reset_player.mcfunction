@@ -45,7 +45,7 @@ gamemode adventure @s[tag=!admin]
 gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
 effect clear @s
-execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 328.5 23 249.5 90 0
+execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 461.5 35 150.5 90 0
 execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 290.5 16 249.5 -90 0
 
 # Quality of life!
