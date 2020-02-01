@@ -38,11 +38,6 @@ team modify yellow color yellow
 team modify red color red
 team modify lobby color gray
 team modify lobby collisionRule never
-team modify lobby friendlyFire false
-team modify red friendlyFire false
-team modify yellow friendlyFire false
-team modify green friendlyFire false
-team modify blue friendlyFire false
 
 # Setup gamestate
 difficulty peaceful
