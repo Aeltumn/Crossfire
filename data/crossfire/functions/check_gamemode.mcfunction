@@ -17,8 +17,8 @@ execute as @a[tag=spectateplayer10] unless entity @a[tag=player10,tag=!spectatin
 execute as @a[tag=spectateplayer11] unless entity @a[tag=player11,tag=!spectating] run tag @s remove spectateplayer11
 
 # Give spectatoradventure if we have no specateplayer
-execute as @a if entity @s[tag=!specateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s remove spectatoradventure
-execute as @a unless entity @s[tag=!specateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s add spectatoradventure
+execute as @a unless entity @s[tag=!spectateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s remove spectatoradventure
+execute as @a if entity @s[tag=!spectateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s add spectatoradventure
 
 # Set into the proper gamemode
 gamerule sendCommandFeedback false
