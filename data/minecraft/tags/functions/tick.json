@@ -6,6 +6,7 @@
 		"crossfire:crossbowreload",
 		"crossfire:detect_round",
         "crossfire:check_gamemode",
-		"crossfire:check_water"
+		"crossfire:check_water",
+		"crossfire:flighpath"
 	]
 }
