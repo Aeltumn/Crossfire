@@ -1,7 +1,9 @@
-execute if score joined joined matches ..1 run tellraw @a {"text":"Not enough players have chosen a team yet!"}
+execute if score joined joined matches ..1 run title @a actionbar {"text":"Not enough players have chosen a team yet!","color":"red"}
 
-execute if score joined joined matches 2.. as @a[tag=!admin] run function crossfire:init_player
 execute if score joined joined matches 2.. run scoreboard players set started started 1
+execute if score joined joined matches 2.. run scoreboard players set starttimer starttimer 5
+execute if score joined joined matches 2.. run function crossfire:timer
+execute if score joined joined matches 2.. as @a[tag=!admin] run function crossfire:init_player
 
 execute if score joined joined matches 2.. if score playerscore player matches 0 as @a[tag=!selected,tag=joined,limit=1] run tag @s add player1
 execute if score joined joined matches 2.. as @a[tag=player1] run tag @s add selected
@@ -46,10 +48,6 @@ execute if score joined joined matches 2.. run scoreboard players add playerscor
 execute if score joined joined matches 2.. if score playerscore player matches 10 as @a[tag=!selected,tag=joined,limit=1] run tag @s add player11
 execute if score joined joined matches 2.. as @a[tag=player11] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
-
-
-execute if score joined joined matches 2.. run scoreboard players set starttimer starttimer 5
-execute if score joined joined matches 2.. run function crossfire:timer
 
 # Create the cages
 clone 323 30 161 319 40 157 395 26 174
