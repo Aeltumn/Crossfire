@@ -44,6 +44,12 @@ team modify red collisionRule never
 team modify lobby color gray
 team modify lobby collisionRule never
 
+team modify blue seeFriendlyInvisibles false
+team modify green seeFriendlyInvisibles false
+team modify yellow seeFriendlyInvisibles false
+team modify red seeFriendlyInvisibles false
+team modify lobby seeFriendlyInvisibles false
+
 # Setup gamestate
 difficulty peaceful
 gamerule announceAdvancements false

@@ -1,11 +1,13 @@
-gamerule sendCommandFeedback false
-gamemode spectator @a[tag=spectating,tag=!admin]
-gamemode adventure @a[tag=!spectating,tag=!admin]
-gamerule sendCommandFeedback true
-
-
+# Give players spectating if applicable
 execute if score started started matches 1 as @a[tag=!spectating,tag=!joined] run tag @s add spectating
 
+# Set gamemode to proper
+gamerule sendCommandFeedback false
+gamemode adventure @a[tag=!spectating,tag=!admin]
+gamemode spectator @a[tag=spectating,tag=!admin]
+gamerule sendCommandFeedback true
+
+# Spectate the player into someone else
 scoreboard players set spectateSuccess spectateSuccess 0
 execute if score spectateSuccess spectateSuccess matches 0 store success score spectateSuccess spectateSuccess if score started started matches 1 as @a[tag=spectating,tag=spectateplayer1] run spectate @e[limit=1,tag=player1,tag=!spectating] @s
 execute if score spectateSuccess spectateSuccess matches 0 store success score spectateSuccess spectateSuccess if score started started matches 1 as @a[tag=spectating,tag=spectateplayer2] run spectate @e[limit=1,tag=player2,tag=!spectating] @s
@@ -18,4 +20,6 @@ execute if score spectateSuccess spectateSuccess matches 0 store success score s
 execute if score spectateSuccess spectateSuccess matches 0 store success score spectateSuccess spectateSuccess if score started started matches 1 as @a[tag=spectating,tag=spectateplayer9] run spectate @e[limit=1,tag=player9,tag=!spectating] @s
 execute if score spectateSuccess spectateSuccess matches 0 store success score spectateSuccess spectateSuccess if score started started matches 1 as @a[tag=spectating,tag=spectateplayer10] run spectate @e[limit=1,tag=player10,tag=!spectating] @s
 execute if score spectateSuccess spectateSuccess matches 0 store success score spectateSuccess spectateSuccess if score started started matches 1 as @a[tag=spectating,tag=spectateplayer11] run spectate @e[limit=1,tag=player11,tag=!spectating] @s
-execute if score spectateSuccess spectateSuccess matches 0 if score started started matches 1 as @a[tag=spectating] run spectate @e[tag=spectate,limit=1] @s
+
+# If nothing else, we do the spectator cam
+execute if score spectateSuccess spectateSuccess matches 0 if score started started matches 1 as @a[tag=spectating] at @e[tag=flightpath5] run tp @s ^ ^ ^32 facing entity @e[tag=spectatetarget,limit=1]
