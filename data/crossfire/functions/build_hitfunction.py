@@ -34,7 +34,7 @@ s("execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!a
 s("execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit")
 s("")
 s("# Hit supply crates")
-s("execute if entity @s[tag=blue] as @e[tag=supplycrate,distance=..3] run tag @s add crateless")
+s("execute as @e[tag=supplycrate,distance=..3] run tag @s add crateless")
 s("")
 s("# Remove hit tags")
 s("tag @e[type=!player] remove hit")
