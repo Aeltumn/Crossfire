@@ -24,4 +24,4 @@ execute if score spectateSuccess spectateSuccess matches 0 store success score s
 # If nothing else, we do the spectator cam
 # effect give @s minecraft:levitation 1000000 255 true
 # effect give @s minecraft:invisibility 1000000 255 true
-execute if score spectateSuccess spectateSuccess matches 0 if score started started matches 1 as @a[tag=spectating] at @e[tag=flightpath5] run tp @s ^ ^ ^32 facing entity @e[tag=spectatetarget,limit=1]
+execute if score spectateSuccess spectateSuccess matches 0 if score started started matches 1 as @a[tag=spectating] at @e[tag=flightpath5] run tp @s ^ ^ ^28 facing entity @e[tag=spectatetarget,limit=1]
