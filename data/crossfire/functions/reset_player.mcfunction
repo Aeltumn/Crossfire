@@ -33,8 +33,8 @@ tag @s remove spectateplayer9
 tag @s remove spectateplayer10
 tag @s remove spectateplayer11
 tag @s remove hit
-tag @s remove reloadcrossbow
 tag @s remove givecrossbow
+tag @s remove reloadcrossbow
 
 # Fix wins
 scoreboard players add @s wins 0
