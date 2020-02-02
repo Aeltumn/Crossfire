@@ -1,10 +1,11 @@
 # Give players spectating if applicable
-execute if score started started matches 1 as @a[tag=!spectating,tag=!joined] run tag @s add spectating
+execute if score started started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin] run effect give @s minecraft:invisibility 1000000 255 true
+execute if score started started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin] run effect give @s minecraft:levitation 1000000 255 true
+execute if score started started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin] run tag @s add spectating
 
 # Set gamemode to proper
 gamerule sendCommandFeedback false
-gamemode adventure @a[tag=!spectating,tag=!admin]
-gamemode spectator @a[tag=spectating,tag=!admin]
+gamemode adventure @a[tag=!admin]
 gamerule sendCommandFeedback true
 
 # Spectate the player into someone else
