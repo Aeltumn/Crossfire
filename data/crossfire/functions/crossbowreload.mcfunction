@@ -2,8 +2,8 @@
 execute as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run kill @s
 
 # Take givecrossbow and reloadcrossbow tags from spectators and admins tag @s remove givecrossbow
-execute as @a[tag=givecrossbow] unless entity @e[tag=!spectating,tag=!died,tag=!admin] run tag @s remove givecrossbow
-execute as @a[tag=reloadcrossbow] unless entity @e[tag=!spectating,tag=!died,tag=!admin] run tag @s remove reloadcrossbow
+execute as @a[tag=givecrossbow] unless entity @s[tag=!spectating,tag=!died,tag=!admin] run tag @s remove givecrossbow
+execute as @a[tag=reloadcrossbow] unless entity @s[tag=!spectating,tag=!died,tag=!admin] run tag @s remove reloadcrossbow
 
 # Set `item` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it

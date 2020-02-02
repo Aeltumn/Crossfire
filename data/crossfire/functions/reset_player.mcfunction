@@ -40,7 +40,8 @@ tag @s remove reloadcrossbow
 scoreboard players add @s wins 0
 
 # Fix timer
-scoreboard players reset @s timer
+scoreboard players set @s isreloading 0
+scoreboard players set @s timer 0
 
 # Teleport people back
 gamerule sendCommandFeedback false
