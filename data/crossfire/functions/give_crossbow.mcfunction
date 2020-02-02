@@ -24,5 +24,5 @@ execute if score @s wins matches 30.. if entity @s[team=blue] run replaceitem en
 
 # Reset some variables
 scoreboard players set @s isreloading 0
-scoreboard players set @s timer 0
+scoreboard players set @s timer -1
 playsound minecraft:item.bottle.fill_dragonbreath master @s ~ ~ ~ 0.4 1
