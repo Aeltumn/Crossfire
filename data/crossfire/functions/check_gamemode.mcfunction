@@ -1,11 +1,10 @@
 # Give players spectating if applicable
-execute if score started started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin] run effect give @s minecraft:invisibility 1000000 255 true
-execute if score started started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin] run effect give @s minecraft:levitation 1000000 255 true
 execute if score started started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin] run tag @s add spectating
 
 # Set gamemode to proper
 gamerule sendCommandFeedback false
-gamemode adventure @a[tag=!admin]
+gamemode adventure @a[tag=!spectating,tag=!admin]
+gamemode spectator @a[tag=spectating,tag=!admin]
 gamerule sendCommandFeedback true
 
 # Spectate the player into someone else
@@ -23,4 +22,6 @@ execute if score spectateSuccess spectateSuccess matches 0 store success score s
 execute if score spectateSuccess spectateSuccess matches 0 store success score spectateSuccess spectateSuccess if score started started matches 1 as @a[tag=spectating,tag=spectateplayer11] run spectate @e[limit=1,tag=player11,tag=!spectating] @s
 
 # If nothing else, we do the spectator cam
+# effect give @s minecraft:levitation 1000000 255 true
+# effect give @s minecraft:invisibility 1000000 255 true
 execute if score spectateSuccess spectateSuccess matches 0 if score started started matches 1 as @a[tag=spectating] at @e[tag=flightpath5] run tp @s ^ ^ ^32 facing entity @e[tag=spectatetarget,limit=1]
