@@ -3,11 +3,11 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run kill @s
 
 # Set `item` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it
-execute as @a unless entity @s[tag=!died,tag=!admin,tag=givecrossbow] run clear @s minecraft:crossbow
-execute as @a[tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0
-execute as @a[tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 2.. run clear @s minecraft:crossbow
-execute as @a[tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0
-execute as @a[tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 0 run give @s minecraft:crossbow{Charged:0b}
+execute as @a unless entity @s[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] run clear @s minecraft:crossbow
+execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0
+execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 2.. run clear @s minecraft:crossbow
+execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0
+execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 0 run give @s minecraft:crossbow{Charged:0b}
 
 # Determine whether or not the player is currently allowed to reload
 execute as @a[tag=reloadcrossbow,scores={isreloading=..0,respawnshield=..3},tag=!died,tag=!admin,nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Charged:0b}}}] run scoreboard players set @s isreloading 1

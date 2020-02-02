@@ -39,6 +39,9 @@ tag @s remove givecrossbow
 # Fix wins
 scoreboard players add @s wins 0
 
+# Fix timer
+scoreboard players reset @s timer
+
 # Teleport people back
 gamerule sendCommandFeedback false
 gamemode adventure @s[tag=!admin]

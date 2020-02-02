@@ -4,6 +4,7 @@ gamemode adventure @s
 gamerule sendCommandFeedback true
 clear @s #crossfire:obtainableitems
 tag @s add givecrossbow
+function crossfire:give_armor
 
 effect give @s minecraft:resistance 1000000 255 true
 effect give @s minecraft:saturation 1000000 255 true

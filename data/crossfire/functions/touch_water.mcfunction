@@ -1,5 +1,8 @@
 tellraw @a ["",{"selector":"@s"},{"text":" tried to swim.."}]
 gamemode spectator @s
+clear @s minecraft:leather_chestplate
+clear @s minecraft:leather_leggings
+clear @s minecraft:leather_boots
 tag @s add waterdead
 tag @s add spectating
 tag @s add died

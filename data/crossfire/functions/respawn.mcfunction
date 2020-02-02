@@ -16,5 +16,8 @@ execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run tag @s add spectating
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run effect give @s minecraft:levitation 1000000 255 true
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run effect give @s minecraft:invisibility 1000000 255 true
+execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run clear @s minecraft:leather_chestplate
+execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run clear @s minecraft:leather_leggings
+execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run clear @s minecraft:leather_boots
 
 execute as @a[tag=died] if score @s deadtimer matches ..0 run function crossfire:respawn2

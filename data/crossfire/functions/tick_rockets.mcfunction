@@ -11,10 +11,10 @@ execute as @a[tag=died,tag=!waterdead,tag=!spectating] at @s run particle minecr
 clear @a[tag=!admin] #crossfire:illegalitems
 
 # Trigger a hit for each team if the hit player isn't of the same team and not spectating
-execute as @e[tag=!dead,type=arrow,tag=green] at @s if entity @e[type=player,distance=..2.5,team=!green,tag=!died,tag=!spectating,tag=selected] run function crossfire:generated/hit
-execute as @e[tag=!dead,type=arrow,tag=red] at @s if entity @e[type=player,distance=..2.5,team=!red,tag=!died,tag=!spectating,tag=selected] run function crossfire:generated/hit
-execute as @e[tag=!dead,type=arrow,tag=yellow] at @s if entity @e[type=player,distance=..2.5,team=!yellow,tag=!died,tag=!spectating,tag=selected] run function crossfire:generated/hit
-execute as @e[tag=!dead,type=arrow,tag=blue] at @s if entity @e[type=player,distance=..2.5,team=!blue,tag=!died,tag=!spectating,tag=selected] run function crossfire:generated/hit
+execute as @e[tag=!dead,type=arrow,tag=green] at @s if entity @e[type=player,distance=..2.5,team=!green,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
+execute as @e[tag=!dead,type=arrow,tag=red] at @s if entity @e[type=player,distance=..2.5,team=!red,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
+execute as @e[tag=!dead,type=arrow,tag=yellow] at @s if entity @e[type=player,distance=..2.5,team=!yellow,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
+execute as @e[tag=!dead,type=arrow,tag=blue] at @s if entity @e[type=player,distance=..2.5,team=!blue,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
 
 # Trigger hits if the arrow hits the ground or the arrow is too old
 execute as @e[tag=!dead,type=minecraft:arrow,nbt={inGround:1b}] at @s run function crossfire:generated/hit
