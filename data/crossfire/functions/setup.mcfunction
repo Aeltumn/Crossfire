@@ -11,6 +11,7 @@ scoreboard objectives add roundKills dummy
 scoreboard objectives add spectateSuccess dummy
 scoreboard objectives add isreloading dummy
 scoreboard objectives add timer dummy
+scoreboard objectives add round dummy
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add kills dummy {"text":"Kills"}
 scoreboard objectives setdisplay belowName kills
@@ -61,4 +62,3 @@ gamerule naturalRegeneration false
 # Clone logo back
 clone 308 28 169 305 48 132 393 42 132
 function crossfire:lobby_teleport
-execute as @a run function crossfire:reset_player
