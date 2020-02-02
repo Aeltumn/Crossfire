@@ -15,10 +15,10 @@ execute as @a unless entity @s[tag=reloadcrossbow,scores={respawnshield=..3},tag
 
 # Increase timer (or reset if it shouldn't increase)
 execute as @a[scores={isreloading=1..}] run scoreboard players add @s timer 1
-execute as @a[scores={isreloading=..0}] run scoreboard players set @s timer 0
+execute as @a[scores={isreloading=..0}] run scoreboard players set @s timer 1
 
 # Give reload crossbows during reloading
-execute as @a[scores={timer=0..10}] run replaceitem entity @s container.0 crossbow{CustomModelData:17,HideFlags:63,Charged:0b} 1
+execute as @a[scores={timer=1..10}] run replaceitem entity @s container.0 crossbow{CustomModelData:17,HideFlags:63,Charged:0b} 1
 execute as @a[scores={timer=11..20}] run replaceitem entity @s container.0 crossbow{CustomModelData:18,HideFlags:63,Charged:0b} 1
 execute as @a[scores={timer=21..30}] run replaceitem entity @s container.0 crossbow{CustomModelData:19,HideFlags:63,Charged:0b} 1
 execute as @a[scores={timer=31..40}] run replaceitem entity @s container.0 crossbow{CustomModelData:20,HideFlags:63,Charged:0b} 1
