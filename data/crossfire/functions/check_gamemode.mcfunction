@@ -17,8 +17,8 @@ execute as @a[tag=spectateplayer10] unless entity @a[tag=player10,tag=!spectatin
 execute as @a[tag=spectateplayer11] unless entity @a[tag=player11,tag=!spectating] run tag @s remove spectateplayer11
 
 # Give spectatoradventure if we have no specateplayer
-execute as @a unless entity @s[tag=!specateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s remove spectatoradventure
-execute as @a if entity @s[tag=!specateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s add spectatoradventure
+execute as @a if entity @s[tag=!specateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s remove spectatoradventure
+execute as @a unless entity @s[tag=!specateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s add spectatoradventure
 
 # Set into the proper gamemode
 gamerule sendCommandFeedback false
@@ -28,16 +28,16 @@ gamerule sendCommandFeedback true
 
 # Actually make player spectate if applicable
 execute as @a[tag=spectateplayer1,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player1,tag=!spectating] @s
-execute as @a[tag=spectateplayer2,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player2,tag=!spectate] @s
-execute as @a[tag=spectateplayer3,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player3,tag=!spectate] @s
-execute as @a[tag=spectateplayer4,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player4,tag=!spectate] @s
-execute as @a[tag=spectateplayer5,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player5,tag=!spectate] @s
-execute as @a[tag=spectateplayer6,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player6,tag=!spectate] @s
-execute as @a[tag=spectateplayer7,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player7,tag=!spectate] @s
-execute as @a[tag=spectateplayer8,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player8,tag=!spectate] @s
-execute as @a[tag=spectateplayer9,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player9,tag=!spectate] @s
-execute as @a[tag=spectateplayer10,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player10,tag=!spectate] @s
-execute as @a[tag=spectateplayer11,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player11,tag=!spectate] @s
+execute as @a[tag=spectateplayer2,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player2,tag=!spectating] @s
+execute as @a[tag=spectateplayer3,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player3,tag=!spectating] @s
+execute as @a[tag=spectateplayer4,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player4,tag=!spectating] @s
+execute as @a[tag=spectateplayer5,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player5,tag=!spectating] @s
+execute as @a[tag=spectateplayer6,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player6,tag=!spectating] @s
+execute as @a[tag=spectateplayer7,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player7,tag=!spectating] @s
+execute as @a[tag=spectateplayer8,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player8,tag=!spectating] @s
+execute as @a[tag=spectateplayer9,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player9,tag=!spectating] @s
+execute as @a[tag=spectateplayer10,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player10,tag=!spectating] @s
+execute as @a[tag=spectateplayer11,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player11,tag=!spectating] @s
 
 # If nothing else, we do the spectator cam
 execute as @a[tag=spectatoradventure,gamemode=adventure] as @a[tag=spectating] at @e[tag=flightpath5] run tp @s ^ ^ ^28 facing entity @e[tag=spectatetarget,limit=1]
