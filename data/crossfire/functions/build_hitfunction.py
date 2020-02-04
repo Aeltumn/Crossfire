@@ -34,6 +34,7 @@ s("execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!a
 s("execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit")
 s("")
 s("# Hit supply crates")
+s("scoreboard players set result result 0")
 s("execute store result score result result as @e[tag=supplycrate,tag=!crateless,distance=..3] run tag @s add wantstodrop")
 s("execute if score result result matches 1 as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!crateless,tag=!wantstodrop,distance=..1] add wantstodrop")
 for i in range(1, 12):
