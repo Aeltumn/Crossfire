@@ -29,7 +29,8 @@ execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admi
 execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
 
 # Hit supply crates
-execute as @e[tag=supplycrate,distance=..3] run tag @s add crateless
+execute as @e[tag=supplycrate,tag=!crateless,distance=..3] run tag @s add wantstodrop
+execute as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!wantstodrop,distance=..1] add wantstodrop
 
 # Remove hit tags
 tag @e[type=!player] remove hit
