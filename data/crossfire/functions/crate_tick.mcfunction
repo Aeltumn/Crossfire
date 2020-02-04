@@ -1,3 +1,6 @@
+# Kill powerups after 25s
+kill @e[tag=sparkling,scores={age=500..}]
+
 # Increase copter age
 scoreboard players add @e[tag=supplycrate] age 1
 scoreboard players add @e[tag=crate] age 1
