@@ -1,5 +1,5 @@
 # Increase copter age
-scoreboard players add @e[tag=supplycrate,tag!=diamond] age 1
+scoreboard players add @e[tag=supplycrate,tag=!diamond] age 1
 scoreboard players add @e[tag=crate,tag=!diamond] age 1
 scoreboard players add @e[tag=supplycrate,tag=diamond] age 8
 scoreboard players add @e[tag=crate,tag=diamond] age 8
