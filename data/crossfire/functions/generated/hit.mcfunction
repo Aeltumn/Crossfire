@@ -31,17 +31,17 @@ execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admi
 # Hit supply crates
 execute as @e[tag=supplycrate,tag=!crateless,distance=..3] run tag @s add wantstodrop
 execute as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!crateless,tag=!wantstodrop,distance=..1] add wantstodrop
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
-tellraw @a ["",{"selector":"@a[tag="+name+",limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"gray"}]
+tellraw @a ["",{"selector":"@a[tag=player1,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player2,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player3,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player4,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player5,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player6,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player7,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player8,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player9,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player10,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+tellraw @a ["",{"selector":"@a[tag=player11,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
 
 # Remove hit tags
 tag @e[type=!player] remove hit
