@@ -3,6 +3,22 @@ execute if score gametimer gametimer matches 0.. run execute store result bossba
 execute if score gametimer gametimer matches 2.. run bossbar set minecraft:timer name ["",{"text":"Game ends in: "},{"score":{"name":"gametimer","objective":"gametimer"},"bold":true,"color":"gold"},{"text":" seconds."}]
 execute if score gametimer gametimer matches 1 run bossbar set minecraft:timer name ["",{"text":"Game ends in: "},{"score":{"name":"gametimer","objective":"gametimer"},"bold":true,"color":"gold"},{"text":" second."}]
 
+# Spawn random crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 20 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 40 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 60 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 80 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 100 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 120 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 140 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 160 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 180 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 200 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 220 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 240 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 260 run function crossfire:spawn/random_crates
+execute if predicate crossfire:spawn_crates if score gametimer gametimer matches 280 run function crossfire:spawn/random_crates
+
 # Run game end
 execute if score gametimer gametimer matches 0 run function crossfire:end_game
 

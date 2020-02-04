@@ -1,0 +1,1 @@
+execute positioned 397 22 150 run function crossfire:spawn/iron_crate

@@ -1,0 +1,6 @@
+{
+    "condition": "spawn_crates",
+    "random_chance": {
+        "chance": 0.2
+    }
+}

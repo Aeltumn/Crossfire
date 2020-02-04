@@ -54,6 +54,10 @@ execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 46
 execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 397.5 23 150.5 -90 0
 team join lobby @s
 
+# Reset exp
+xp set @s 0 levels
+xp set @s 0 points
+
 # Quality of life!
 effect give @s[tag=!admin] minecraft:instant_health 1 20 true
 effect give @s[tag=!admin] minecraft:jump_boost 1000000 1 true
