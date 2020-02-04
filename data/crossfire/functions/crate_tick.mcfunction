@@ -3,8 +3,8 @@ scoreboard players add @e[tag=supplycrate] age 1
 scoreboard players add @e[tag=crate] age 1
 
 # Make too old crates leave
-execute as @e[tag=supplycrate,tag=!wantstodrop,scores={age=800..}] run tag @s add crateless
-execute as @e[tag=crate,tag=!wantstodrop,scores={age=800..}] run tag @s add crateless
+execute as @e[tag=supplycrate,tag=!wantstodrop,tag=!crateless,scores={age=800..}] run tag @s add crateless
+execute as @e[tag=crate,tag=!wantstodrop,tag=!dropped,scores={age=800..}] run tag @s add crateless
 
 # Cloud particle in copter
 execute as @e[tag=crate] at @s run particle minecraft:cloud ~ ~2.5 ~ 0.6 0.3 0.6 0 1
