@@ -29,6 +29,7 @@ execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admi
 execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
 
 # Hit supply crates
+scoreboard players set result result 0
 execute store result score result result as @e[tag=supplycrate,tag=!crateless,distance=..3] run tag @s add wantstodrop
 execute if score result result matches 1 as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!crateless,tag=!wantstodrop,distance=..1] add wantstodrop
 execute if score result result matches 1 if entity @s[tag=player1] run tellraw @a ["",{"selector":"@a[tag=player1,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
