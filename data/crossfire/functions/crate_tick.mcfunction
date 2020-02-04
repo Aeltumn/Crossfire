@@ -26,6 +26,4 @@ execute as @e[tag=wantstodrop,tag=supplycrate,tag=!crateless] at @s if block ~ 0
 execute as @e[tag=wantstodrop,tag=supplycrate,tag=crateless] run tag @s remove wantstodrop
 
 # Make crates explode on impact
-execute as @e[tag=dropped,tag=iron] at @s unless block ~ ~-1 ~ minecraft:air run function crossfire:drop_iron
-execute as @e[tag=dropped,tag=gold] at @s unless block ~ ~-1 ~ minecraft:air run function crossfire:drop_iron
-execute as @e[tag=dropped,tag=diamond] at @s unless block ~ ~-1 ~ minecraft:air run function crossfire:drop_iron
+execute as @e[tag=dropped] if data entity @s {OnGround:1b} run function crossfire:drop_iron
