@@ -29,19 +29,19 @@ execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admi
 execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
 
 # Hit supply crates
-execute as @e[tag=supplycrate,tag=!crateless,distance=..3] run tag @s add wantstodrop
-execute as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!crateless,tag=!wantstodrop,distance=..1] add wantstodrop
-execute if entity @s[tag=player1] run tellraw @a ["",{"selector":"@a[tag=player1,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player2] run tellraw @a ["",{"selector":"@a[tag=player2,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player3] run tellraw @a ["",{"selector":"@a[tag=player3,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player4] run tellraw @a ["",{"selector":"@a[tag=player4,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player5] run tellraw @a ["",{"selector":"@a[tag=player5,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player6] run tellraw @a ["",{"selector":"@a[tag=player6,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player7] run tellraw @a ["",{"selector":"@a[tag=player7,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player8] run tellraw @a ["",{"selector":"@a[tag=player8,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player9] run tellraw @a ["",{"selector":"@a[tag=player9,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player10] run tellraw @a ["",{"selector":"@a[tag=player10,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
-execute if entity @s[tag=player11] run tellraw @a ["",{"selector":"@a[tag=player11,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute store result score result result as @e[tag=supplycrate,tag=!crateless,distance=..3] run tag @s add wantstodrop
+execute if score result result matches 1 as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!crateless,tag=!wantstodrop,distance=..1] add wantstodrop
+execute if score result result matches 1 if entity @s[tag=player1] run tellraw @a ["",{"selector":"@a[tag=player1,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player2] run tellraw @a ["",{"selector":"@a[tag=player2,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player3] run tellraw @a ["",{"selector":"@a[tag=player3,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player4] run tellraw @a ["",{"selector":"@a[tag=player4,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player5] run tellraw @a ["",{"selector":"@a[tag=player5,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player6] run tellraw @a ["",{"selector":"@a[tag=player6,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player7] run tellraw @a ["",{"selector":"@a[tag=player7,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player8] run tellraw @a ["",{"selector":"@a[tag=player8,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player9] run tellraw @a ["",{"selector":"@a[tag=player9,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player10] run tellraw @a ["",{"selector":"@a[tag=player10,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
+execute if score result result matches 1 if entity @s[tag=player11] run tellraw @a ["",{"selector":"@a[tag=player11,limit=1]"},{"text":" has hit a crate! It's about to fall down!","color":"white"}]
 
 # Remove hit tags
 tag @e[type=!player] remove hit
