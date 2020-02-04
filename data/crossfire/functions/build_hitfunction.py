@@ -38,7 +38,7 @@ s("execute as @e[tag=supplycrate,tag=!crateless,distance=..3] run tag @s add wan
 s("execute as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!crateless,tag=!wantstodrop,distance=..1] add wantstodrop")
 for i in range(1, 12):
     name = "player" + str(i)
-    s("tellraw @a [\"\",{\"selector\":\"@a[tag=\"+name+\",limit=1]\"},{\"text\":\" has hit a crate! It's about to fall down!\",\"color\":\"gray\"}]")
+    s("tellraw @a [\"\",{\"selector\":\"@a[tag="+name+",limit=1]\"},{\"text\":\" has hit a crate! It's about to fall down!\",\"color\":\"white\"}]")
 s("")
 s("# Remove hit tags")
 s("tag @e[type=!player] remove hit")
