@@ -2,7 +2,7 @@
 execute as @e[tag=flightpath5] at @s run tp @s ~ ~ ~ ~0.05 -10
 # Rotate sparkling entities
 execute as @e[tag=sparkling] run scoreboard players add @s age 1
-# execute as @e[tag=sparkling,scores={age=5..}] at @s run tp @s ~ ~ ~ ~1 ~
+execute as @e[tag=sparkling] if data entity @s {Marker:1b,NoGravity:1b} at @s run tp @s ~ ~ ~ ~1 ~
 
 # Make copters fly
 execute as @e[tag=supplycrate,tag=!crateless,tag=!diamond] at @s run tp @s ^ ^ ^0.2 ~2 ~
