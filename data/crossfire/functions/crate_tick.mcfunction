@@ -14,14 +14,14 @@ execute as @e[tag=crate,tag=diamond,tag=!wantstodrop,tag=!dropped,scores={age=30
 execute as @e[tag=crate] at @s run particle minecraft:cloud ~ ~2.5 ~ 0.6 0.3 0.6 0 1
 
 # Sparkling particles for dropped items
-execute as @e[tag=sparkling] at @s run particle minecraft:firework ~ ~ ~ 0.2 0.3 0.2 0 1
+execute as @e[tag=sparkling] at @s run particle minecraft:firework ~ ~0.2 ~ 0.2 0.3 0.2 0 1
 
 # Lava particle if crate wants to dorp
 execute as @e[tag=supplycrate,tag=wantstodrop,tag=!crateless] at @s run particle minecraft:lava ~ ~2.5 ~ 0.3 0.5 0.3 0 1
 
 # Make crates explode on impact
-execute as @e[tag=dropped] at @s unless block ~ ~-1 ~ minecraft:air run function crossfire:drop_iron
-execute as @e[tag=dropped,scores={age=40..}] at @s run function crossfire:drop_iron
+execute as @e[tag=dropped] at @s unless block ~ ~-1 ~ minecraft:air positioned ~0.5 ~ ~0.5 run function crossfire:drop_iron
+execute as @e[tag=dropped,scores={age=40..}] at @s positioned ~0.5 ~ ~0.5 run function crossfire:drop_iron
 
 # Make crates drop if they want to and are above terracotta
 execute as @e[tag=wantstodrop,tag=crate,tag=!crateless] at @s if block ~ 0 ~ minecraft:purple_glazed_terracotta run tag @s add dropped
