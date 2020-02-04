@@ -16,14 +16,14 @@ execute as @e[tag=crate] at @s run particle minecraft:cloud ~ ~2.5 ~ 0.6 0.3 0.6
 # Lava particle if crate wants to dorp
 execute as @e[tag=supplycrate,tag=wantstodrop,tag=!crateless] at @s run particle minecraft:lava ~ ~2.5 ~ 0.3 0.5 0.3 0 1
 
+# Make crates explode on impact
+execute as @e[tag=dropped] if data entity @s {OnGround:1b} run function crossfire:drop_iron
+
 # Make crates drop if they want to and are above terracotta
 execute as @e[tag=wantstodrop,tag=crate,tag=!crateless] at @s if block ~ 0 ~ minecraft:purple_glazed_terracotta run tag @s add dropped
-execute as @e[tag=wantstodrop,tag=crate,tag=dropped] run data merge entity @s {NoGravity:0}
+execute as @e[tag=wantstodrop,tag=crate,tag=dropped] run data merge entity @s {NoGravity:0b}
 execute as @e[tag=wantstodrop,tag=crate,tag=dropped] run tag @s remove wantstodrop
 
 # Make copters fly away if they are above terracotta
 execute as @e[tag=wantstodrop,tag=supplycrate,tag=!crateless] at @s if block ~ 0 ~ minecraft:purple_glazed_terracotta run tag @s add crateless
 execute as @e[tag=wantstodrop,tag=supplycrate,tag=crateless] run tag @s remove wantstodrop
-
-# Make crates explode on impact
-execute as @e[tag=dropped] if data entity @s {OnGround:1b} run function crossfire:drop_iron
