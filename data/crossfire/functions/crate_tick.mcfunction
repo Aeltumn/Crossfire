@@ -17,7 +17,7 @@ execute as @e[tag=crate] at @s run particle minecraft:cloud ~ ~2.5 ~ 0.6 0.3 0.6
 execute as @e[tag=supplycrate,tag=wantstodrop,tag=!crateless] at @s run particle minecraft:lava ~ ~2.5 ~ 0.3 0.5 0.3 0 1
 
 # Make crates explode on impact
-execute as @e[tag=dropped] if data entity @s {OnGround:1b} run function crossfire:drop_iron
+execute as @e[tag=dropped] if data entity @s {OnGround:1b} at @s run function crossfire:drop_iron
 
 # Make crates drop if they want to and are above terracotta
 execute as @e[tag=wantstodrop,tag=crate,tag=!crateless] at @s if block ~ 0 ~ minecraft:purple_glazed_terracotta run tag @s add dropped
