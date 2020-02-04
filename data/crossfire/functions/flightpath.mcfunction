@@ -2,8 +2,13 @@
 execute as @e[tag=flightpath5] at @s run tp @s ~ ~ ~ ~0.05 -10
 
 # Make copters fly
-execute as @e[tag=supplycrate,tag=!crateless] at @s run tp @s ^ ^ ^0.2 ~2 ~
-execute as @e[tag=crate,tag=!crateless,tag=!dropped] at @s run tp @s ^ ^ ^0.2 ~2 ~
+execute as @e[tag=supplycrate,tag=!crateless,tag=!diamond] at @s run tp @s ^ ^ ^0.2 ~2 ~
+execute as @e[tag=crate,tag=!crateless,tag=!dropped,tag=!diamond] at @s run tp @s ^ ^ ^0.2 ~2 ~
+
+# Diamonds go straight ahead
+execute as @e[tag=supplycrate,tag=!crateless,tag=diamond] at @s run tp @s ^ ^ ^0.3 ~ ~
+execute as @e[tag=crate,tag=!crateless,tag=!dropped,tag=diamond] at @s run tp @s ^ ^ ^0.3 ~ ~
+
 # If crateless make copter(/crate) fly up
 execute as @e[tag=crateless] at @s run tp @s ~ ~0.2 ~
 

@@ -1,6 +1,8 @@
 # Increase copter age
-scoreboard players add @e[tag=supplycrate] age 1
-scoreboard players add @e[tag=crate] age 1
+scoreboard players add @e[tag=supplycrate,tag!=diamond] age 1
+scoreboard players add @e[tag=crate,tag=!diamond] age 1
+scoreboard players add @e[tag=supplycrate,tag=diamond] age 8
+scoreboard players add @e[tag=crate,tag=diamond] age 8
 
 # Make too old crates leave
 execute as @e[tag=supplycrate,tag=!wantstodrop,tag=!crateless,scores={age=800..}] run tag @s add crateless
