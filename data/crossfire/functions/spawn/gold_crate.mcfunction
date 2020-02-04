@@ -1,3 +1,3 @@
 summon minecraft:armor_stand ~ 38 ~ {Tags:["supplycrate","gold"],NoGravity:1b,ArmorItems:[{},{},{},{id:"gold_ingot",Count:10b,Marker:1b,tag:{CustomModelData:2}}],Invisible:1}
-summon minecraft:armor_stand ~ 38 ~ {Tags:["crate","gold"],NoGravity:1b,ArmorItems:[{},{},{},{id:"gold_ingot",Count:10b,tag:{CustomModelData:4}}],Invisible:1}
+summon minecraft:armor_stand ~ 38 ~ {Tags:["crate","gold"],NoGravity:1b,ArmorItems:[{},{},{},{id:"gold_ingot",Marker:1b,Count:10b,tag:{CustomModelData:4}}],Invisible:1}
 tellraw @a ["",{"text":"A shiny crate has appeared!","color":"white"}]
