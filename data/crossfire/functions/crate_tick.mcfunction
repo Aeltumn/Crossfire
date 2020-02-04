@@ -14,7 +14,7 @@ execute as @e[tag=crate,tag=diamond,tag=!wantstodrop,tag=!dropped,scores={age=30
 execute as @e[tag=crate] at @s run particle minecraft:cloud ~ ~2.5 ~ 0.6 0.3 0.6 0 1
 
 # Sparkling particles for dropped items
-execute as @e[tag=sparkling] at @s run particle minecraft:firework ~ ~ ~ 0.2 0.3 0.2 0 2
+execute as @e[tag=sparkling] at @s run particle minecraft:firework ~ ~ ~ 0.2 0.3 0.2 0 1
 
 # Lava particle if crate wants to dorp
 execute as @e[tag=supplycrate,tag=wantstodrop,tag=!crateless] at @s run particle minecraft:lava ~ ~2.5 ~ 0.3 0.5 0.3 0 1
