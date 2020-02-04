@@ -1,9 +1,6 @@
 # Kill powerups after 50s
 kill @e[tag=sparkling,scores={age=1000..}]
 
-# Give tags to powerups if they are on the ground
-#execute as @e[tag=sparkling,scores={age=1..}] run data merge entity @s {Marker:1b,NoGravity:1b}
-
 # Increase copter age
 scoreboard players add @e[tag=supplycrate] age 1
 scoreboard players add @e[tag=crate] age 1
