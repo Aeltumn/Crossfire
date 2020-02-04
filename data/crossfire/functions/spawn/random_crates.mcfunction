@@ -13,5 +13,5 @@ execute if score location result matches 0 if predicate crossfire:gold_chance po
 execute if score location result matches 1 if predicate crossfire:gold_chance positioned 397 22 150 run function crossfire:spawn/gold_crate
 
 # Diamond crate
-execute if score location result matches 0 f predicate crossfire:diamond_chance positioned 390 20 177 rotated -180 0 run function crossfire:spawn/diamond_crate
+execute if score location result matches 0 if predicate crossfire:diamond_chance positioned 390 20 177 rotated -180 0 run function crossfire:spawn/diamond_crate
 execute if score location result matches 1 if predicate crossfire:diamond_chance positioned 404 32 123 rotated 0 0 run function crossfire:spawn/diamond_crate
