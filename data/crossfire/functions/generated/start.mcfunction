@@ -10,66 +10,77 @@ execute if score map map matches 0 if score joined joined matches 2.. if score p
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 0 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player1
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player1] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player1] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player1] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 1 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player2
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 1 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player2
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player2] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player2] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player2] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 2 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player3
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 2 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player3
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player3] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player3] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player3] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 3 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player4
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 3 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player4
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player4] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player4] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player4] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 4 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player5
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 4 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player5
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player5] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player5] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player5] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 5 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player6
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 5 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player6
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player6] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player6] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player6] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 6 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player7
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 6 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player7
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player7] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player7] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player7] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 7 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player8
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 7 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player8
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player8] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player8] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player8] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 8 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player9
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 8 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player9
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player9] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player9] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player9] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 9 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player10
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 9 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player10
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player10] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player10] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player10] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches 10 as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add player11
 execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches 10 as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add player11
 execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=player11] run tag @s add selected0
 execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=player11] run tag @s add selected1
+execute if score joined joined matches 2.. as @a[tag=player11] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
 
