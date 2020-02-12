@@ -17,9 +17,9 @@ scoreboard players set @s deadtimer 6
 scoreboard players set @s isreloading 0
 scoreboard players set @s timer 0
 
-tp @s[team=blue] 397.5 27 124.5 0 0
-tp @s[team=yellow] 423.5 27 150.5 90 0
-tp @s[team=green] 529 71 275 0 0
-tp @s[team=red] 529 71 317 180 0
+tp @s[team=blue] 548 77 421.5 90 0
+tp @s[team=yellow] 511 77 421.5 -90 0
+tp @s[team=green] 529.5 77 403 0 0
+tp @s[team=red] 529.5 77 440 180 0
 tp @s[team=magenta] 529.5 71 317.0 180 0
 tp @s[team=orange] 529.5 71 276.0 0 0

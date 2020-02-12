@@ -15,6 +15,8 @@ execute as @e[tag=!dead,type=arrow,tag=green] at @s if entity @a[distance=..2.5,
 execute as @e[tag=!dead,type=arrow,tag=red] at @s if entity @a[distance=..2.5,team=!red,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
 execute as @e[tag=!dead,type=arrow,tag=yellow] at @s if entity @a[distance=..2.5,team=!yellow,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
 execute as @e[tag=!dead,type=arrow,tag=blue] at @s if entity @a[distance=..2.5,team=!blue,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
+execute as @e[tag=!dead,type=arrow,tag=orange] at @s if entity @a[distance=..2.5,team=!orange,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
+execute as @e[tag=!dead,type=arrow,tag=magenta] at @s if entity @a[distance=..2.5,team=!magenta,tag=!died,tag=!spectating,tag=selected,tag=!admin] run function crossfire:generated/hit
 
 # Trigger hit on supply crates
 execute as @e[tag=!dead,type=arrow] at @s if entity @e[tag=supplycrate,distance=..2.5] run function crossfire:generated/hit

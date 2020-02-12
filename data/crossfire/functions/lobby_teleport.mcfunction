@@ -6,6 +6,8 @@ team empty blue
 team empty red
 team empty yellow
 team empty green
+team empty orange
+team empty magenta
 
 # Reset some scoreboard values
 scoreboard players set playerscore player 0
