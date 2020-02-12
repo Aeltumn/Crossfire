@@ -6,6 +6,8 @@ execute if entity @s[tag=red] at @s run summon firework_rocket ~ ~ ~ {Tags:["cus
 execute if entity @s[tag=yellow] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;14602026]}],Flight:1}}}}
 execute if entity @s[tag=green] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;4312372]}],Flight:1}}}}
 execute if entity @s[tag=blue] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;6719955]}],Flight:1}}}}
+execute if entity @s[tag=orange] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;15435844]}],Flight:1}}}}
+execute if entity @s[tag=magenta] at @s run summon firework_rocket ~ ~ ~ {Tags:["custom"],LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;12801229]}],Flight:1}}}}
 
 # Killscreens
 # Red killscreen
@@ -27,6 +29,16 @@ execute if entity @s[tag=green] as @a[distance=..3,team=!green,tag=!died,tag=!ad
 execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
 execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"aqua"},{"text":"\uE005"}]
 execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+
+# Orange killscreen
+execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"gold"},{"text":"\uE005"}]
+execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+
+# Magenta killscreen
+execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"light_purple"},{"text":"\uE005"}]
+execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
 
 # Hit supply crates
 scoreboard players set result result 0
@@ -52,56 +64,78 @@ execute if entity @s[tag=red,tag=player1] if entity @a[distance=..3,team=red,lim
 execute if entity @s[tag=yellow,tag=player1] if entity @a[distance=..3,team=yellow,limit=1,tag=!player1] run title @a[tag=player1] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player1] if entity @a[distance=..3,team=green,limit=1,tag=!player1] run title @a[tag=player1] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player1] if entity @a[distance=..3,team=blue,limit=1,tag=!player1] run title @a[tag=player1] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player1] if entity @a[distance=..3,team=orange,limit=1,tag=!player1] run title @a[tag=player1] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player1] if entity @a[distance=..3,team=magenta,limit=1,tag=!player1] run title @a[tag=player1] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player2] if entity @a[distance=..3,team=red,limit=1,tag=!player2] run title @a[tag=player2] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player2] if entity @a[distance=..3,team=yellow,limit=1,tag=!player2] run title @a[tag=player2] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player2] if entity @a[distance=..3,team=green,limit=1,tag=!player2] run title @a[tag=player2] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player2] if entity @a[distance=..3,team=blue,limit=1,tag=!player2] run title @a[tag=player2] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player2] if entity @a[distance=..3,team=orange,limit=1,tag=!player2] run title @a[tag=player2] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player2] if entity @a[distance=..3,team=magenta,limit=1,tag=!player2] run title @a[tag=player2] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player3] if entity @a[distance=..3,team=red,limit=1,tag=!player3] run title @a[tag=player3] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player3] if entity @a[distance=..3,team=yellow,limit=1,tag=!player3] run title @a[tag=player3] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player3] if entity @a[distance=..3,team=green,limit=1,tag=!player3] run title @a[tag=player3] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player3] if entity @a[distance=..3,team=blue,limit=1,tag=!player3] run title @a[tag=player3] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player3] if entity @a[distance=..3,team=orange,limit=1,tag=!player3] run title @a[tag=player3] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player3] if entity @a[distance=..3,team=magenta,limit=1,tag=!player3] run title @a[tag=player3] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player4] if entity @a[distance=..3,team=red,limit=1,tag=!player4] run title @a[tag=player4] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player4] if entity @a[distance=..3,team=yellow,limit=1,tag=!player4] run title @a[tag=player4] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player4] if entity @a[distance=..3,team=green,limit=1,tag=!player4] run title @a[tag=player4] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player4] if entity @a[distance=..3,team=blue,limit=1,tag=!player4] run title @a[tag=player4] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player4] if entity @a[distance=..3,team=orange,limit=1,tag=!player4] run title @a[tag=player4] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player4] if entity @a[distance=..3,team=magenta,limit=1,tag=!player4] run title @a[tag=player4] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player5] if entity @a[distance=..3,team=red,limit=1,tag=!player5] run title @a[tag=player5] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player5] if entity @a[distance=..3,team=yellow,limit=1,tag=!player5] run title @a[tag=player5] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player5] if entity @a[distance=..3,team=green,limit=1,tag=!player5] run title @a[tag=player5] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player5] if entity @a[distance=..3,team=blue,limit=1,tag=!player5] run title @a[tag=player5] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player5] if entity @a[distance=..3,team=orange,limit=1,tag=!player5] run title @a[tag=player5] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player5] if entity @a[distance=..3,team=magenta,limit=1,tag=!player5] run title @a[tag=player5] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player6] if entity @a[distance=..3,team=red,limit=1,tag=!player6] run title @a[tag=player6] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player6] if entity @a[distance=..3,team=yellow,limit=1,tag=!player6] run title @a[tag=player6] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player6] if entity @a[distance=..3,team=green,limit=1,tag=!player6] run title @a[tag=player6] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player6] if entity @a[distance=..3,team=blue,limit=1,tag=!player6] run title @a[tag=player6] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player6] if entity @a[distance=..3,team=orange,limit=1,tag=!player6] run title @a[tag=player6] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player6] if entity @a[distance=..3,team=magenta,limit=1,tag=!player6] run title @a[tag=player6] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player7] if entity @a[distance=..3,team=red,limit=1,tag=!player7] run title @a[tag=player7] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player7] if entity @a[distance=..3,team=yellow,limit=1,tag=!player7] run title @a[tag=player7] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player7] if entity @a[distance=..3,team=green,limit=1,tag=!player7] run title @a[tag=player7] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player7] if entity @a[distance=..3,team=blue,limit=1,tag=!player7] run title @a[tag=player7] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player7] if entity @a[distance=..3,team=orange,limit=1,tag=!player7] run title @a[tag=player7] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player7] if entity @a[distance=..3,team=magenta,limit=1,tag=!player7] run title @a[tag=player7] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player8] if entity @a[distance=..3,team=red,limit=1,tag=!player8] run title @a[tag=player8] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player8] if entity @a[distance=..3,team=yellow,limit=1,tag=!player8] run title @a[tag=player8] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player8] if entity @a[distance=..3,team=green,limit=1,tag=!player8] run title @a[tag=player8] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player8] if entity @a[distance=..3,team=blue,limit=1,tag=!player8] run title @a[tag=player8] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player8] if entity @a[distance=..3,team=orange,limit=1,tag=!player8] run title @a[tag=player8] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player8] if entity @a[distance=..3,team=magenta,limit=1,tag=!player8] run title @a[tag=player8] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player9] if entity @a[distance=..3,team=red,limit=1,tag=!player9] run title @a[tag=player9] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player9] if entity @a[distance=..3,team=yellow,limit=1,tag=!player9] run title @a[tag=player9] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player9] if entity @a[distance=..3,team=green,limit=1,tag=!player9] run title @a[tag=player9] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player9] if entity @a[distance=..3,team=blue,limit=1,tag=!player9] run title @a[tag=player9] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player9] if entity @a[distance=..3,team=orange,limit=1,tag=!player9] run title @a[tag=player9] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player9] if entity @a[distance=..3,team=magenta,limit=1,tag=!player9] run title @a[tag=player9] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player10] if entity @a[distance=..3,team=red,limit=1,tag=!player10] run title @a[tag=player10] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player10] if entity @a[distance=..3,team=yellow,limit=1,tag=!player10] run title @a[tag=player10] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player10] if entity @a[distance=..3,team=green,limit=1,tag=!player10] run title @a[tag=player10] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player10] if entity @a[distance=..3,team=blue,limit=1,tag=!player10] run title @a[tag=player10] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player10] if entity @a[distance=..3,team=orange,limit=1,tag=!player10] run title @a[tag=player10] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player10] if entity @a[distance=..3,team=magenta,limit=1,tag=!player10] run title @a[tag=player10] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 execute if entity @s[tag=red,tag=player11] if entity @a[distance=..3,team=red,limit=1,tag=!player11] run title @a[tag=player11] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=yellow,tag=player11] if entity @a[distance=..3,team=yellow,limit=1,tag=!player11] run title @a[tag=player11] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=green,tag=player11] if entity @a[distance=..3,team=green,limit=1,tag=!player11] run title @a[tag=player11] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 execute if entity @s[tag=blue,tag=player11] if entity @a[distance=..3,team=blue,limit=1,tag=!player11] run title @a[tag=player11] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=orange,tag=player11] if entity @a[distance=..3,team=orange,limit=1,tag=!player11] run title @a[tag=player11] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
+execute if entity @s[tag=magenta,tag=player11] if entity @a[distance=..3,team=magenta,limit=1,tag=!player11] run title @a[tag=player11] actionbar ["",{"text":"Don't attack your teammates!","color":"red"}]
 
 
 # Message informing you of respawn shield
@@ -109,56 +143,78 @@ execute if entity @s[tag=red,tag=player1] if entity @a[distance=..3,team=!red,ta
 execute if entity @s[tag=yellow,tag=player1] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player1] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player1] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player1] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player1] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player1] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player1] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player1] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player1] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player1] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player2] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player2] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player2] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player2] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player2] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player2] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player2] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player2] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player2] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player2] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player2] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player2] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player3] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player3] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player3] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player3] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player3] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player3] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player3] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player3] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player3] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player3] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player3] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player3] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player4] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player4] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player4] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player4] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player4] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player4] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player4] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player4] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player4] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player4] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player4] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player4] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player5] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player5] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player5] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player5] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player5] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player5] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player5] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player5] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player5] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player5] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player5] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player5] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player6] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player6] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player6] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player6] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player6] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player6] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player6] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player6] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player6] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player6] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player6] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player6] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player7] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player7] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player7] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player7] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player7] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player7] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player7] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player7] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player7] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player7] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player7] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player7] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player8] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player8] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player8] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player8] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player8] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player8] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player8] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player8] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player8] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player8] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player8] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player8] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player9] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player9] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player9] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player9] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player9] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player9] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player9] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player9] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player9] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player9] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player9] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player9] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player10] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player10] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player10] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player10] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player10] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player10] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player10] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player10] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player10] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player10] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player10] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player10] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 execute if entity @s[tag=red,tag=player11] if entity @a[distance=..3,team=!red,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player11] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=yellow,tag=player11] if entity @a[distance=..3,team=!yellow,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player11] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=green,tag=player11] if entity @a[distance=..3,team=!green,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player11] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 execute if entity @s[tag=blue,tag=player11] if entity @a[distance=..3,team=!blue,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player11] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=orange,tag=player11] if entity @a[distance=..3,team=!orange,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player11] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
+execute if entity @s[tag=magenta,tag=player11] if entity @a[distance=..3,team=!magenta,tag=!died,scores={respawnshield=1..},limit=1] run title @a[tag=player11] actionbar ["",{"text":"You've hit a player that was still respawning!","color":"yellow"}]
 
 
 # Death messages per player
