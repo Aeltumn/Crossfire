@@ -22,6 +22,18 @@ execute if score @s wins matches 10..19 if entity @s[team=blue] run replaceitem 
 execute if score @s wins matches 20..29 if entity @s[team=blue] run replaceitem entity @s container.3 crossbow{CustomModelData:7,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
 execute if score @s wins matches 30.. if entity @s[team=blue] run replaceitem entity @s container.3 crossbow{CustomModelData:11,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
 
+# Purple team
+execute if score @s wins matches ..9 if entity @s[team=purple] run replaceitem entity @s container.3 crossbow{CustomModelData:22,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+execute if score @s wins matches 10..19 if entity @s[team=purple] run replaceitem entity @s container.3 crossbow{CustomModelData:24,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+execute if score @s wins matches 20..29 if entity @s[team=purple] run replaceitem entity @s container.3 crossbow{CustomModelData:26,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+execute if score @s wins matches 30.. if entity @s[team=purple] run replaceitem entity @s container.3 crossbow{CustomModelData:28,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+
+# Orange team
+execute if score @s wins matches ..9 if entity @s[team=orange] run replaceitem entity @s container.3 crossbow{CustomModelData:21,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+execute if score @s wins matches 10..19 if entity @s[team=orange] run replaceitem entity @s container.3 crossbow{CustomModelData:23,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+execute if score @s wins matches 20..29 if entity @s[team=orange] run replaceitem entity @s container.3 crossbow{CustomModelData:25,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+execute if score @s wins matches 30.. if entity @s[team=orange] run replaceitem entity @s container.3 crossbow{CustomModelData:27,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}]} 1
+
 # Reset some variables
 scoreboard players set @s isreloading 0
 scoreboard players set @s timer 0
