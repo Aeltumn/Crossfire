@@ -50,7 +50,8 @@ gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
 function crossfire:give_armor
 effect clear @s[tag=!admin]
-execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 574 85 296 90 0
+execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=1}] 574.5 85 296.5 90 0
+execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=0}] 574.5 85 421.5 90 0
 execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 529 71 296 -90 0
 team join lobby @s
 

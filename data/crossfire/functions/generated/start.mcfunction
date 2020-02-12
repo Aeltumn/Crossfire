@@ -1,9 +1,7 @@
-execute if score joined joined matches ..1 run title @a actionbar {"text":"Not enough players have chosen a team yet!","color":"red"}
+execute if score joined joined matches ..1 run tellraw @a {"text":"Not enough players have chosen a team yet!"}
 
-execute if score joined joined matches 2.. run scoreboard players set started started 1
-execute if score joined joined matches 2.. run scoreboard players set starttimer starttimer 5
-execute if score joined joined matches 2.. run function crossfire:timer
 execute if score joined joined matches 2.. as @a[tag=!admin] run function crossfire:init_player
+execute if score joined joined matches 2.. run scoreboard players set started started 1
 
 execute if score joined joined matches 2.. if score playerscore player matches 0 as @a[tag=!selected,tag=joined,limit=1] run tag @s add player1
 execute if score joined joined matches 2.. as @a[tag=player1] run tag @s add selected
@@ -49,11 +47,14 @@ execute if score joined joined matches 2.. if score playerscore player matches 1
 execute if score joined joined matches 2.. as @a[tag=player11] run tag @s add selected
 execute if score joined joined matches 2.. run scoreboard players add playerscore player 1
 
-# Create the cages
-clone 323 30 161 319 40 157 395 26 174
-clone 329 30 161 325 40 157 369 26 148
-clone 318 30 161 313 40 157 395 26 122
-clone 335 30 161 331 40 157 421 26 148
 
-# Remove the logo
-fill 393 42 132 396 62 169 air
+execute if score joined joined matches 2.. run scoreboard players set starttimer starttimer 5
+execute if score joined joined matches 2.. run function crossfire:timer
+
+# Create duel map cages (1)
+clone 438 77 364 432 81 361 526 70 274
+clone 438 77 369 432 81 366 526 70 315
+
+# Remove the logos
+fill 528 89 315 525 109 278 air
+fill 525 109 403 528 89 440 air

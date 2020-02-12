@@ -2,7 +2,7 @@ effect clear @s
 gamerule sendCommandFeedback false
 gamemode adventure @s
 gamerule sendCommandFeedback true
-clear @s #crossfire:obtainableitems
+clear @s[tag=!admin] #crossfire:obtainableitems
 tag @s add givecrossbow
 execute if score starttimer starttimer matches ..0 run tag @s add reloadcrossbow
 function crossfire:give_armor
@@ -21,3 +21,5 @@ tp @s[team=blue] 397.5 27 124.5 0 0
 tp @s[team=yellow] 423.5 27 150.5 90 0
 tp @s[team=green] 529 71 275 0 0
 tp @s[team=red] 529 71 317 180 0
+tp @s[team=magenta] 529.5 71 317.0 180 0
+tp @s[team=orange] 529.5 71 276.0 0 0
