@@ -19,5 +19,5 @@ scoreboard players set @s timer 0
 
 tp @s[team=blue] 397.5 27 124.5 0 0
 tp @s[team=yellow] 423.5 27 150.5 90 0
-tp @s[team=green] 397.5 27 176.5 -180 0
-tp @s[team=red] 371.5 27 150.5 -90 0
+tp @s[team=green] 529 71 275 0 0
+tp @s[team=red] 529 71 317 180 0

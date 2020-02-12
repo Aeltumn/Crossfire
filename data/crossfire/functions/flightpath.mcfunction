@@ -16,4 +16,4 @@ execute as @e[tag=crate,tag=!crateless,tag=!dropped,tag=diamond] at @s run tp @s
 execute as @e[tag=crateless] at @s run tp @s ~ ~0.2 ~
 
 # Kill crateless copters above y 75
-execute as @e[tag=crateless] at @s if entity @s[y=75,dy=1000] run kill @s
+execute as @e[tag=crateless] at @s if entity @s[y=120,dy=1000] run kill @s

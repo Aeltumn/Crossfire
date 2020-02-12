@@ -40,4 +40,4 @@ execute as @a[tag=spectateplayer10,tag=spectating,gamemode=spectator] run specta
 execute as @a[tag=spectateplayer11,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player11,tag=!spectating] @s
 
 # If nothing else, we do the spectator cam
-execute as @a[tag=spectatoradventure,gamemode=adventure,tag=spectating] at @e[tag=flightpath5] run tp @s ^ ^ ^28 facing entity @e[tag=spectatetarget,limit=1]
+execute as @a[tag=spectatoradventure,gamemode=adventure,tag=spectating] at @e[tag=flightpath5] run tp @s ^ ^ ^18 facing entity @e[tag=spectatetarget,limit=1]
