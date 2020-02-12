@@ -51,8 +51,8 @@ s("execute store result score result result as @e[tag=supplycrate,tag=!crateless
 s("execute if score result result matches 1 as @e[tag=supplycrate,tag=!crateless,tag=wantstodrop] at @s run tag @e[tag=!dropped,tag=!crateless,tag=!wantstodrop,distance=..1] add wantstodrop")
 for i in range(1, 12):
     name = "player" + str(i)
-    s("execute if score result result matches 1 if entity @s[tag="+name+",scores={map=0}] run tellraw @a[scores={map=0}]] [\"\",{\"selector\":\"@a[tag="+name+",limit=1]\"},{\"text\":\" has hit a crate! It's about to fall down!\",\"color\":\"white\"}]")
-    s("execute if score result result matches 1 if entity @s[tag="+name+",scores={map=1}] run tellraw @a[scores={map=1}]] [\"\",{\"selector\":\"@a[tag="+name+",limit=1]\"},{\"text\":\" has hit a crate! It's about to fall down!\",\"color\":\"white\"}]")
+    s("execute if score result result matches 1 if entity @s[tag="+name+",scores={map=0}] run tellraw @a[scores={map=0}] [\"\",{\"selector\":\"@a[tag="+name+",limit=1]\"},{\"text\":\" has hit a crate! It's about to fall down!\",\"color\":\"white\"}]")
+    s("execute if score result result matches 1 if entity @s[tag="+name+",scores={map=1}] run tellraw @a[scores={map=1}] [\"\",{\"selector\":\"@a[tag="+name+",limit=1]\"},{\"text\":\" has hit a crate! It's about to fall down!\",\"color\":\"white\"}]")
 s("")
 s("# Remove hit tags")
 s("tag @e[type=!player] remove hit")

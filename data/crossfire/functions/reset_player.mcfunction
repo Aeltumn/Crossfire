@@ -43,6 +43,9 @@ scoreboard players add @s wins 0
 scoreboard players set @s isreloading 0
 scoreboard players set @s timer 0
 
+# Fix map
+scoreboard players add @s map 0
+
 # Teleport people back
 gamerule sendCommandFeedback false
 gamemode adventure @s[tag=!admin]
