@@ -1,4 +1,5 @@
-tellraw @a ["",{"selector":"@s"},{"text":" tried to swim.."}]
+execute if entity @s[scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@s"},{"text":" tried to swim.."}]
+execute if entity @s[scores={map=1}] run tellraw @a[scores={map=1}] ["",{"selector":"@s"},{"text":" tried to swim.."}]
 clear @s minecraft:leather_chestplate
 clear @s minecraft:leather_leggings
 clear @s minecraft:leather_boots
