@@ -32,15 +32,15 @@ execute as @a at @s if block ~ ~-1 ~ minecraft:light_blue_concrete if entity @s[
 
 execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=!orange,tag=!admin] run title @s times 10 40 10
 execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=!orange,tag=!admin] run title @s subtitle ["",{"text":"Joined team: "},{"text":"Orange","bold":true,"color":"gold"}]
-execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=!orange,tag=!admin] run title @s title {"text":"\uE002"}
+execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=!orange,tag=!admin] run title @s title {"text":"\uE011"}
 execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=!orange,tag=!admin] if entity @s[tag=!joined] run scoreboard players add joined joined 1
 execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=!orange,tag=!admin] run tag @s add joined
 execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=!orange,tag=!admin] run team join orange @s
 execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team=orange,tag=!admin] run function crossfire:give_armor
 
 execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] run title @s times 10 40 10
-execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] run title @s subtitle ["",{"text":"Joined team: "},{"text":"Magenta","bold":true,"color":"gold"}]
-execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] run title @s title {"text":"\uE002"}
+execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] run title @s subtitle ["",{"text":"Joined team: "},{"text":"Magenta","bold":true,"color":"light_purple"}]
+execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] run title @s title {"text":"\uE012"}
 execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] if entity @s[tag=!joined] run scoreboard players add joined joined 1
 execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] run tag @s add joined
 execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] run team join magenta @s
