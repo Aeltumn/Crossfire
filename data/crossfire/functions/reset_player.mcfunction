@@ -38,6 +38,9 @@ tag @s remove hit
 tag @s remove givecrossbow
 tag @s remove reloadcrossbow
 
+# Remove from your team
+team leave @s 
+
 # Fix wins
 scoreboard players add @s wins 0
 
