@@ -17,6 +17,8 @@ tag @s remove player9
 tag @s remove player10
 tag @s remove player11
 tag @s remove selected
+tag @s remove selected0
+tag @s remove selected1
 tag @s remove waterdead
 tag @s remove died
 tag @s remove joined

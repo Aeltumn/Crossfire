@@ -3,10 +3,12 @@ file = open("generated\\start.mcfunction", "w+")
 file.write("execute if score map map matches 0 if score joined joined matches ..1 run tellraw @a[scores={map=0}] {\"text\":\"Not enough players have chosen a team yet!\"}\n")
 file.write("execute if score map map matches 1 if score joined joined matches ..1 run tellraw @a[scores={map=1}] {\"text\":\"Not enough players have chosen a team yet!\"}\n")
 file.write("\n")
+file.write("scoreboard players set gametimer gametimer 300\n")
 file.write("execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=!admin,scores={map=0}] run function crossfire:init_player\n")
 file.write("execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=!admin,scores={map=1}] run function crossfire:init_player\n")
 file.write("execute if score map map matches 0 if score joined joined matches 2.. run scoreboard players set started started0 1\n")
 file.write("execute if score map map matches 1 if score joined joined matches 2.. run scoreboard players set started started1 1\n")
+file.write("execute if score joined joined matches 2.. run scoreboard players set started started 1\n")
 file.write("\n")
 
 # This file is messy but this for loop is worth it.
@@ -14,9 +16,9 @@ for s in range(1, 12):
     name = "player" + str(s)
     file.write("execute if score map map matches 0 if score joined joined matches 2.. if score playerscore player matches " + str(s - 1) + " as @a[tag=!selected0,tag=joined,scores={map=0},limit=1] run tag @s add " + name + "\n")
     file.write("execute if score map map matches 1 if score joined joined matches 2.. if score playerscore player matches " + str(s - 1) + " as @a[tag=!selected1,tag=joined,scores={map=1},limit=1] run tag @s add " + name + "\n")
+    file.write("execute if score joined joined matches 2.. as @a[tag=" + name + "] run tag @s add selected\n")
     file.write("execute if score map map matches 0 if score joined joined matches 2.. as @a[tag=" + name + "] run tag @s add selected0\n")
     file.write("execute if score map map matches 1 if score joined joined matches 2.. as @a[tag=" + name + "] run tag @s add selected1\n")
-    file.write("execute if score joined joined matches 2.. as @a[tag=" + name + "] run tag @s add selected\n")
     file.write("execute if score joined joined matches 2.. run scoreboard players add playerscore player 1\n")
     file.write("\n")
 
