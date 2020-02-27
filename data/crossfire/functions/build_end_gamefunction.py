@@ -7,6 +7,10 @@ for xi in [0, 1]:
     if xi == 1: file.write("fill 509 70 276 549 70 316 barrier replace air\n")
     file.write("\n")
     
+    file.write("# Kill summary\n")
+    file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Point scoreboard for this game:\"}]")
+    file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"(kills give 1 point, death from water retracts 1 point)\",\"color\":\"gray\"}]")
+    
     file.write("# Clear viewers of the timer\n")
     file.write("bossbar set crossfire:timer"+x+" players\n")
     file.write("# Show the postgame bossbar\n")
