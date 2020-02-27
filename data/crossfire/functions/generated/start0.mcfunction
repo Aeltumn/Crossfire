@@ -1,4 +1,5 @@
-# Start the game if possibleexecute if score joined0 joined matches ..1 run tellraw @a[scores={map=0}] {"text":"Not enough players have chosen a team yet!"}
+# Start the game if possible
+execute if score joined0 joined matches ..1 run tellraw @a[scores={map=0}] {"text":"Not enough players have chosen a team yet!"}
 
 execute if score joined0 joined matches 2.. as @a[tag=!admin,scores={map=0}] run function crossfire:init_player
 execute if score joined0 joined matches 2.. run scoreboard players set started0 started 1
@@ -64,9 +65,9 @@ execute if score joined0 joined matches 2.. as @a[tag=player11] run tag @s add s
 execute if score joined0 joined matches 2.. run scoreboard players add playerscore0 player 1
 
 
-scoreboard players reset playerscore player
-execute if score joined0 joined matches 2.. run scoreboard players set starttimer starttimer 5
-execute if score joined0 joined matches 2.. run function crossfire:timer
+execute if score joined0 joined matches 2.. run scoreboard players reset playerscore0 player
+execute if score joined0 joined matches 2.. run scoreboard players set starttimer0 starttimer 5
+execute if score joined0 joined matches 2.. run function crossfire:timer0
 
 # Create party map cages (0)
 execute if score joined0 joined matches 2.. run clone 438 76 383 444 86 386 526 76 438
