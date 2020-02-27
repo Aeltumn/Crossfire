@@ -1,0 +1,21 @@
+bossbar set crossfire:timer0 players
+bossbar set crossfire:postgame0 players
+
+# Empty teams
+team empty blue
+team empty red
+team empty yellow
+team empty green
+
+# Reset some scoreboard values
+scoreboard players set playerscore0 player 0
+scoreboard players set started0 started 0
+scoreboard players set joined0 joined 0
+scoreboard players set gametimer0 gametimer -1
+scoreboard players set postgametimer0 postgametimer -1
+scoreboard players set starttimer0 starttimer -1
+scoreboard players add round0 round 1
+
+# Reset winners
+scoreboard objectives remove winner0
+scoreboard objectives add winner0 dummy

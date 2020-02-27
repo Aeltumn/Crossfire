@@ -13,5 +13,5 @@ execute if score gold result matches 0 run tellraw @a ["",{"text":"The ","color"
 execute if score gold result matches 1 run tellraw @a ["",{"text":"The ","color":"white"},{"text":"Multishot Powerup","color":"gold","hoverEvent":{"action":"show_text","value":["",{"text":"Makes the user's crossbow shoot 3 arrows at a time.","color":"white"}]}},{"text":" power-up has been dropped by a shiny crate!","color":"white"}]
 
 # Summon items
-execute if score gold result matches 0 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop3"],ArmorItems:[{},{},{},{id:"minecraft:orange-dye",Count:1b,tag:{CustomPotionEffects:[{Id:1,Amplifier:1,Duration:400}],CustomPotionColor:10806260,display:{Name:"Rapid Fire Powerup"}}}],Invisible:1}
-execute if score gold result matches 1 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop4"],ArmorItems:[{},{},{},{id:"minecraft:magenta_dye",Count:1b,tag:{CustomPotionEffects:[{Id:8,Amplifier:4,Duration:400}],CustomPotionColor:1309504,display:{Name:"Multishot Powerup"}}}],Invisible:1}
+execute if score gold result matches 0 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop3"],ArmorItems:[{},{},{},{id:"minecraft:orange-dye",Count:1b,tag:{display:{Name:"Rapid Fire Powerup"}}}],Invisible:1}
+execute if score gold result matches 1 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop4"],ArmorItems:[{},{},{},{id:"minecraft:magenta_dye",Count:1b,tag:{display:{Name:"Multishot Powerup"}}}],Invisible:1}

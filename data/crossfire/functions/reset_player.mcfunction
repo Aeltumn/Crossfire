@@ -1,6 +1,10 @@
 # Kick everyone out of spectator target
 execute as @s[tag=spectating] run spectate
 
+# Update round
+execute if entity @s[scores={map=0}] run scoreboard players operation @s round = round0 round
+execute if entity @s[scores={map=1}] run scoreboard players operation @s round = round1 round
+
 # Remove tags
 tag @s remove player1
 tag @s remove player2
@@ -55,11 +59,14 @@ gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
 function crossfire:give_armor
 effect clear @s[tag=!admin]
-execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=1}] 574.5 85 296.5 90 0
-execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=0}] 574.5 85 421.5 90 0
-execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=1}] 529 71 296 -90 0
-execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=0}] 529 71 421 -90 0
 team join lobby @s
+
+# Teleport player
+execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run tp @s[tag=!admin] 574.5 85 296.5 90 0
+execute if entity @s[scores={map=1}] unless score postgametimer1 postgametimer matches -1 run tp @s[tag=!admin] 529 71 296 -90 0
+
+execute if entity @s[scores={map=0}] if score postgametimer0 postgametimer matches -1 run tp @s[tag=!admin] 574.5 85 421.5 90 0
+execute if entity @s[scores={map=0}] unless score postgametimer0 postgametimer matches -1 run tp @s[tag=!admin] 529 71 421 -90 0
 
 # Reset exp
 xp set @s 0 levels

@@ -1,3 +1,4 @@
+# Create objectives
 scoreboard objectives add gametimer dummy
 scoreboard objectives add postgametimer dummy
 scoreboard objectives add starttimer dummy
@@ -23,14 +24,20 @@ scoreboard objectives setdisplay list kills
 kill @e[tag=cleanup]
 
 # Create Bossbars
-bossbar add crossfire:postgame {"text":""}
-bossbar set crossfire:postgame color blue
-bossbar add minecraft:timer {"text":""}
-bossbar set minecraft:timer color yellow
+bossbar add crossfire:postgame0 {"text":""}
+bossbar set crossfire:postgame0 color blue
+bossbar add crossfire:postgame1 {"text":""}
+bossbar set crossfire:postgame1 color blue
+bossbar add crossfire:timer0 {"text":""}
+bossbar set crossfire:timer0 color yellow
+bossbar add crossfire:timer1 {"text":""}
+bossbar set crossfire:timer1 color yellow
+bossbar set crossfire:postgame0 max 25
+bossbar set crossfire:postgame1 max 25
+bossbar set crossfire:timer0 max 300
+bossbar set crossfire:timer1 max 300
 
-bossbar set crossfire:postgame max 25
-bossbar set minecraft:timer max 300
-
+# Add the teams
 team add red
 team add yellow
 team add green
@@ -39,7 +46,7 @@ team add orange
 team add magenta
 team add lobby
 
-# Setup Teams
+# Setup team attributes
 team modify blue color aqua
 team modify blue collisionRule never
 team modify green color green
@@ -78,7 +85,6 @@ gamerule mobGriefing false
 gamerule doMobSpawning false
 gamerule naturalRegeneration false
 
-# Clone logo back
-clone 464 95 345 467 75 382 525 89 278 replace normal
-clone 464 95 345 467 75 382 525 89 403 replace normal
-function crossfire:lobby_teleport
+# Bring everyone back to their lobbies
+function crossfire:lobby_teleport0
+function crossfire:lobby_teleport1

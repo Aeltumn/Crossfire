@@ -4,7 +4,8 @@ gamemode adventure @s
 gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
 tag @s add givecrossbow
-execute if score started started matches 1 if score starttimer starttimer matches ..0 run tag @s add reloadcrossbow
+execute if score started0 started matches 1 if score starttimer0 starttimer matches ..0 run tag @s add reloadcrossbow
+execute if score started1 started matches 1 if score starttimer1 starttimer matches ..0 run tag @s add reloadcrossbow
 function crossfire:give_armor
 
 effect give @s minecraft:resistance 1000000 255 true

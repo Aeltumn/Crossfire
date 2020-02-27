@@ -1,7 +1,5 @@
 # Kill all dropped crossbows
 execute as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run kill @s
-# Destroy dropped potions
-execute as @e[type=item,nbt={Item:{id:"minecraft:potion"}}] run kill @s
 
 # Take givecrossbow and reloadcrossbow tags from spectators and admins tag @s remove givecrossbow
 execute as @a[tag=givecrossbow] unless entity @s[tag=!spectating,tag=!died,tag=!admin] run tag @s remove givecrossbow

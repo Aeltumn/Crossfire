@@ -1,3 +1,4 @@
+# Remove redundant tags
 tag @s remove waterdead
 tag @s remove spectating
 tag @s remove died
