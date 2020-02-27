@@ -19,6 +19,7 @@ tellraw @a[scores={map=0}] ["",{"text":"Red Team","color":"red"},{"text":": "},{
 tellraw @a[scores={map=0}] ["",{"text":"Yellow Team","color":"yellow"},{"text":": "},{"score":{"name":"Yellow","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
 tellraw @a[scores={map=0}] ["",{"text":"Green Team","color":"green"},{"text":": "},{"score":{"name":"Green","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
 tellraw @a[scores={map=0}] ["",{"text":"Blue Team","color":"aqua"},{"text":": "},{"score":{"name":"Blue","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+
 # Clear viewers of the timer
 bossbar set crossfire:timer0 players
 # Show the postgame bossbar

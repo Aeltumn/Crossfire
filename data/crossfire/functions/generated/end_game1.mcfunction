@@ -15,7 +15,9 @@ execute if entity @a[tag=player9,scores={map=1}] run tellraw @a[scores={map=1}] 
 execute if entity @a[tag=player10,scores={map=1}] run tellraw @a[scores={map=1}] ["",{"selector":"@a[tag=player10]"},{"text":": "},{"score":{"name":"@a[tag=player10]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
 execute if entity @a[tag=player11,scores={map=1}] run tellraw @a[scores={map=1}] ["",{"selector":"@a[tag=player11]"},{"text":": "},{"score":{"name":"@a[tag=player11]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
 tellraw @a[scores={map=1}] [""]
-tellraw @a[scores={map=1}] ["",{"text":"Orange Team","color":"gold"},{"text":": "},{"score":{"name":"Orange","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]tellraw @a[scores={map=1}] ["",{"text":"Magenta Team","color":"light_purple"},{"text":": "},{"score":{"name":"Magenta","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+tellraw @a[scores={map=1}] ["",{"text":"Orange Team","color":"gold"},{"text":": "},{"score":{"name":"Orange","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+tellraw @a[scores={map=1}] ["",{"text":"Magenta Team","color":"light_purple"},{"text":": "},{"score":{"name":"Magenta","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+
 # Clear viewers of the timer
 bossbar set crossfire:timer1 players
 # Show the postgame bossbar
