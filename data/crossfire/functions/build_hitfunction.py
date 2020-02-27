@@ -91,6 +91,7 @@ for i in range(1, 12):
     s("execute if entity @s[tag="+name+"] as @e[tag=hit] run tag @s add "+spec)
     s("execute if entity @s[tag="+name+"] as @e[tag=hit] run scoreboard players add @a[tag="+name+"] roundKills 1")
     s("execute if entity @s[tag="+name+"] as @e[tag=hit] run scoreboard players add @a[tag="+name+"] kills 1")
+    s("execute as @a[tag="+name+"] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0")
     s("execute if entity @s[tag="+name+",tag=red] as @e[tag=hit] run scoreboard players add Red kills 1")
     s("execute if entity @s[tag="+name+",tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1")
     s("execute if entity @s[tag="+name+",tag=green] as @e[tag=hit] run scoreboard players add Green kills 1")

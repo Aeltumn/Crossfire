@@ -5,9 +5,9 @@ execute if score postgametimer1 postgametimer matches 1 run bossbar set crossfir
 
 # Spawn fireworks
 execute if score Orange winner matches 1 run summon firework_rocket 525.5 73 292.5 {Tags:["custom"],LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;15435844]}],Flight:2}}}}
-execute if score Magenta winner matches 1 run  summon firework_rocket 525.5 73 292.5 {Tags:["custom"],LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;12801229]}],Flight:2}}}}
+execute if score Magenta winner matches 1 run summon firework_rocket 525.5 73 292.5 {Tags:["custom"],LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;12801229]}],Flight:2}}}}
 execute if score Orange winner matches 1 run summon firework_rocket 533.5 73 300.5 {Tags:["custom"],LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;15435844]}],Flight:2}}}}
-execute if score Magenta winner matches 1 run  summon firework_rocket 533.5 73 300.5 {Tags:["custom"],LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;12801229]}],Flight:2}}}}
+execute if score Magenta winner matches 1 run summon firework_rocket 533.5 73 300.5 {Tags:["custom"],LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;12801229]}],Flight:2}}}}
 
 # Clone the logos back
 execute if score postgametimer1 postgametimer matches 0 run function crossfire:lobby_teleport1

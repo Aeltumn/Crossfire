@@ -21,7 +21,7 @@ execute as @a[tag=died,tag=!waterdead] if entity @s[team=orange] if score @s dea
 execute as @a[tag=died,tag=!waterdead] if entity @s[team=magenta] if score @s deadtimer matches 4 at @s run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:1,Colors:[I;12801229]}],Flight:1}}}}
 
 # Turn into spectator mode when you reach the top
-execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run playsound minecraft:item.trident.return master @s ~ ~ ~ 100 0
+execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run playsound minecraft:item.trident.return master @a ~ ~ ~ 1000000000000000000000000 0
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run tag @s add spectating
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run effect give @s minecraft:levitation 1000000 255 true
 execute as @a[tag=died,tag=!waterdead] if score @s deadtimer matches 4 at @s run effect give @s minecraft:invisibility 1000000 255 true
