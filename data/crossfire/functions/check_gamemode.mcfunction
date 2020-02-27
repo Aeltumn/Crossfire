@@ -3,8 +3,8 @@ execute if score started0 started matches 1 as @a[tag=!spectating,tag=!selected,
 execute if score started1 started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin,scores={map=1}] run tag @s add spectating
 
 # Give potion effects if spectating
-effect give @s[tag=spectating] minecraft:levitation 1000000 255 true
-effect give @s[tag=spectating] minecraft:invisibility 1000000 255 true
+effect give @a[tag=spectating] minecraft:levitation 1000000 255 true
+effect give @a[tag=spectating] minecraft:invisibility 1000000 255 true
 
 # Remove the player spectate tag if that player is now also spectating
 execute as @a[tag=spectateplayer1] unless entity @a[tag=player1,tag=!spectating] run tag @s remove spectateplayer1
