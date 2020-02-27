@@ -1,9 +1,6 @@
 # Kick everyone out of spectator target
 execute as @s[tag=spectating] run spectate
 
-# Cleanup
-kill @e[tag=cleanup]
-
 # Remove tags
 tag @s remove player1
 tag @s remove player2
@@ -39,7 +36,7 @@ tag @s remove givecrossbow
 tag @s remove reloadcrossbow
 
 # Remove from your team
-team leave @s 
+team leave @s
 
 # Fix wins
 scoreboard players add @s wins 0
@@ -60,7 +57,8 @@ function crossfire:give_armor
 effect clear @s[tag=!admin]
 execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=1}] 574.5 85 296.5 90 0
 execute if score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=0}] 574.5 85 421.5 90 0
-execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin] 529 71 296 -90 0
+execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=1}] 529 71 296 -90 0
+execute unless score postgametimer postgametimer matches -1 run tp @s[tag=!admin,scores={map=0}] 529 71 421 -90 0
 team join lobby @s
 
 # Reset exp

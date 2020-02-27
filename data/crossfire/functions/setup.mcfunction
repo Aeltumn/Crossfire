@@ -19,6 +19,9 @@ scoreboard objectives add kills dummy {"text":"Kills"}
 scoreboard objectives setdisplay belowName kills
 scoreboard objectives setdisplay list kills
 
+# Cleanup
+kill @e[tag=cleanup]
+
 # Create Bossbars
 bossbar add crossfire:postgame {"text":""}
 bossbar set crossfire:postgame color blue
