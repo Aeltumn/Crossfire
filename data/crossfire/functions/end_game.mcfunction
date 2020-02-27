@@ -15,8 +15,8 @@ execute as @a run scoreboard players operation @s kills += @s roundKills
 scoreboard players set @a roundKills 0
 
 # Add barriers above the water
-execute if score map map matches 1 run fill 509 70 401 549 70 441 barrier replace air
-execute if score map map matches 1 run fill 509 70 276 549 70 316 barrier replace air
+execute if score map map matches 1 run fill 509 70 401 549 70 441 air replace barrier
+execute if score map map matches 1 run fill 509 70 276 549 70 316 air replace barrier
 
 # Start the post-game timer also set started to 0 to stop crossbow giving
 scoreboard players set started started 0

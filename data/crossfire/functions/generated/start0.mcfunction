@@ -72,7 +72,7 @@ execute if score map map matches 0 run clone 444 76 393 441 86 399 546 76 418
 execute if score map map matches 0 run clone 441 76 407 444 86 401 509 76 418
 
 # Remove post-game barriers
-fill 509 70 401 549 70 441 barrier replace air
+fill 509 70 401 549 70 441 air replace barrier
 
 # Remove the logos
 fill 525 109 403 528 89 440 air

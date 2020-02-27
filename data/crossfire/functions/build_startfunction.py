@@ -37,7 +37,7 @@ for xi in [0, 1]:
         file.write("execute if score map map matches 1 run clone 438 77 369 432 87 366 526 70 315\n")
     file.write("\n")
     file.write("# Remove post-game barriers\n")
-    if xi == 0: file.write("fill 509 70 401 549 70 441 barrier replace air\n")
+    if xi == 0: file.write("fill 509 70 401 549 70 441 air replace barrier\n")
     if xi == 1: file.write("fill 509 70 276 549 70 316 air replace barrier\n")
     file.write("\n")
     file.write("# Remove the logos\n")
