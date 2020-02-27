@@ -15,5 +15,5 @@ execute if entity @s[team=green] run scoreboard players remove Green kills 1
 execute if entity @s[team=blue] run scoreboard players remove Blue kills 1
 execute if entity @s[team=magenta] run scoreboard players remove Magenta kills 1
 execute if entity @s[team=orange] run scoreboard players remove Orange kills 1
-title @s actionbar {"text":"A kill has been taken away because you fell in the water.","color":"red"}
+title @s actionbar {"text":"A point has been taken away because you fell in the water.","color":"red"}
 playsound minecraft:entity.generic.splash master @s ~ ~ ~ 2 1

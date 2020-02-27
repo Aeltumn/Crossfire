@@ -37,7 +37,7 @@ execute unless entity @a[team=blue] run scoreboard players set Blue kills -999
 execute if score Red kills > Blue kills if score Red kills > Yellow kills if score Red kills > Green kills run scoreboard players set Red winner 1
 execute if score Blue kills > Red kills if score Blue kills > Yellow kills if score Blue kills > Green kills run scoreboard players set Blue winner 1
 execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if score Yellow kills > Green kills run scoreboard players set Yellow winner 1
-execute if score Green kills > Red kills if score Green kills > Yellow kills if score Green kills > Green kills run scoreboard players set Green winner 1
+execute if score Green kills > Red kills if score Green kills > Yellow kills if score Green kills > Blue kills run scoreboard players set Green winner 1
 execute unless score Red winner matches 1.. unless score Green winner matches 1.. unless score Yellow winner matches 1.. unless score Blue winner matches 1.. run scoreboard players set Draw0 winner 1
 execute if score Red winner matches 1.. run tellraw @a[scores={map=0}] ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
 execute if score Red winner matches 1.. run title @a[scores={map=0}] title ["",{"text":"Red","bold":true,"color":"red"},{"text":" won the game!"}]
