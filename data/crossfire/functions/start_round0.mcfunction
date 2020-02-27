@@ -9,6 +9,7 @@ scoreboard players reset Red winner
 scoreboard players reset Yellow winner
 scoreboard players reset Green winner
 scoreboard players reset Blue winner
+scoreboard players reset Draw0 winner
 
 # Start the game!
 execute as @a[scores={map=0}] at @s run playsound minecraft:event.raid.horn master @s ~ ~ ~ 100 1

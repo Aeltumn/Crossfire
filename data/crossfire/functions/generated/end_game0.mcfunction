@@ -41,6 +41,10 @@ function crossfire:timer0-3
 title @a[scores={map=0}] subtitle {"text":""}
 title @a[scores={map=0}] times 40 160 40
 
+execute unless entity @a[team=red] run scoreboard players set Red kills -999
+execute unless entity @a[team=yellow] run scoreboard players set Yellow kills -999
+execute unless entity @a[team=green] run scoreboard players set Green kills -999
+execute unless entity @a[team=blue] run scoreboard players set Blue kills -999
 execute if score Red kills > Blue kills if score Red kills > Yellow kills if score Red kills > Green kills run scoreboard players set Red winner 1
 execute if score Blue kills > Red kills if score Blue kills > Yellow kills if score Blue kills > Green kills run scoreboard players set Blue winner 1
 execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if score Yellow kills > Green kills run scoreboard players set Yellow winner 1

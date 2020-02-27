@@ -47,6 +47,10 @@ for xi in [0, 1]:
     file.write("title @a[scores={map="+x+"}] times 40 160 40\n")
     file.write("\n")
     if xi == 0:
+        file.write("execute unless entity @a[team=red] run scoreboard players set Red kills -999\n")
+        file.write("execute unless entity @a[team=yellow] run scoreboard players set Yellow kills -999\n")
+        file.write("execute unless entity @a[team=green] run scoreboard players set Green kills -999\n")
+        file.write("execute unless entity @a[team=blue] run scoreboard players set Blue kills -999\n")
         file.write("execute if score Red kills > Blue kills if score Red kills > Yellow kills if score Red kills > Green kills run scoreboard players set Red winner 1\n")
         file.write("execute if score Blue kills > Red kills if score Blue kills > Yellow kills if score Blue kills > Green kills run scoreboard players set Blue winner 1\n")
         file.write("execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if score Yellow kills > Green kills run scoreboard players set Yellow winner 1\n")
@@ -64,6 +68,8 @@ for xi in [0, 1]:
         file.write("execute if score Draw0 winner matches 1.. run title @a[scores={map=0}] title [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
 
     if xi == 1:
+        file.write("execute unless entity @a[team=orange] run scoreboard players set Orange kills -999\n")
+        file.write("execute unless entity @a[team=magenta] run scoreboard players set Magenta kills -999\n")
         file.write("execute if score Orange kills > Magenta kills run scoreboard players set Orange winner 1\n")
         file.write("execute if score Magenta kills > Orange kills run scoreboard players set Magenta winner 1\n")
         file.write("execute unless score Orange winner matches 1.. unless score Magenta winner matches 1.. run scoreboard players set Draw1 winner 1\n")

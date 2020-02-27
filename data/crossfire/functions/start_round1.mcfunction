@@ -7,6 +7,7 @@ tag @a[scores={map=1}] add reloadcrossbow
 # Reset Winners
 scoreboard players reset Magenta winner
 scoreboard players reset Orange winner
+scoreboard players reset Draw1 winner
 
 # Start the game!
 execute as @a[scores={map=1}] at @s run playsound minecraft:event.raid.horn master @s ~ ~ ~ 100 1

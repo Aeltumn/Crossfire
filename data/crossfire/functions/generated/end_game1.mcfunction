@@ -39,6 +39,8 @@ function crossfire:timer1-3
 title @a[scores={map=1}] subtitle {"text":""}
 title @a[scores={map=1}] times 40 160 40
 
+execute unless entity @a[team=orange] run scoreboard players set Orange kills -999
+execute unless entity @a[team=magenta] run scoreboard players set Magenta kills -999
 execute if score Orange kills > Magenta kills run scoreboard players set Orange winner 1
 execute if score Magenta kills > Orange kills run scoreboard players set Magenta winner 1
 execute unless score Orange winner matches 1.. unless score Magenta winner matches 1.. run scoreboard players set Draw1 winner 1
