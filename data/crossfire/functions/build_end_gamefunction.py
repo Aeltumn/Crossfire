@@ -51,7 +51,7 @@ for xi in [0, 1]:
         file.write("execute if score Blue kills > Red kills if score Blue kills > Yellow kills if score Blue kills > Green kills run scoreboard players set Blue winner 1\n")
         file.write("execute if score Yellow kills > Blue kills if score Yellow kills > Red kills if score Yellow kills > Green kills run scoreboard players set Yellow winner 1\n")
         file.write("execute if score Green kills > Red kills if score Green kills > Yellow kills if score Green kills > Green kills run scoreboard players set Green winner 1\n")
-        file.write("execute if score Red winner matches 0 if score Green winner matches 0 if score Yellow winner matches 0 if score Blue winner matches 0 run scoreboard players set Draw0 winner 1\n")
+        file.write("execute unless score Red winner matches 1.. unless score Green winner matches 1.. unless score Yellow winner matches 1.. unless score Blue winner matches 1.. run scoreboard players set Draw0 winner 1\n")
         file.write("execute if score Red winner matches 1.. run tellraw @a[scores={map=0}] [\"\",{\"text\":\"Red\",\"bold\":true,\"color\":\"red\"},{\"text\":\" won the game!\"}]\n")
         file.write("execute if score Red winner matches 1.. run title @a[scores={map=0}] title [\"\",{\"text\":\"Red\",\"bold\":true,\"color\":\"red\"},{\"text\":\" won the game!\"}]\n")
         file.write("execute if score Blue winner matches 1.. run tellraw @a[scores={map=0}] [\"\",{\"text\":\"Blue\",\"bold\":true,\"color\":\"aqua\"},{\"text\":\" won the game!\"}]\n")
@@ -66,7 +66,7 @@ for xi in [0, 1]:
     if xi == 1:
         file.write("execute if score Orange kills > Magenta kills run scoreboard players set Orange winner 1\n")
         file.write("execute if score Magenta kills > Orange kills run scoreboard players set Magenta winner 1\n")
-        file.write("execute if score Orange winner matches 0 if score Magenta winner matches 0 run scoreboard players set Draw1 winner 1\n")
+        file.write("execute unless score Orange winner matches 1.. unless score Magenta winner matches 1.. run scoreboard players set Draw1 winner 1\n")
         file.write("execute if score Orange winner matches 1.. run tellraw @a[scores={map=1}] [\"\",{\"text\":\"Orange\",\"bold\":true,\"color\":\"gold\"},{\"text\":\" won the game!\"}]\n")
         file.write("execute if score Orange winner matches 1.. run title @a[scores={map=1}] title [\"\",{\"text\":\"Orange\",\"bold\":true,\"color\":\"gold\"},{\"text\":\" won the game!\"}]\n")
         file.write("execute if score Magenta winner matches 1.. run tellraw @a[scores={map=1}] [\"\",{\"text\":\"Magenta\",\"bold\":true,\"color\":\"light_purple\"},{\"text\":\" won the game!\"}]\n")

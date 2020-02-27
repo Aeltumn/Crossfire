@@ -41,7 +41,7 @@ title @a[scores={map=1}] times 40 160 40
 
 execute if score Orange kills > Magenta kills run scoreboard players set Orange winner 1
 execute if score Magenta kills > Orange kills run scoreboard players set Magenta winner 1
-execute if score Orange winner matches 0 if score Magenta winner matches 0 run scoreboard players set Draw1 winner 1
+execute unless score Orange winner matches 1.. unless score Magenta winner matches 1.. run scoreboard players set Draw1 winner 1
 execute if score Orange winner matches 1.. run tellraw @a[scores={map=1}] ["",{"text":"Orange","bold":true,"color":"gold"},{"text":" won the game!"}]
 execute if score Orange winner matches 1.. run title @a[scores={map=1}] title ["",{"text":"Orange","bold":true,"color":"gold"},{"text":" won the game!"}]
 execute if score Magenta winner matches 1.. run tellraw @a[scores={map=1}] ["",{"text":"Magenta","bold":true,"color":"light_purple"},{"text":" won the game!"}]

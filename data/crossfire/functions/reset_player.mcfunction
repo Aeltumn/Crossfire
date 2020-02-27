@@ -83,3 +83,4 @@ effect give @s[tag=!admin] minecraft:instant_health 1 20 true
 effect give @s[tag=!admin] minecraft:jump_boost 1000000 1 true
 effect give @s[tag=!admin] minecraft:speed 1000000 0 true
 effect give @s[tag=!admin] minecraft:weakness 1000000 255 true
+effect give @s[tag=!admin] minecraft:resistance 1000000 255 true
