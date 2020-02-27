@@ -14,8 +14,8 @@ execute if score Green winner matches 1 run summon firework_rocket 524.5 74 426.
 execute if score Blue winner matches 1 run summon firework_rocket 524.5 74 426.5 {Tags:["custom"],LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;6719955]}],Flight:2}}}}
 
 # Clone the logos back
-execute if score postgametimer0 postgametimer matches 0 run function crossfire:lobby_teleport0
 execute if score postgametimer0 postgametimer matches 0 run clone 464 95 345 467 75 382 525 89 403 replace normal
+execute if score postgametimer0 postgametimer matches 0 run function crossfire:lobby_teleport0
 
 # Re-run the timer
 execute if score postgametimer0 postgametimer matches 0.. run scoreboard players remove postgametimer0 postgametimer 1
