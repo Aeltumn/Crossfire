@@ -18,13 +18,13 @@ for xi in [0, 1]:
         file.write("execute if entity @a[tag="+name+",scores={map="+x+"}] run tellraw @a[scores={map="+x+"}] [\"\",{\"selector\":\"@a[tag="+name+"]\"},{\"text\":\": \"},{\"score\":{\"name\":\"@a[tag="+name+"]\",\"objective\":\"roundKills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
     file.write("tellraw @a[scores={map="+x+"}] [\"\"]\n")
     if xi == 0:
-        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Red Team\",\"color\":\"red\"},{\"text\":\": \"},{\"score\":{\"name\":\"Red\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
-        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Yellow Team\",\"color\":\"yellow\"},{\"text\":\": \"},{\"score\":{\"name\":\"Yellow\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
-        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Green Team\",\"color\":\"green\"},{\"text\":\": \"},{\"score\":{\"name\":\"Green\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
-        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Blue Team\",\"color\":\"aqua\"},{\"text\":\": \"},{\"score\":{\"name\":\"Blue\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
+        file.write("execute if entity @a[team=red] run tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Red Team\",\"color\":\"red\"},{\"text\":\": \"},{\"score\":{\"name\":\"Red\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
+        file.write("execute if entity @a[team=yellow] run tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Yellow Team\",\"color\":\"yellow\"},{\"text\":\": \"},{\"score\":{\"name\":\"Yellow\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
+        file.write("execute if entity @a[team=green] run tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Green Team\",\"color\":\"green\"},{\"text\":\": \"},{\"score\":{\"name\":\"Green\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
+        file.write("execute if entity @a[team=blue] run tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Blue Team\",\"color\":\"aqua\"},{\"text\":\": \"},{\"score\":{\"name\":\"Blue\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
     if xi == 1:
-        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Orange Team\",\"color\":\"gold\"},{\"text\":\": \"},{\"score\":{\"name\":\"Orange\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
-        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Magenta Team\",\"color\":\"light_purple\"},{\"text\":\": \"},{\"score\":{\"name\":\"Magenta\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
+        file.write("execute if entity @a[team=orange] run tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Orange Team\",\"color\":\"gold\"},{\"text\":\": \"},{\"score\":{\"name\":\"Orange\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
+        file.write("execute if entity @a[team=magenta] run tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Magenta Team\",\"color\":\"light_purple\"},{\"text\":\": \"},{\"score\":{\"name\":\"Magenta\",\"objective\":\"kills\"},\"color\":\"white\"},{\"text\":\" points\",\"color\":\"white\"}]\n")
     file.write("tellraw @a[scores={map="+x+"}] [\"\"]\n")
     file.write("tellraw @a[scores={map="+x+"}] [\"\"]\n")
     
