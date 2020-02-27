@@ -38,6 +38,9 @@ tag @s remove hit
 tag @s remove givecrossbow
 tag @s remove reloadcrossbow
 
+# Reset roundkills
+scoreboard players reset @s roundKills
+
 # Don't remove joined when going to postgame to avoid triggering spectator
 execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
 execute if entity @s[scores={map=0}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
