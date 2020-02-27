@@ -1,6 +1,20 @@
 # Add barriers above the waterfill 509 70 401 549 70 441 barrier replace air
 
-# Clear viewers of the timer
+# Kill summary
+tellraw @a[scores={map=0}] ["",{"text":"Point scoreboard for this game:"}]
+tellraw @a[scores={map=0}] ["",{"text":"(kills give 1 point, death from water retracts 1 point)","color":"gray"}]
+execute if entity @a[tag=player1,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player1]"},{"text":": "},{"score":{"name":"@a[tag=player1]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player2,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player2]"},{"text":": "},{"score":{"name":"@a[tag=player2]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player3,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player3]"},{"text":": "},{"score":{"name":"@a[tag=player3]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player4,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player4]"},{"text":": "},{"score":{"name":"@a[tag=player4]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player5,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player5]"},{"text":": "},{"score":{"name":"@a[tag=player5]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player6,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player6]"},{"text":": "},{"score":{"name":"@a[tag=player6]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player7,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player7]"},{"text":": "},{"score":{"name":"@a[tag=player7]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player8,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player8]"},{"text":": "},{"score":{"name":"@a[tag=player8]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player9,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player9]"},{"text":": "},{"score":{"name":"@a[tag=player9]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player10,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player10]"},{"text":": "},{"score":{"name":"@a[tag=player10]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+execute if entity @a[tag=player11,scores={map=0}] run tellraw @a[scores={map=0}] ["",{"selector":"@a[tag=player11]"},{"text":": "},{"score":{"name":"@a[tag=player11]","objective":"roundKills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]
+tellraw @a[scores={map=0}] [""]tellraw @a[scores={map=0}] ["",{"text":"Red Team","color":"red"},{"text":": "},{"score":{"name":"Red","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]tellraw @a[scores={map=0}] ["",{"text":"Yellow Team","color":"yellow"},{"text":": "},{"score":{"name":"Yellow","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]tellraw @a[scores={map=0}] ["",{"text":"Green Team","color":"green"},{"text":": "},{"score":{"name":"Green","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]tellraw @a[scores={map=0}] ["",{"text":"Blue Team","color":"aqua"},{"text":": "},{"score":{"name":"Blue","objective":"kills"},"color":"dark_purple"},{"text":" points","color":"dark_purple"}]# Clear viewers of the timer
 bossbar set crossfire:timer0 players
 # Show the postgame bossbar
 bossbar set crossfire:postgame0 players @a[scores={map=0}]

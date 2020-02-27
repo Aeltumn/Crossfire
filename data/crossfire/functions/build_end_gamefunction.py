@@ -8,8 +8,20 @@ for xi in [0, 1]:
     file.write("\n")
     
     file.write("# Kill summary\n")
-    file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Point scoreboard for this game:\"}]")
-    file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"(kills give 1 point, death from water retracts 1 point)\",\"color\":\"gray\"}]")
+    file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Point scoreboard for this game:\"}]\n")
+    file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"(kills give 1 point, death from water retracts 1 point)\",\"color\":\"gray\"}]\n")
+    for i in range(1, 12):
+        name = "player" + str(i)
+        file.write("execute if entity @a[tag="+name+",scores={map="+x+"}] run tellraw @a[scores={map="+x+"}] [\"\",{\"selector\":\"@a[tag="+name+"]\"},{\"text\":\": \"},{\"score\":{\"name\":\"@a[tag="+name+"]\",\"objective\":\"roundKills\"},\"color\":\"dark_purple\"},{\"text\":\" points\",\"color\":\"dark_purple\"}]\n")
+    file.write("tellraw @a[scores={map="+x+"}] [\"\"]")
+    if xi == 0:
+        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Red Team\",\"color\":\"red\"},{\"text\":\": \"},{\"score\":{\"name\":\"Red\",\"objective\":\"kills\"},\"color\":\"dark_purple\"},{\"text\":\" points\",\"color\":\"dark_purple\"}]")
+        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Yellow Team\",\"color\":\"yellow\"},{\"text\":\": \"},{\"score\":{\"name\":\"Yellow\",\"objective\":\"kills\"},\"color\":\"dark_purple\"},{\"text\":\" points\",\"color\":\"dark_purple\"}]")
+        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Green Team\",\"color\":\"green\"},{\"text\":\": \"},{\"score\":{\"name\":\"Green\",\"objective\":\"kills\"},\"color\":\"dark_purple\"},{\"text\":\" points\",\"color\":\"dark_purple\"}]")
+        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Blue Team\",\"color\":\"aqua\"},{\"text\":\": \"},{\"score\":{\"name\":\"Blue\",\"objective\":\"kills\"},\"color\":\"dark_purple\"},{\"text\":\" points\",\"color\":\"dark_purple\"}]")
+    if xi == 1:
+        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Orange Team\",\"color\":\"gold\"},{\"text\":\": \"},{\"score\":{\"name\":\"Orange\",\"objective\":\"kills\"},\"color\":\"dark_purple\"},{\"text\":\" points\",\"color\":\"dark_purple\"}]")
+        file.write("tellraw @a[scores={map="+x+"}] [\"\",{\"text\":\"Magenta Team\",\"color\":\"light_purple\"},{\"text\":\": \"},{\"score\":{\"name\":\"Magenta\",\"objective\":\"kills\"},\"color\":\"dark_purple\"},{\"text\":\" points\",\"color\":\"dark_purple\"}]")
     
     file.write("# Clear viewers of the timer\n")
     file.write("bossbar set crossfire:timer"+x+" players\n")
