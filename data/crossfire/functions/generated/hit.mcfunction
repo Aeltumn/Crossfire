@@ -237,6 +237,13 @@ execute if entity @s[tag=player1,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player1] as @e[tag=hit] run tag @s add spectateplayer1
 execute if entity @s[tag=player1] as @e[tag=hit] run scoreboard players add @a[tag=player1] roundKills 1
 execute if entity @s[tag=player1] as @e[tag=hit] run scoreboard players add @a[tag=player1] kills 1
+execute as @a[tag=player1] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player1,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player1,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player1,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player1,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player1,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player1,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player2] as @e[tag=hit] run title @a[tag=player2] times 10 30 10
 execute if entity @s[tag=player2] as @e[tag=hit] run title @a[tag=player2] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -246,6 +253,13 @@ execute if entity @s[tag=player2,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player2] as @e[tag=hit] run tag @s add spectateplayer2
 execute if entity @s[tag=player2] as @e[tag=hit] run scoreboard players add @a[tag=player2] roundKills 1
 execute if entity @s[tag=player2] as @e[tag=hit] run scoreboard players add @a[tag=player2] kills 1
+execute as @a[tag=player2] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player2,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player2,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player2,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player2,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player2,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player2,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player3] as @e[tag=hit] run title @a[tag=player3] times 10 30 10
 execute if entity @s[tag=player3] as @e[tag=hit] run title @a[tag=player3] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -255,6 +269,13 @@ execute if entity @s[tag=player3,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player3] as @e[tag=hit] run tag @s add spectateplayer3
 execute if entity @s[tag=player3] as @e[tag=hit] run scoreboard players add @a[tag=player3] roundKills 1
 execute if entity @s[tag=player3] as @e[tag=hit] run scoreboard players add @a[tag=player3] kills 1
+execute as @a[tag=player3] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player3,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player3,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player3,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player3,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player3,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player3,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player4] as @e[tag=hit] run title @a[tag=player4] times 10 30 10
 execute if entity @s[tag=player4] as @e[tag=hit] run title @a[tag=player4] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -264,6 +285,13 @@ execute if entity @s[tag=player4,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player4] as @e[tag=hit] run tag @s add spectateplayer4
 execute if entity @s[tag=player4] as @e[tag=hit] run scoreboard players add @a[tag=player4] roundKills 1
 execute if entity @s[tag=player4] as @e[tag=hit] run scoreboard players add @a[tag=player4] kills 1
+execute as @a[tag=player4] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player4,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player4,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player4,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player4,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player4,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player4,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player5] as @e[tag=hit] run title @a[tag=player5] times 10 30 10
 execute if entity @s[tag=player5] as @e[tag=hit] run title @a[tag=player5] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -273,6 +301,13 @@ execute if entity @s[tag=player5,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player5] as @e[tag=hit] run tag @s add spectateplayer5
 execute if entity @s[tag=player5] as @e[tag=hit] run scoreboard players add @a[tag=player5] roundKills 1
 execute if entity @s[tag=player5] as @e[tag=hit] run scoreboard players add @a[tag=player5] kills 1
+execute as @a[tag=player5] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player5,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player5,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player5,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player5,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player5,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player5,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player6] as @e[tag=hit] run title @a[tag=player6] times 10 30 10
 execute if entity @s[tag=player6] as @e[tag=hit] run title @a[tag=player6] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -282,6 +317,13 @@ execute if entity @s[tag=player6,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player6] as @e[tag=hit] run tag @s add spectateplayer6
 execute if entity @s[tag=player6] as @e[tag=hit] run scoreboard players add @a[tag=player6] roundKills 1
 execute if entity @s[tag=player6] as @e[tag=hit] run scoreboard players add @a[tag=player6] kills 1
+execute as @a[tag=player6] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player6,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player6,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player6,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player6,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player6,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player6,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player7] as @e[tag=hit] run title @a[tag=player7] times 10 30 10
 execute if entity @s[tag=player7] as @e[tag=hit] run title @a[tag=player7] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -291,6 +333,13 @@ execute if entity @s[tag=player7,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player7] as @e[tag=hit] run tag @s add spectateplayer7
 execute if entity @s[tag=player7] as @e[tag=hit] run scoreboard players add @a[tag=player7] roundKills 1
 execute if entity @s[tag=player7] as @e[tag=hit] run scoreboard players add @a[tag=player7] kills 1
+execute as @a[tag=player7] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player7,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player7,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player7,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player7,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player7,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player7,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player8] as @e[tag=hit] run title @a[tag=player8] times 10 30 10
 execute if entity @s[tag=player8] as @e[tag=hit] run title @a[tag=player8] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -300,6 +349,13 @@ execute if entity @s[tag=player8,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player8] as @e[tag=hit] run tag @s add spectateplayer8
 execute if entity @s[tag=player8] as @e[tag=hit] run scoreboard players add @a[tag=player8] roundKills 1
 execute if entity @s[tag=player8] as @e[tag=hit] run scoreboard players add @a[tag=player8] kills 1
+execute as @a[tag=player8] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player8,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player8,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player8,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player8,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player8,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player8,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player9] as @e[tag=hit] run title @a[tag=player9] times 10 30 10
 execute if entity @s[tag=player9] as @e[tag=hit] run title @a[tag=player9] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -309,6 +365,13 @@ execute if entity @s[tag=player9,tag=selected1] as @e[tag=hit] run tellraw @a[sc
 execute if entity @s[tag=player9] as @e[tag=hit] run tag @s add spectateplayer9
 execute if entity @s[tag=player9] as @e[tag=hit] run scoreboard players add @a[tag=player9] roundKills 1
 execute if entity @s[tag=player9] as @e[tag=hit] run scoreboard players add @a[tag=player9] kills 1
+execute as @a[tag=player9] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player9,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player9,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player9,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player9,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player9,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player9,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player10] as @e[tag=hit] run title @a[tag=player10] times 10 30 10
 execute if entity @s[tag=player10] as @e[tag=hit] run title @a[tag=player10] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -318,6 +381,13 @@ execute if entity @s[tag=player10,tag=selected1] as @e[tag=hit] run tellraw @a[s
 execute if entity @s[tag=player10] as @e[tag=hit] run tag @s add spectateplayer10
 execute if entity @s[tag=player10] as @e[tag=hit] run scoreboard players add @a[tag=player10] roundKills 1
 execute if entity @s[tag=player10] as @e[tag=hit] run scoreboard players add @a[tag=player10] kills 1
+execute as @a[tag=player10] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player10,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player10,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player10,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player10,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player10,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player10,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 execute if entity @s[tag=player11] as @e[tag=hit] run title @a[tag=player11] times 10 30 10
 execute if entity @s[tag=player11] as @e[tag=hit] run title @a[tag=player11] subtitle ["",{"text":"You've killed: "},{"selector":"@s"}]
@@ -327,6 +397,13 @@ execute if entity @s[tag=player11,tag=selected1] as @e[tag=hit] run tellraw @a[s
 execute if entity @s[tag=player11] as @e[tag=hit] run tag @s add spectateplayer11
 execute if entity @s[tag=player11] as @e[tag=hit] run scoreboard players add @a[tag=player11] roundKills 1
 execute if entity @s[tag=player11] as @e[tag=hit] run scoreboard players add @a[tag=player11] kills 1
+execute as @a[tag=player11] at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
+execute if entity @s[tag=player11,tag=red] as @e[tag=hit] run scoreboard players add Red kills 1
+execute if entity @s[tag=player11,tag=yellow] as @e[tag=hit] run scoreboard players add Yellow kills 1
+execute if entity @s[tag=player11,tag=green] as @e[tag=hit] run scoreboard players add Green kills 1
+execute if entity @s[tag=player11,tag=blue] as @e[tag=hit] run scoreboard players add Blue kills 1
+execute if entity @s[tag=player11,tag=magenta] as @e[tag=hit] run scoreboard players add Magenta kills 1
+execute if entity @s[tag=player11,tag=orange] as @e[tag=hit] run scoreboard players add Orange kills 1
 
 
 # Make hit effects work
