@@ -15,6 +15,7 @@ tag @s remove spectateplayer10
 tag @s remove spectateplayer11
 scoreboard players set @s deadtimer 6
 scoreboard players set @s respawnshield 5
+playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 0
 
 # Remove from currently spectated entity
 spectate @s
