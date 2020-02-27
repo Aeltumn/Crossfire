@@ -2,7 +2,7 @@ for xi in [0, 1]:
     x = str(xi)
     file = open("generated\\end_game"+x+".mcfunction", "w+")
     
-    file.write("# Add barriers above the water")
+    file.write("# Add barriers above the water\n")
     if xi == 0: file.write("fill 509 70 401 549 70 441 barrier replace air\n")
     if xi == 1: file.write("fill 509 70 276 549 70 316 barrier replace air\n")
     file.write("\n")

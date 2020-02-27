@@ -1,4 +1,5 @@
-# Add barriers above the waterfill 509 70 276 549 70 316 barrier replace air
+# Add barriers above the water
+fill 509 70 276 549 70 316 barrier replace air
 
 # Kill summary
 tellraw @a[scores={map=1}] [""]
