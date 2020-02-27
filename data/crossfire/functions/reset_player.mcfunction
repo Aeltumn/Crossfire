@@ -43,7 +43,7 @@ scoreboard players set @s roundKills 0
 
 # Don't remove joined when going to postgame to avoid triggering spectator
 execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
-execute if entity @s[scores={map=0}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
+execute if entity @s[scores={map=0}] if score postgametimer0 postgametimer matches -1 run tag @s remove joined
 
 # Remove from your team
 team leave @s
