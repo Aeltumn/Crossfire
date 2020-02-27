@@ -22,7 +22,6 @@ tag @s remove selected0
 tag @s remove selected1
 tag @s remove waterdead
 tag @s remove died
-tag @s remove joined
 tag @s remove spectating
 tag @s remove spectateplayer1
 tag @s remove spectateplayer2
@@ -38,6 +37,10 @@ tag @s remove spectateplayer11
 tag @s remove hit
 tag @s remove givecrossbow
 tag @s remove reloadcrossbow
+
+# Don't remove joined when going to postgame to avoid triggering spectator
+execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
+execute if entity @s[scores={map=0}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
 
 # Remove from your team
 team leave @s

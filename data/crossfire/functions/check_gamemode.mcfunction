@@ -1,6 +1,6 @@
 # Put into spectating only if your map has started
-execute if score started0 started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin,scores={map=0}] run tag @s add spectating
-execute if score started1 started matches 1 as @a[tag=!spectating,tag=!selected,tag=!admin,scores={map=1}] run tag @s add spectating
+execute if score started0 started matches 1 as @a[tag=!spectating,tag=!joined,tag=!admin,scores={map=0}] run tag @s add spectating
+execute if score started1 started matches 1 as @a[tag=!spectating,tag=!joined,tag=!admin,scores={map=1}] run tag @s add spectating
 
 # Give potion effects if spectating
 effect give @a[tag=spectating] minecraft:levitation 1000000 255 true
