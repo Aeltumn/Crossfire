@@ -29,18 +29,7 @@ for xi in [0, 1]:
     file.write("tellraw @a[scores={map="+x+"}] [\"\"]\n")
     
     file.write("\n")
-    file.write("# Clear viewers of the timer\n")
-    file.write("bossbar set crossfire:timer"+x+" players\n")
-    file.write("# Show the postgame bossbar\n")
-    file.write("bossbar set crossfire:postgame"+x+" players @a[scores={map="+x+"}]\n")
-    file.write("# Set the post game timer to its start value\n")
-    file.write("scoreboard players set postgametimer"+x+" postgametimer 25\n")
-    file.write("# Reset all players in this map\n")
-    file.write("execute as @a[scores={map="+x+"}] run function crossfire:reset_player\n")
-    file.write("# Reset all players in this map\n")
-    file.write("function crossfire:timer"+x+"-3\n")
-    file.write("\n")
-    
+      
     file.write("# Send titles to winners")
     file.write("title @a[scores={map="+x+"}] clear\n")
     file.write("title @a[scores={map="+x+"}] subtitle {\"text\":\"\"}\n")
@@ -79,5 +68,17 @@ for xi in [0, 1]:
         file.write("execute if score Magenta winner matches 1.. run title @a[scores={map=1}] title [\"\",{\"text\":\"Magenta\",\"bold\":true,\"color\":\"light_purple\"},{\"text\":\" won the game!\"}]\n")
         file.write("execute if score Draw1 winner matches 1.. run tellraw @a[scores={map=1}] [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
         file.write("execute if score Draw1 winner matches 1.. run title @a[scores={map=1}] title [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
+ 
+    file.write("\n")
+    file.write("# Clear viewers of the timer\n")
+    file.write("bossbar set crossfire:timer"+x+" players\n")
+    file.write("# Show the postgame bossbar\n")
+    file.write("bossbar set crossfire:postgame"+x+" players @a[scores={map="+x+"}]\n")
+    file.write("# Set the post game timer to its start value\n")
+    file.write("scoreboard players set postgametimer"+x+" postgametimer 25\n")
+    file.write("# Reset all players in this map\n")
+    file.write("execute as @a[scores={map="+x+"}] run function crossfire:reset_player\n")
+    file.write("# Reset all players in this map\n")
+    file.write("function crossfire:timer"+x+"-3\n")
  
     file.close()

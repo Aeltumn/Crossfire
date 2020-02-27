@@ -24,17 +24,6 @@ tellraw @a[scores={map=1}] ["",{"text":"Magenta Team","color":"light_purple"},{"
 tellraw @a[scores={map=1}] [""]
 tellraw @a[scores={map=1}] [""]
 
-# Clear viewers of the timer
-bossbar set crossfire:timer1 players
-# Show the postgame bossbar
-bossbar set crossfire:postgame1 players @a[scores={map=1}]
-# Set the post game timer to its start value
-scoreboard players set postgametimer1 postgametimer 25
-# Reset all players in this map
-execute as @a[scores={map=1}] run function crossfire:reset_player
-# Reset all players in this map
-function crossfire:timer1-3
-
 # Send titles to winnerstitle @a[scores={map=1}] clear
 title @a[scores={map=1}] subtitle {"text":""}
 title @a[scores={map=1}] times 40 160 40
@@ -50,3 +39,14 @@ execute if score Magenta winner matches 1.. run tellraw @a[scores={map=1}] ["",{
 execute if score Magenta winner matches 1.. run title @a[scores={map=1}] title ["",{"text":"Magenta","bold":true,"color":"light_purple"},{"text":" won the game!"}]
 execute if score Draw1 winner matches 1.. run tellraw @a[scores={map=1}] ["",{"text":"It's a draw!","bold":true,"color":"gold"}]
 execute if score Draw1 winner matches 1.. run title @a[scores={map=1}] title ["",{"text":"It's a draw!","bold":true,"color":"gold"}]
+
+# Clear viewers of the timer
+bossbar set crossfire:timer1 players
+# Show the postgame bossbar
+bossbar set crossfire:postgame1 players @a[scores={map=1}]
+# Set the post game timer to its start value
+scoreboard players set postgametimer1 postgametimer 25
+# Reset all players in this map
+execute as @a[scores={map=1}] run function crossfire:reset_player
+# Reset all players in this map
+function crossfire:timer1-3
