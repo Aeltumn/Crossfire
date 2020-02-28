@@ -15,8 +15,8 @@ execute as @a[tag=reloadcrossbow] unless entity @s[tag=!spectating,tag=!died,tag
 # Make sure you have the map switch item_tele
 execute as @a[tag=mapchanger] store result score @s item_tele run clear @s[tag=!admin] minecraft:carrot_on_a_stick 0
 execute as @a[tag=mapchanger] if score @s item_tele matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick
-execute as @a[tag=mapchanger,scores={map=0}] unless score @s item_tele matches 1 run replaceitem entity @s container.4 carrot_on_a_stick{CustomModelData:2,display:{Name:"{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"Go to the Duel map\"}"}} 1
-execute as @a[tag=mapchanger,scores={map=1}] unless score @s item_tele matches 1 run replaceitem entity @s container.4 carrot_on_a_stick{CustomModelData:3,display:{Name:"{\"color\":\"dark_green\",\"italic\":false,\"text\":\"Go to the Party map\"}"}} 1
+execute as @a[tag=mapchanger,scores={map=0}] unless score @s item_tele matches 1 run replaceitem entity @s container.5 carrot_on_a_stick{CustomModelData:2,display:{Name:"{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"Go to the Duel map\"}"}} 1
+execute as @a[tag=mapchanger,scores={map=1}] unless score @s item_tele matches 1 run replaceitem entity @s container.5 carrot_on_a_stick{CustomModelData:3,display:{Name:"{\"color\":\"dark_green\",\"italic\":false,\"text\":\"Go to the Party map\"}"}} 1
 
 # Set `item_cross` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it
