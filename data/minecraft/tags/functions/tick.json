@@ -10,6 +10,7 @@
 		"crossfire:tick/flightpath",
         "crossfire:tick/crate_tick",
 		"crossfire:tick/collect_powerup",
-		"crossfire:tick/use_powerup"
+		"crossfire:tick/use_powerup",
+		"crossfire:tick/increase_switch_timer"
 	]
 }

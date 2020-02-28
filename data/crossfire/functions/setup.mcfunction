@@ -16,6 +16,7 @@ scoreboard objectives add round dummy
 scoreboard objectives add result dummy
 scoreboard objectives add map dummy
 scoreboard objectives add song dummy
+scoreboard objectives add cooldown dummy
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add powerup minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add kills dummy {"text":"Kills"}
