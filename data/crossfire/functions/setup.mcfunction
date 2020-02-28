@@ -71,6 +71,14 @@ team modify orange seeFriendlyInvisibles false
 team modify magenta seeFriendlyInvisibles false
 team modify lobby seeFriendlyInvisibles false
 
+team modify blue nametagVisibility never
+team modify green nametagVisibility never
+team modify yellow nametagVisibility never
+team modify red nametagVisibility never
+team modify orange nametagVisibility never
+team modify magenta nametagVisibility never
+team modify lobby nametagVisibility never
+
 # Setup gamestate
 difficulty peaceful
 gamerule announceAdvancements false
