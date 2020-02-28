@@ -6,6 +6,8 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Cu
 # Multishot
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] run effect give @s minecraft:luck 20 0
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] at @s run playsound minecraft:item.armor.equip_diamond master @a ~ ~ ~
+# Give the multishot crossbow if you already have a reloaded crossbow
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] if entity @s[tag=givecrossbow,tag=!spectating,tag=!died,predicate=crossfire:has_multishot] if score @s timer matches 40.. run function crossfire:give_crossbow_multishot
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] run replaceitem entity @s weapon.mainhand air
 
 # Map switch items

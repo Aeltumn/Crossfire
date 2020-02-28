@@ -109,5 +109,7 @@ for xi in [0, 1]:
     file.write("execute as @a[scores={map="+x+"}] run function crossfire:reset_player\n")
     file.write("# Reset all players in this map\n")
     file.write("function crossfire:timer"+x+"-3\n")
+    file.write("# Cleanup")
+    file.write("kill @e[tag=cleanup"+x+"]")
  
     file.close()
