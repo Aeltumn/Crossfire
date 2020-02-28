@@ -15,6 +15,7 @@ scoreboard objectives add timer dummy
 scoreboard objectives add round dummy
 scoreboard objectives add result dummy
 scoreboard objectives add map dummy
+scoreboard objectives add song dummy
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add kills dummy {"text":"Kills"}
 scoreboard objectives setdisplay belowName kills

@@ -70,6 +70,25 @@ for xi in [0, 1]:
         file.write("execute if score Draw1 winner matches 1.. run title @a[scores={map=1}] title [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
  
     file.write("\n")
+    file.write("# Play sound to play depending on if they won or lost\n")
+    if xi == 0:
+        file.write("execute if score Red winner matches 1.. run tag @a[team=red,scores={map="+x+"}] add won0\n")
+        file.write("execute if score Yellow winner matches 1.. run tag @a[team=yellow,scores={map="+x+"}] add won0\n")
+        file.write("execute if score Green winner matches 1.. run tag @a[team=green,scores={map="+x+"}] add won0\n")
+        file.write("execute if score Blue winner matches 1.. run tag @a[team=blue,scores={map="+x+"}] add won0\n")
+    if xi == 1:
+        file.write("execute if score Orange winner matches 1.. run tag @a[team=orange,scores={map="+x+"}] add won1\n")
+        file.write("execute if score Magenta winner matches 1.. run tag @a[team=magenta,scores={map="+x+"}] add won1\n")
+           
+    file.write("\n")
+    file.write("# Give lost if you don't have win\n") 
+    file.write("tag @a[tag=!won"+x+",scores={map="+x+"}] add lost"+x+"\n")
+    
+    file.write("\n")
+    file.write("# Play this game's song function (in case of simultanious wins we have two copies)\n")
+    file.write("function crossfire:song"+x+"\n")
+ 
+    file.write("\n")
     file.write("# Clear viewers of the timer\n")
     file.write("bossbar set crossfire:timer"+x+" players\n")
     file.write("# Show the postgame bossbar\n")

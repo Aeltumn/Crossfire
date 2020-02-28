@@ -40,6 +40,16 @@ execute if score Magenta winner matches 1.. run title @a[scores={map=1}] title [
 execute if score Draw1 winner matches 1.. run tellraw @a[scores={map=1}] ["",{"text":"It's a draw!","bold":true,"color":"gold"}]
 execute if score Draw1 winner matches 1.. run title @a[scores={map=1}] title ["",{"text":"It's a draw!","bold":true,"color":"gold"}]
 
+# Play sound to play depending on if they won or lost
+execute if score Orange winner matches 1.. run tag @a[team=orange,scores={map=1}] add won1
+execute if score Magenta winner matches 1.. run tag @a[team=magenta,scores={map=1}] add won1
+
+# Give lost if you don't have win
+tag @a[tag=!won1,scores={map=1}] add lost1
+
+# Play this game's song function (in case of simultanious wins we have two copies)
+function crossfire:song1
+
 # Clear viewers of the timer
 bossbar set crossfire:timer1 players
 # Show the postgame bossbar
