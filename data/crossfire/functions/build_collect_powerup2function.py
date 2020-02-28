@@ -25,15 +25,15 @@ for xi in [0, 1, 2, 3, 4]:
     for si in [4, 5, 6]:
         sj = str(si)
         if xi == 0:
-            t = "potion{CustomPotionEffects:[{Id:1,Amplifier:1,Duration:400}],CustomPotionColor:10806260,display:{Name:\"{\\\"color\\\":\\\"aqua\\\",\\\"text\\\":\\\"Swiftness II Potion\\\"}\"}}"
+            t = "potion{CustomPotionEffects:[{Id:1,Amplifier:1,Duration:400}],CustomPotionColor:10806260,display:{Name:\"{\\\"color\\\":\\\"aqua\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Swiftness II Potion\\\"}\"}}"
         if xi == 1:
-            t = "potion{CustomPotionEffects:[{Id:8,Amplifier:4,Duration:400}],CustomPotionColor:1309504,display:{Name:\"{\\\"color\\\":\\\"green\\\",\\\"text\\\":\\\"Jump Boost V Potion\\\"}\"}}"
+            t = "potion{CustomPotionEffects:[{Id:8,Amplifier:4,Duration:400}],CustomPotionColor:1309504,display:{Name:\"{\\\"color\\\":\\\"green\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Jump Boost V Potion\\\"}\"}}"
         if xi == 2:
-            t = "potion{CustomPotionEffects:[{Id:28,Duration:400}],CustomPotionColor:16777215,display:{Name:\"{\\\"color\\\":\\\"gray\\\",\\\"text\\\":\\\"Slow Falling I Potion\\\"}\"}}"
+            t = "potion{CustomPotionEffects:[{Id:28,Duration:400}],CustomPotionColor:16777215,display:{Name:\"{\\\"color\\\":\\\"gray\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Slow Falling I Potion\\\"}\"}}"
         if xi == 3:
-            t = "carrot_on_a_stick{CustomModelData:0,display:{Name:\"{\\\"color\\\":\\\"gold\\\",\\\"text\\\":\\\"Rapid Fire Powerup\\\"}\"}}"
+            t = "carrot_on_a_stick{CustomModelData:0,display:{Name:\"{\\\"color\\\":\\\"gold\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Rapid Fire Powerup\\\"}\"}}"
         if xi == 4:
-            t = "carrot_on_a_stick{CustomModelData:1,display:{Name:\"{\\\"color\\\":\\\"light_purple\\\",\\\"text\\\":\\\"Multishot Powerup\\\"}\"}}"
+            t = "carrot_on_a_stick{CustomModelData:1,display:{Name:\"{\\\"color\\\":\\\"light_purple\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Multishot Powerup\\\"}\"}}"
             
         s("execute if score temp result matches 0 if entity @s[tag=drop"+x+"] store success score temp result run execute if entity @a[distance=..1,limit=1,nbt={Inventory:[{Slot:"+sj+"b}]}] run replaceitem entity @s container."+sj+" "+t+" 1")
     s("")
