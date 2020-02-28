@@ -38,10 +38,12 @@ tag @s remove spectateplayer9
 tag @s remove spectateplayer10
 tag @s remove spectateplayer11
 tag @s remove hit
-tag @s remove givecrossbow
 tag @s remove reloadcrossbow
 tag @s remove joined0
 tag @s remove joined1
+
+# We always give people crossbows, a bit dangerous, but alright.
+tag @s add givecrossbow
 
 # Reset roundkills
 scoreboard players set @s roundKills 0
