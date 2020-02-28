@@ -77,7 +77,7 @@ team modify yellow nametagVisibility never
 team modify red nametagVisibility never
 team modify orange nametagVisibility never
 team modify magenta nametagVisibility never
-team modify lobby nametagVisibility never
+team modify lobby nametagVisibility hideForOtherTeams
 
 # Setup gamestate
 difficulty peaceful
