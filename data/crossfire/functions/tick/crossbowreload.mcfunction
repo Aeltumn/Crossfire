@@ -24,7 +24,7 @@ execute as @a[scores={isreloading=1..},tag=!spectating] unless entity @s[tag=rel
 # Increase timer
 execute as @a[scores={isreloading=1..}] run scoreboard players add @s timer 1
 # Increase timer further if you have rapid fire
-execute as @a[scores={isreloading=1..},predicate=crossfire:has_rapid_fire] run scoreboard players add @s timer 7
+execute as @a[scores={isreloading=1..},predicate=crossfire:has_rapid_fire] run scoreboard players add @s timer 3
 
 # Give reload crossbows during reloading
 execute as @a[tag=givecrossbow,scores={timer=1..10}] run replaceitem entity @s container.2 crossbow{CustomModelData:17,HideFlags:63,Charged:0b} 1
