@@ -19,6 +19,13 @@ execute if predicate crossfire:spawn_crates if score gametimer1 gametimer matche
 execute if predicate crossfire:spawn_crates if score gametimer1 gametimer matches 260 run function crossfire:spawn/random_crates1
 execute if predicate crossfire:spawn_crates if score gametimer1 gametimer matches 280 run function crossfire:spawn/random_crates1
 
+# End game if the game has only one team
+scoreboard players set temp9 result 0
+execute if entity @a[team=orange] run scoreboard players add temp9 result 1
+execute if entity @a[team=magenta] run scoreboard players add temp9 result 1
+execute if score temp9 result matches ..1 run scoreboard players set gametimer1 gametimer 0
+execute if score temp9 result matches ..1 run tellraw @a[scores={map=1}] ["",{"text":"Only one team is left, the game will end now."}]
+
 # Run game end
 execute if score gametimer1 gametimer matches 0 run function crossfire:generated/end_game1
 

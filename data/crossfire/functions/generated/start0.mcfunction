@@ -2,8 +2,18 @@
 scoreboard players set joined0 joined 0
 execute as @e[tag=joined0] run scoreboard players add joined0 joined 1
 
+# If only one team is filled we set joined to 0 to prevent a game start
+scoreboard players set temp50 result 0
+execute if entity @a[team=red] run scoreboard players add temp50 result 1
+execute if entity @a[team=green] run scoreboard players add temp50 result 1
+execute if entity @a[team=yellow] run scoreboard players add temp50 result 1
+execute if entity @a[team=blue] run scoreboard players add temp50 result 1
+
+execute if score temp50 result matches ..1 run scoreboard players set joined0 joined 0
+
 # Start the game if possible
-execute if score joined0 joined matches ..1 run tellraw @a[scores={map=0}] {"text":"Not enough players have chosen a team yet!"}
+execute if score joined0 joined matches 0 run tellraw @a[scores={map=0}] {"text":"You need to have at least 2 teams with players in them."}
+execute if score joined0 joined matches 1 run tellraw @a[scores={map=0}] {"text":"Not enough players have chosen a team yet!"}
 
 execute if score joined0 joined matches 2.. as @a[tag=!admin,scores={map=0}] run function crossfire:init_player
 execute if score joined0 joined matches 2.. run scoreboard players set started0 started 1

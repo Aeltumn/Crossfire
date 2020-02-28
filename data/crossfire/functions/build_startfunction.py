@@ -7,8 +7,23 @@ for xi in [0, 1]:
     file.write("execute as @e[tag=joined"+x+"] run scoreboard players add joined"+x+" joined 1\n")
     file.write("\n")
     
+    file.write("# If only one team is filled we set joined to 0 to prevent a game start\n")
+    file.write("scoreboard players set temp5"+x+" result 0\n")
+    if xi == 0:
+        file.write("execute if entity @a[team=red] run scoreboard players add temp50 result 1\n")
+        file.write("execute if entity @a[team=green] run scoreboard players add temp50 result 1\n")
+        file.write("execute if entity @a[team=yellow] run scoreboard players add temp50 result 1\n")
+        file.write("execute if entity @a[team=blue] run scoreboard players add temp50 result 1\n")
+    if xi == 1:
+        file.write("execute if entity @a[team=orange] run scoreboard players add temp51 result 1\n")
+        file.write("execute if entity @a[team=magenta] run scoreboard players add temp51 result 1\n")
+    file.write("\n")
+    file.write("execute if score temp5"+x+" result matches ..1 run scoreboard players set joined"+x+" joined 0\n")
+    file.write("\n")
+    
     file.write("# Start the game if possible\n")
-    file.write("execute if score joined"+x+" joined matches ..1 run tellraw @a[scores={map="+x+"}] {\"text\":\"Not enough players have chosen a team yet!\"}\n")
+    file.write("execute if score joined"+x+" joined matches 0 run tellraw @a[scores={map="+x+"}] {\"text\":\"You need to have at least 2 teams with players in them.\"}\n")
+    file.write("execute if score joined"+x+" joined matches 1 run tellraw @a[scores={map="+x+"}] {\"text\":\"Not enough players have chosen a team yet!\"}\n")
     file.write("\n")
     file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=!admin,scores={map="+x+"}] run function crossfire:init_player\n")
     file.write("execute if score joined"+x+" joined matches 2.. run scoreboard players set started"+x+" started 1\n")
