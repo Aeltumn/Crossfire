@@ -60,7 +60,7 @@ execute if score Blue winner matches 1.. run tag @a[team=blue,scores={map=0}] ad
 tag @a[tag=!won0,scores={map=0}] add lost0
 
 # Play this game's song function (in case of simultanious wins we have two copies)
-function crossfire:song0
+schedule function crossfire:song0 4s replace
 
 # Clear viewers of the timer
 bossbar set crossfire:timer0 players

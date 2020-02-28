@@ -48,7 +48,7 @@ execute if score Magenta winner matches 1.. run tag @a[team=magenta,scores={map=
 tag @a[tag=!won1,scores={map=1}] add lost1
 
 # Play this game's song function (in case of simultanious wins we have two copies)
-function crossfire:song1
+schedule function crossfire:song1 4s replace
 
 # Clear viewers of the timer
 bossbar set crossfire:timer1 players

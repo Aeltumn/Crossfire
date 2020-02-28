@@ -1,6 +1,7 @@
 {
 	"values": [
         "crossfire:setup",
-		"crossfire:respawn"
+		"crossfire:respawn",
+		"crossfire:gamesong"
 	]
 }

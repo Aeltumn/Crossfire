@@ -86,7 +86,7 @@ for xi in [0, 1]:
     
     file.write("\n")
     file.write("# Play this game's song function (in case of simultanious wins we have two copies)\n")
-    file.write("function crossfire:song"+x+"\n")
+    file.write("schedule function crossfire:song"+x+" 4s replace\n")
  
     file.write("\n")
     file.write("# Clear viewers of the timer\n")
