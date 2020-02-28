@@ -1,8 +1,8 @@
 # Teleport to the spawn location
-tp @s[team=blue] 548.0 77 421.5 90 0
-tp @s[team=yellow] 511.0 77 421.5 -90 0
-tp @s[team=green] 529.5 77 403.0 0 0
-tp @s[team=red] 529.5 77 440.0 180 0
+tp @s[team=blue] 550.0 71 421.5 90 0
+tp @s[team=yellow] 509.0 71 421.5 -90 0
+tp @s[team=green] 529.5 71 401.0 0 0
+tp @s[team=red] 529.5 71 442.0 180 0
 tp @s[team=magenta] 529.5 71 317.0 180 0
 tp @s[team=orange] 529.5 71 276.0 0 0
 
