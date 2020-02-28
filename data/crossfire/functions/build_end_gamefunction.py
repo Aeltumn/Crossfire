@@ -55,6 +55,12 @@ for xi in [0, 1]:
         file.write("execute if score Green winner matches 1.. run title @a[scores={map=0}] title [\"\",{\"text\":\"Green\",\"bold\":true,\"color\":\"green\"},{\"text\":\" won the game!\"}]\n")
         file.write("execute if score Draw0 winner matches 1.. run tellraw @a[scores={map=0}] [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
         file.write("execute if score Draw0 winner matches 1.. run title @a[scores={map=0}] title [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
+        file.write("\n")
+        file.write("# Actually give the wins to the players\n")
+        file.write("execute if score Red winner matches 1.. run scoreboard players add @a[team=red] wins 1\n")
+        file.write("execute if score Yellow winner matches 1.. run scoreboard players add @a[team=yellow] wins 1\n")
+        file.write("execute if score Green winner matches 1.. run scoreboard players add @a[team=green] wins 1\n")
+        file.write("execute if score Blue winner matches 1.. run scoreboard players add @a[team=blue] wins 1\n")
 
     if xi == 1:
         file.write("execute unless entity @a[team=orange] run scoreboard players set Orange kills -999\n")
@@ -68,6 +74,10 @@ for xi in [0, 1]:
         file.write("execute if score Magenta winner matches 1.. run title @a[scores={map=1}] title [\"\",{\"text\":\"Magenta\",\"bold\":true,\"color\":\"light_purple\"},{\"text\":\" won the game!\"}]\n")
         file.write("execute if score Draw1 winner matches 1.. run tellraw @a[scores={map=1}] [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
         file.write("execute if score Draw1 winner matches 1.. run title @a[scores={map=1}] title [\"\",{\"text\":\"It's a draw!\",\"bold\":true,\"color\":\"gold\"}]\n")
+        file.write("\n")
+        file.write("# Actually give the wins to the players\n")
+        file.write("execute if score Orange winner matches 1.. run scoreboard players add @a[team=orange] wins 1\n")
+        file.write("execute if score Magenta winner matches 1.. run scoreboard players add @a[team=magenta] wins 1\n")
  
     file.write("\n")
     file.write("# Play sound to play depending on if they won or lost\n")

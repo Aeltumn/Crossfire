@@ -50,6 +50,12 @@ execute if score Green winner matches 1.. run title @a[scores={map=0}] title [""
 execute if score Draw0 winner matches 1.. run tellraw @a[scores={map=0}] ["",{"text":"It's a draw!","bold":true,"color":"gold"}]
 execute if score Draw0 winner matches 1.. run title @a[scores={map=0}] title ["",{"text":"It's a draw!","bold":true,"color":"gold"}]
 
+# Actually give the wins to the players
+execute if score Red winner matches 1.. run scoreboard players add @a[team=red] wins 1
+execute if score Yellow winner matches 1.. run scoreboard players add @a[team=yellow] wins 1
+execute if score Green winner matches 1.. run scoreboard players add @a[team=green] wins 1
+execute if score Blue winner matches 1.. run scoreboard players add @a[team=blue] wins 1
+
 # Play sound to play depending on if they won or lost
 execute if score Red winner matches 1.. run tag @a[team=red,scores={map=0}] add won0
 execute if score Yellow winner matches 1.. run tag @a[team=yellow,scores={map=0}] add won0
