@@ -37,6 +37,11 @@ tag @s remove spectateplayer11
 tag @s remove hit
 tag @s remove givecrossbow
 tag @s remove reloadcrossbow
+tag @s remove joined0
+tag @s remove joined1
+
+# We should have all powerup slots free now
+tag @s add freeslot
 
 # Reset roundkills
 scoreboard players set @s roundKills 0

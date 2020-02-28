@@ -2,6 +2,11 @@ for xi in [0, 1]:
     x = str(xi)
     file = open("generated\\start"+x+".mcfunction", "w+")
         
+    file.write("# Determine joined value\n")
+    file.write("scoreboard players set joined"+x+" joined 0\n")
+    file.write("execute as @e[tag=joined"+x+"] run scoreboard players add joined"+x+" joined 1\n")
+    file.write("\n")
+    
     file.write("# Start the game if possible\n")
     file.write("execute if score joined"+x+" joined matches ..1 run tellraw @a[scores={map="+x+"}] {\"text\":\"Not enough players have chosen a team yet!\"}\n")
     file.write("\n")

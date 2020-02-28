@@ -1,3 +1,7 @@
+# Determine joined value
+scoreboard players set joined1 joined 0
+execute as @e[tag=joined1] run scoreboard players add joined1 joined 1
+
 # Start the game if possible
 execute if score joined1 joined matches ..1 run tellraw @a[scores={map=1}] {"text":"Not enough players have chosen a team yet!"}
 
