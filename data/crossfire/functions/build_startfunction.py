@@ -36,10 +36,10 @@ for xi in [0, 1]:
     file.write("\n")
     if xi == 0:
         file.write("# Create party map cages (0)\n")
-        file.write("execute if score joined0 joined matches 2.. run clone 438 76 383 444 86 386 526 76 438\n")
-        file.write("execute if score joined0 joined matches 2.. run clone 438 76 388 444 86 391 526 76 401\n")
-        file.write("execute if score joined0 joined matches 2.. run clone 444 76 393 441 86 399 546 76 418\n")
-        file.write("execute if score joined0 joined matches 2.. run clone 441 76 407 444 86 401 509 76 418\n")
+        file.write("execute if score joined0 joined matches 2.. run clone 438 76 383 444 86 386 526 70 440\n")
+        file.write("execute if score joined0 joined matches 2.. run clone 438 76 388 444 86 391 526 70 399\n")
+        file.write("execute if score joined0 joined matches 2.. run clone 444 76 393 441 86 399 548 70 418\n")
+        file.write("execute if score joined0 joined matches 2.. run clone 441 76 407 444 86 401 507 70 418\n")
     if xi == 1:
         file.write("# Create duel map cages (1)\n")
         file.write("execute if score joined1 joined matches 2.. run clone 438 77 364 432 87 361 526 70 274\n")

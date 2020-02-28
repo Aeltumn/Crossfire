@@ -70,10 +70,10 @@ execute if score joined0 joined matches 2.. run scoreboard players set starttime
 execute if score joined0 joined matches 2.. run function crossfire:timer0
 
 # Create party map cages (0)
-execute if score joined0 joined matches 2.. run clone 438 76 383 444 86 386 526 76 438
-execute if score joined0 joined matches 2.. run clone 438 76 388 444 86 391 526 76 401
-execute if score joined0 joined matches 2.. run clone 444 76 393 441 86 399 546 76 418
-execute if score joined0 joined matches 2.. run clone 441 76 407 444 86 401 509 76 418
+execute if score joined0 joined matches 2.. run clone 438 76 383 444 86 386 526 70 440
+execute if score joined0 joined matches 2.. run clone 438 76 388 444 86 391 526 70 399
+execute if score joined0 joined matches 2.. run clone 444 76 393 441 86 399 548 70 418
+execute if score joined0 joined matches 2.. run clone 441 76 407 444 86 401 507 70 418
 
 # Remove post-game barriers
 execute if score joined0 joined matches 2.. run fill 509 70 401 549 70 441 air replace barrier
