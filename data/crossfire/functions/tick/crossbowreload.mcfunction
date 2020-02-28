@@ -1,8 +1,7 @@
 # Kill all dropped crossbows
 execute as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run kill @s
 # Kill all powerups
-execute as @e[type=item,nbt={Item:{id:"minecraft:orange_dye"}}] run kill @s
-execute as @e[type=item,nbt={Item:{id:"minecraft:magenta_dye"}}] run kill @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}] run kill @s
 execute as @e[type=item,nbt={Item:{id:"minecraft:potion"}}] run kill @s
 
 # Take givecrossbow and reloadcrossbow tags from spectators and admins tag @s remove givecrossbow
