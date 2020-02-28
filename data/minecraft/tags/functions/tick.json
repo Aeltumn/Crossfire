@@ -9,6 +9,7 @@
 		"crossfire:tick/check_water",
 		"crossfire:tick/flightpath",
         "crossfire:tick/crate_tick",
-		"crossfire:tick/collect_powerup"
+		"crossfire:tick/collect_powerup",
+		"crossfire:tick/use_powerup"
 	]
 }
