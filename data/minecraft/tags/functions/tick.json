@@ -1,13 +1,13 @@
 {
 	"values": [
-		"crossfire:shoot_bow",
-        "crossfire:tick_rockets",
-		"crossfire:team_join",
-		"crossfire:crossbowreload",
-		"crossfire:detect_round",
-        "crossfire:check_gamemode",
-		"crossfire:check_water",
-		"crossfire:flightpath",
-        "crossfire:crate_tick"
+		"crossfire:tick/shoot_bow",
+        "crossfire:tick/tick_rockets",
+		"crossfire:tick/team_join",
+		"crossfire:tick/crossbowreload",
+		"crossfire:tick/detect_round",
+        "crossfire:tick/check_gamemode",
+		"crossfire:tick/check_water",
+		"crossfire:tick/flightpath",
+        "crossfire:tick/crate_tick"
 	]
 }
