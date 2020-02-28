@@ -1,3 +1,6 @@
+# Fix map
+scoreboard players add @s map 0
+
 # Kick everyone out of spectator target
 execute as @s[tag=spectating] run spectate
 
@@ -40,9 +43,6 @@ tag @s remove reloadcrossbow
 tag @s remove joined0
 tag @s remove joined1
 
-# We should have all powerup slots free now
-tag @s add freeslot
-
 # Reset roundkills
 scoreboard players set @s roundKills 0
 
@@ -62,9 +62,6 @@ scoreboard players add @s wins 0
 # Fix timer
 scoreboard players set @s isreloading 0
 scoreboard players set @s timer 0
-
-# Fix map
-scoreboard players add @s map 0
 
 # Teleport people back
 gamerule sendCommandFeedback false

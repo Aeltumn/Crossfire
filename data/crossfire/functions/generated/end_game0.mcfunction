@@ -71,6 +71,7 @@ schedule function crossfire:song0 6s replace
 # Clear viewers of the timer
 bossbar set crossfire:timer0 players
 # Show the postgame bossbar
+bossbar set crossfire:postgame0 players
 bossbar set crossfire:postgame0 players @a[scores={map=0}]
 # Set the post game timer to its start value
 scoreboard players set postgametimer0 postgametimer 25

@@ -13,5 +13,5 @@ execute if score gold result matches 0 run tellraw @a[scores={map=1}] ["",{"text
 execute if score gold result matches 1 run tellraw @a[scores={map=1}] ["",{"text":"The ","color":"white"},{"text":"Multishot Powerup","color":"light_purple","hoverEvent":{"action":"show_text","value":["",{"text":"Makes the user's crossbow shoot 3 arrows at a time.","color":"white"}]}},{"text":" power-up has been dropped by a shiny crate!","color":"white"}]
 
 # Summon items
-execute if score gold result matches 0 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop3","drop","1"],ArmorItems:[{},{},{},{id:"minecraft:carrot_on_a_stick",CustomModelData:0,Count:1b,tag:{display:{Name:"Rapid Fire Powerup"}}}],Invisible:1}
-execute if score gold result matches 1 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop4","drop","1"],ArmorItems:[{},{},{},{id:"minecraft:carrot_on_a_stick",CustomModelData:1,Count:1b,tag:{display:{Name:"Multishot Powerup"}}}],Invisible:1}
+execute if score gold result matches 0 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop3","drop","1"],Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:carrot_on_a_stick",CustomModelData:0,Count:1b,tag:{display:{Name:"Rapid Fire Powerup"}}}],Invisible:1}
+execute if score gold result matches 1 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop4","drop","1"],Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:carrot_on_a_stick",CustomModelData:1,Count:1b,tag:{display:{Name:"Multishot Powerup"}}}],Invisible:1}

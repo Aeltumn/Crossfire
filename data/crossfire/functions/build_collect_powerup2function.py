@@ -35,7 +35,7 @@ for xi in [0, 1, 2, 3, 4]:
         if xi == 4:
             t = "carrot_on_a_stick{CustomModelData:1,display:{Name:\"{\\\"color\\\":\\\"light_purple\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Multishot Powerup\\\"}\"}}"
             
-        s("execute if score temp result matches 0 if entity @s[tag=drop"+x+"] store success score temp result run execute if entity @a[distance=..1,limit=1,nbt={Inventory:[{Slot:"+sj+"b}]}] run replaceitem entity @s container."+sj+" "+t+" 1")
+        s("execute if score temp result matches 0 if entity @s[tag=drop"+x+"] store success score temp result run execute if entity @a[distance=..1,limit=1,nbt=!{Inventory:[{Slot:"+sj+"b}]}] run replaceitem entity @s container."+sj+" "+t+" 1")
     s("")
 
 s("# Tell the player they've been given something")

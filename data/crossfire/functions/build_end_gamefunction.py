@@ -102,6 +102,7 @@ for xi in [0, 1]:
     file.write("# Clear viewers of the timer\n")
     file.write("bossbar set crossfire:timer"+x+" players\n")
     file.write("# Show the postgame bossbar\n")
+    file.write("bossbar set crossfire:postgame"+x+" players\n")
     file.write("bossbar set crossfire:postgame"+x+" players @a[scores={map="+x+"}]\n")
     file.write("# Set the post game timer to its start value\n")
     file.write("scoreboard players set postgametimer"+x+" postgametimer 25\n")
