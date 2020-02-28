@@ -53,6 +53,12 @@ scoreboard players add @s cooldown 0
 execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
 execute if entity @s[scores={map=0}] if score postgametimer0 postgametimer matches -1 run tag @s remove joined
 
+# Allow changing maps if not in post-game
+execute if entity @s[scores={map=0}] if score postgametimer0 postgametimer matches -1 run tag @s add mapchanger
+execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run tag @s add mapchanger
+execute if entity @s[scores={map=0}] unless score postgametimer0 postgametimer matches -1 run tag @s remove mapchanger
+execute if entity @s[scores={map=1}] unless score postgametimer1 postgametimer matches -1 run tag @s remove mapchanger
+
 # Remove from your team
 team leave @s
 
@@ -78,10 +84,6 @@ execute if entity @s[scores={map=1}] unless score postgametimer1 postgametimer m
 
 execute if entity @s[scores={map=0}] if score postgametimer0 postgametimer matches -1 run tp @s[tag=!admin] 574.5 85 421.5 90 0
 execute if entity @s[scores={map=0}] unless score postgametimer0 postgametimer matches -1 run tp @s[tag=!admin] 529 72 421 -90 0
-
-# Give map switch item
-execute if entity @s[scores={map=0}] if score postgametimer0 postgametimer matches -1 run replaceitem entity @s container.2 carrot_on_a_stick{CustomModelData:2,display:{Name:"{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"Go to the Duel map\"}"}} 1
-execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run replaceitem entity @s container.2 carrot_on_a_stick{CustomModelData:3,display:{Name:"{\"color\":\"dark_green\",\"italic\":false,\"text\":\"Go to the Party map\"}"}} 1
 
 # Reset exp
 xp set @s 0 levels

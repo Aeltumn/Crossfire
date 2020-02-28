@@ -34,6 +34,12 @@ execute if score @s wins matches 10..19 if entity @s[team=orange] run replaceite
 execute if score @s wins matches 20..29 if entity @s[team=orange] run replaceitem entity @s container.2 crossbow{CustomModelData:25,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}],display:{Name:"{\"italic\":false,\"text\":\"Orange Crossbow\",\"color\":\"gold\"}"}} 1
 execute if score @s wins matches 30.. if entity @s[team=orange] run replaceitem entity @s container.2 crossbow{CustomModelData:27,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}],display:{Name:"{\"italic\":false,\"text\":\"Orange Crossbow\",\"color\":\"gold\"}"}} 1
 
+# Teamless
+execute if score @s wins matches ..9 if entity @s[team=lobby] run replaceitem entity @s container.2 crossbow{CustomModelData:29,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}],display:{Name:"{\"italic\":false,\"text\":\"Crossbow\",\"color\":\"gray\"}"}} 1
+execute if score @s wins matches 10..19 if entity @s[team=lobby] run replaceitem entity @s container.2 crossbow{CustomModelData:30,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}],display:{Name:"{\"italic\":false,\"text\":\"Crossbow\",\"color\":\"gray\"}"}} 1
+execute if score @s wins matches 20..29 if entity @s[team=lobby] run replaceitem entity @s container.2 crossbow{CustomModelData:31,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}],display:{Name:"{\"italic\":false,\"text\":\"Crossbow\",\"color\":\"gray\"}"}} 1
+execute if score @s wins matches 30.. if entity @s[team=lobby] run replaceitem entity @s container.2 crossbow{CustomModelData:32,HideFlags:63,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b,Unbreakable:1,Enchantments:[{id:piercing,lvl:10}],display:{Name:"{\"italic\":false,\"text\":\"Crossbow\",\"color\":\"gray\"}"}} 1
+
 # Reset some variables
 scoreboard players set @s isreloading 0
 scoreboard players set @s timer 0

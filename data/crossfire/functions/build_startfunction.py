@@ -44,6 +44,7 @@ for xi in [0, 1]:
         name = "player" + str(s)
         file.write("execute if score joined"+x+" joined matches 2.. if score playerscore"+x+" player matches " + str(s - 1) + " as @a[tag=!selected"+x+",tag=joined,scores={map="+x+"},limit=1] run tag @s add " + name + "\n")
         file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + "] run tag @s add selected\n")
+        file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + "] run tag @s remove mapchanger\n")
         file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + "] run tag @s add selected"+x+"\n")
         file.write("execute if score joined"+x+" joined matches 2.. run scoreboard players add playerscore"+x+" player 1\n")
         file.write("\n")
