@@ -3,6 +3,7 @@
 		"crossfire:tick/shoot_bow",
         "crossfire:tick/tick_rockets",
 		"crossfire:tick/team_join",
+		"crossfire:tick/shooting_range_join",
 		"crossfire:tick/crossbowreload",
 		"crossfire:tick/detect_round",
         "crossfire:tick/check_gamemode",

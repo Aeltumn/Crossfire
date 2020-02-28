@@ -12,34 +12,34 @@ execute if entity @s[tag=lobby] at @s run summon firework_rocket ~ ~ ~ {Tags:["c
 
 # Killscreens
 # Red killscreen
-execute if entity @s[tag=red] as @a[distance=..3,team=!red,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=red] as @a[distance=..3,team=!red,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE006 "},{"text":"Sploded! ","bold":true,"color":"red"},{"text":"\uE006"}]
-execute if entity @s[tag=red] as @a[distance=..3,team=!red,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+execute if entity @s[tag=red] as @a[distance=..3,team=!red,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=red] as @a[distance=..3,team=!red,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s title ["",{"text":" \uE006 "},{"text":"Sploded! ","bold":true,"color":"red"},{"text":"\uE006"}]
+execute if entity @s[tag=red] as @a[distance=..3,team=!red,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run tag @s add hit
 
 # Yellow killscreen
-execute if entity @s[tag=yellow] as @a[distance=..3,team=!yellow,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=yellow] as @a[distance=..3,team=!yellow,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE007 "},{"text":"Sploded! ","bold":true,"color":"yellow"},{"text":"\uE007"}]
-execute if entity @s[tag=yellow] as @a[distance=..3,team=!yellow,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+execute if entity @s[tag=yellow] as @a[distance=..3,team=!yellow,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=yellow] as @a[distance=..3,team=!yellow,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s title ["",{"text":" \uE007 "},{"text":"Sploded! ","bold":true,"color":"yellow"},{"text":"\uE007"}]
+execute if entity @s[tag=yellow] as @a[distance=..3,team=!yellow,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run tag @s add hit
 
 # Green killscreen
-execute if entity @s[tag=green] as @a[distance=..3,team=!green,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=green] as @a[distance=..3,team=!green,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE008 "},{"text":"Sploded! ","bold":true,"color":"green"},{"text":"\uE008"}]
-execute if entity @s[tag=green] as @a[distance=..3,team=!green,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+execute if entity @s[tag=green] as @a[distance=..3,team=!green,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=green] as @a[distance=..3,team=!green,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s title ["",{"text":" \uE008 "},{"text":"Sploded! ","bold":true,"color":"green"},{"text":"\uE008"}]
+execute if entity @s[tag=green] as @a[distance=..3,team=!green,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run tag @s add hit
 
 # Blue killscreen
-execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"aqua"},{"text":"\uE005"}]
-execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s title ["",{"text":" \uE005 "},{"text":"Sploded! ","bold":true,"color":"aqua"},{"text":"\uE005"}]
+execute if entity @s[tag=blue] as @a[distance=..3,team=!blue,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run tag @s add hit
 
 # Orange killscreen
-execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE009 "},{"text":"Sploded! ","bold":true,"color":"gold"},{"text":"\uE009"}]
-execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s title ["",{"text":" \uE009 "},{"text":"Sploded! ","bold":true,"color":"gold"},{"text":"\uE009"}]
+execute if entity @s[tag=orange] as @a[distance=..3,team=!orange,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run tag @s add hit
 
 # Magenta killscreen
-execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s subtitle {"text":"\uE004"}
-execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0}] run title @s title ["",{"text":" \uE010 "},{"text":"Sploded! ","bold":true,"color":"light_purple"},{"text":"\uE010"}]
-execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0}] run tag @s add hit
+execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s subtitle {"text":"\uE004"}
+execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run title @s title ["",{"text":" \uE010 "},{"text":"Sploded! ","bold":true,"color":"light_purple"},{"text":"\uE010"}]
+execute if entity @s[tag=magenta] as @a[distance=..3,team=!magenta,tag=!died,tag=!admin,scores={respawnshield=..0},tag=!shootrange] run tag @s add hit
 
 # Hit supply crates
 scoreboard players set result result 0
