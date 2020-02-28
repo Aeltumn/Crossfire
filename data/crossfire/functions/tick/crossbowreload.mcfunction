@@ -10,10 +10,10 @@ execute as @a[tag=reloadcrossbow] unless entity @s[tag=!spectating,tag=!died,tag
 
 # Set `item` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it
-execute as @a unless entity @s[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] run clear @s minecraft:crossbow
-execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0
-execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 2.. run clear @s minecraft:crossbow
-execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s minecraft:crossbow 0
+execute as @a unless entity @s[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] run clear @s[tag=!admin] minecraft:crossbow
+execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s[tag=!admin] minecraft:crossbow 0
+execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 2.. run clear @s[tag=!admin] minecraft:crossbow
+execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] store result score @s item run clear @s[tag=!admin] minecraft:crossbow 0
 execute as @a[tag=!spectating,tag=!died,tag=!admin,tag=givecrossbow] if score @s item matches 0 run replaceitem entity @s container.2 crossbow{HideFlags:63,Charged:0b} 1
 
 # Determine whether or not the player is currently allowed to reload

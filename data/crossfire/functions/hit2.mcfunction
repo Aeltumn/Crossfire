@@ -12,7 +12,7 @@ execute if entity @s[tag=player8] run tag @a remove spectateplayer8
 execute if entity @s[tag=player9] run tag @a remove spectateplayer9
 execute if entity @s[tag=player10] run tag @a remove spectateplayer10
 execute if entity @s[tag=player11] run tag @a remove spectateplayer11
-clear @s #crossfire:obtainableitems
+clear @s[tag=!admin] #crossfire:obtainableitems
 effect give @s minecraft:levitation 1 40 true
 execute at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1
 tag @s remove hit
