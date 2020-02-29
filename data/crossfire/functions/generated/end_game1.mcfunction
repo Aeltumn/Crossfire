@@ -65,4 +65,5 @@ scoreboard players set postgametimer1 postgametimer 25
 execute as @a[scores={map=1}] run function crossfire:reset_player
 # Reset all players in this map
 function crossfire:timer1-3
-# Cleanupkill @e[tag=cleanup1]
+# Cleanup
+kill @e[tag=cleanup1]
