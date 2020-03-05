@@ -12,4 +12,4 @@ execute as @a if score @s intro matches 5 run scoreboard players set @s map 0
 execute as @a if score @s intro matches 5 run function crossfire:reset_player
 
 # Rerun this function
-schedule function crossfire:team_deny_info 1s replace
+schedule function crossfire:introduction 1s replace
