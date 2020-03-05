@@ -33,6 +33,7 @@ execute as @a if score @s intro matches 79 run tellraw @s ["",{"text":"The team 
 execute as @a if score @s intro matches 79 run tellraw @s [{"text":""}]
 
 # Reset intro to -1 at the end by restting the player
+execute as @a if score @s intro matches 88 run scoreboard players set @s introCompleted 1
 execute as @a if score @s intro matches 88 run scoreboard players set @s map 0
 execute as @a if score @s intro matches 88 run function crossfire:reset_player
 

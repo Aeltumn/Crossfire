@@ -107,6 +107,7 @@ gamerule fallDamage false
 gamerule mobGriefing false
 gamerule doMobSpawning false
 gamerule naturalRegeneration false
+gamerule sendCommandFeedback false
 
 # Bring everyone back to their lobbies
 function crossfire:lobby_teleport0
