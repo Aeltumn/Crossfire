@@ -1,6 +1,13 @@
 # Fix map
 scoreboard players add @s map 0
 
+# Stop intro
+scoreboard players set @s intro -1
+
+# Activate triggers
+scoreboard players enable @s introCompleted
+scoreboard players enable @s intro
+
 # Kick everyone out of spectator target
 execute as @s[tag=spectating] run spectate
 

@@ -2,6 +2,7 @@
 	"values": [
         "crossfire:setup",
 		"crossfire:respawn",
-		"crossfire:gamesong"
+        "crossfire:introduction",
+        "crossfire:team_deny_info"
 	]
 }
