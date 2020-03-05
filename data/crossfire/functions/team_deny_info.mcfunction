@@ -8,6 +8,20 @@ execute as @a at @s if block ~ ~-1 ~ minecraft:orange_concrete if entity @s[team
 execute as @a at @s if block ~ ~-1 ~ minecraft:magenta_concrete if entity @s[team=!magenta,tag=!admin] unless score @s introCompleted matches 1 run tag @s add temp
 
 # Send info to all with temp
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
+tellraw @a[tag=temp] [{"text":""}]
 tellraw @a[tag=temp] [{"text":"You can't join a team until you "},{"text":"complete the tutorial","color":"aqua","hoverEvent":{"action":"show_text","value":"Click here to start the tutorial!"},"clickEvent":{"action":"run_command","value":"/trigger intro set 0"}},{"text":"."}]
 tellraw @a[tag=temp] [{"text":"Or "},{"text":"click here","color":"red","hoverEvent":{"action":"show_text","value":"Click here to skip the tutorial."},"clickEvent":{"action":"run_command","value":"/trigger introCompleted set 1"}},{"text":" to skip the tutorial."}]
 
