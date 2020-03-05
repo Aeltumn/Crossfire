@@ -18,6 +18,9 @@ execute if score started0 started matches 1 if score starttimer0 starttimer matc
 execute if score started1 started matches 1 if score starttimer1 starttimer matches ..0 run tag @s add reloadcrossbow
 function crossfire:give_armor
 
+# Remove current potion effects
+effect clear @s[tag=!admin]
+
 # Give game effects
 effect give @s minecraft:resistance 1000000 255 true
 effect give @s minecraft:saturation 1000000 255 true
