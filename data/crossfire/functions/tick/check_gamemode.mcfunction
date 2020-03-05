@@ -25,8 +25,9 @@ execute as @a if entity @s[tag=!spectateplayer1,tag=!spectateplayer2,tag=!specta
 
 # Set into the proper gamemode
 gamerule sendCommandFeedback false
-gamemode adventure @a[tag=spectatoradventure,tag=!admin]
-gamemode spectator @a[tag=spectating,tag=!spectatoradventure,tag=!admin]
+execute as @a[tag=spectatoradventure,tag=spectating,tag=!admin] unless score @s intro matches 0.. run gamemode adventure
+execute as @a[tag=!spectatoradventure,tag=spectating,tag=!admin] run gamemode spectator
+execute as @a[scores={intro=0..}] run gamemode spectator
 gamerule sendCommandFeedback true
 
 # Actually make player spectate if applicable
