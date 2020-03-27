@@ -4,11 +4,10 @@ particle minecraft:explosion_emitter ~ ~ ~
 playsound minecraft:entity.generic.explode block @a[scores={map=0}] ~ ~ ~
 
 # Get a random iron number
-# iron result is in X = {0,1.2}
+# iron result is in X = {0,1,2}
 scoreboard players set iron result 0
-execute if predicate crossfire:iron_drop run scoreboard players add iron result 1
-execute if predicate crossfire:iron_drop run scoreboard players add iron result 1
-execute if score iron result matches ..2 if predicate crossfire:iron_drop run scoreboard players add iron result 1
+execute if predicate crossfire:two_third run scoreboard players add iron result 1
+execute if predicate crossfire:coin_flip run scoreboard players add iron result 1
 
 # Inform about powerup drop
 execute if score iron result matches 0 run tellraw @a[scores={map=0}] ["",{"text":"The ","color":"white"},{"text":"Swiftness II Potion","color":"aqua","hoverEvent":{"action":"show_text","value":["",{"text":"Gives the user the Swiftness II potion effect for 20 seconds.","color":"white"}]}},{"text":" power-up has been dropped by a crate!","color":"white"}]
