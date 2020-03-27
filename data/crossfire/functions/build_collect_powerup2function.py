@@ -10,7 +10,7 @@ s("execute if entity @s[tag=0] run tellraw @a[scores={map=0}] [\"\",{\"text\":\"
 s("execute if entity @s[tag=1] run tellraw @a[scores={map=1}] [\"\",{\"text\":\"A powerup was picked up, watch out!\"}]")
 s("")
 s("# Destroy the drop")
-s("kill @e[tag=drop,distance=..1,limit=1]")
+s("kill @e[type=!player,tag=drop,distance=..1,limit=1]")
 s("")
 s("# Give the drop to the nearest player")
 s("scoreboard players set temp result 0")
@@ -34,12 +34,12 @@ for xi in [0, 1, 2, 3, 4]:
             t = "carrot_on_a_stick{CustomModelData:0,display:{Name:\"{\\\"color\\\":\\\"gold\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Rapid Fire Powerup\\\"}\"}}"
         if xi == 4:
             t = "carrot_on_a_stick{CustomModelData:1,display:{Name:\"{\\\"color\\\":\\\"light_purple\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Multishot Powerup\\\"}\"}}"
-            
+
         s("execute if score temp result matches 0 if entity @s[tag=drop"+x+"] store success score temp result run execute if entity @a[distance=..1,nbt=!{Inventory:[{Slot:"+sj+"b}]}] run replaceitem entity @a[distance=..1,nbt=!{Inventory:[{Slot:"+sj+"b}]},limit=1] container."+sj+" "+t+" 1")
     s("")
 
 s("# Tell the player they've been given something")
 s("execute if entity @s[tag=!tutorial] run tellraw @s [\"\",{\"text\":\"You've picked up a power up, right click the item that was just added to your inventory to use it.\"}]")
 s("tag @s add tutorial")
-    
+
 file.close()

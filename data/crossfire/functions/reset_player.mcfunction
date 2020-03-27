@@ -1,4 +1,4 @@
-# Stop intro
+# Fix all scoreboard values
 scoreboard players set @s intro -1
 scoreboard players add @s deadtimer 0
 scoreboard players add @s isreloading 0
@@ -7,6 +7,7 @@ scoreboard players add @s cooldown 0
 scoreboard players add @s wins 0
 scoreboard players add @s isreloading 0
 scoreboard players add @s timer 0
+scoreboard players add @s respawnshield 0
 
 # Activate triggers
 scoreboard players enable @s introCompleted

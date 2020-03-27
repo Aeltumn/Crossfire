@@ -11,6 +11,7 @@ scoreboard objectives add gametimer dummy
 scoreboard objectives add postgametimer dummy
 scoreboard objectives add starttimer dummy
 scoreboard objectives add started dummy
+scoreboard objectives add player dummy
 scoreboard objectives add playerscore dummy
 scoreboard objectives add deadtimer dummy
 scoreboard objectives add respawnshield dummy

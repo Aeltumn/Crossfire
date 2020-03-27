@@ -5,7 +5,7 @@ execute if entity @s[tag=0] run tellraw @a[scores={map=0}] ["",{"text":"A poweru
 execute if entity @s[tag=1] run tellraw @a[scores={map=1}] ["",{"text":"A powerup was picked up, watch out!"}]
 
 # Destroy the drop
-kill @e[tag=drop,distance=..1,limit=1]
+kill @e[type=!player,tag=drop,distance=..1,limit=1]
 
 # Give the drop to the nearest player
 scoreboard players set temp result 0
