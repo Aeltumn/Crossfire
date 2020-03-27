@@ -1,5 +1,12 @@
 # Stop intro
 scoreboard players set @s intro -1
+scoreboard players add @s deadtimer 0
+scoreboard players add @s isreloading 0
+scoreboard players add @s timer 0
+scoreboard players add @s cooldown 0
+scoreboard players add @s wins 0
+scoreboard players add @s isreloading 0
+scoreboard players add @s timer 0
 
 # Activate triggers
 scoreboard players enable @s introCompleted
@@ -52,9 +59,6 @@ tag @s add givecrossbow
 # Reset roundkills
 scoreboard players set @s roundKills 0
 
-# Fix cooldown
-scoreboard players add @s cooldown 0
-
 # Don't remove joined when going to postgame to avoid triggering spectator
 execute if entity @s[scores={map=1}] if score postgametimer1 postgametimer matches -1 run tag @s remove joined
 execute if entity @s[scores={map=0}] if score postgametimer0 postgametimer matches -1 run tag @s remove joined
@@ -67,13 +71,6 @@ execute if entity @s[scores={map=1}] unless score postgametimer1 postgametimer m
 
 # Remove from your team
 team leave @s
-
-# Fix wins
-scoreboard players add @s wins 0
-
-# Fix timer
-scoreboard players set @s isreloading 0
-scoreboard players set @s timer 0
 
 # Teleport people back
 gamemode adventure @s[tag=!admin]

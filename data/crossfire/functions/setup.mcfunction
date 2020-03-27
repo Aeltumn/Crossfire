@@ -113,6 +113,10 @@ gamerule doMobSpawning false
 gamerule naturalRegeneration false
 gamerule sendCommandFeedback false
 
+# Add some values to round so it always triggers
+scoreboard players set round0 round 1
+scoreboard players set round1 round 1
+
 # Bring everyone back to their lobbies
 function crossfire:lobby_teleport0
 function crossfire:lobby_teleport1
