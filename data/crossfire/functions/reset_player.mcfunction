@@ -1,6 +1,3 @@
-# Fix map
-scoreboard players add @s map 0
-
 # Stop intro
 scoreboard players set @s intro -1
 
