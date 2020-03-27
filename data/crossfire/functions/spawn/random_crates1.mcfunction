@@ -1,7 +1,7 @@
 # Get a random location1 number
 scoreboard players set location1 result 0
-execute if predicate crossfire:one_third run scoreboard players set location1 result 1
-execute if predicate crossfire:one_third run scoreboard players set location1 result 2
+execute if predicate crossfire:coin_flip run scoreboard players add location1 result 1
+execute if score location1 result matches 0 if predicate crossfire:coin_flip run scoreboard players add iron result 2
 
 # Spawn the crate in the correct location
 # Iron crate

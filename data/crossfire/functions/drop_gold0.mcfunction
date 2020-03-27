@@ -6,7 +6,7 @@ playsound minecraft:entity.generic.explode block @a[scores={map=0}] ~ ~ ~
 # Get a random gold number
 # gold result is in X = {0,1}
 scoreboard players set gold result 0
-execute if predicate crossfire:coin_flip run scoreboard players set gold result 1
+execute if predicate crossfire:coin_flip run scoreboard players add gold result 1
 
 # Inform about powerup drop
 execute if score gold result matches 0 run tellraw @a[scores={map=0}] ["",{"text":"The ","color":"white"},{"text":"Rapid Fire Powerup","color":"gold","hoverEvent":{"action":"show_text","value":["",{"text":"Increases the user's fire rate tremendously.","color":"white"}]}},{"text":" power-up has been dropped by a shiny crate!","color":"white"}]
