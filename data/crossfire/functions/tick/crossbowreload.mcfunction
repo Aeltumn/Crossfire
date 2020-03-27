@@ -17,6 +17,7 @@ execute as @a[tag=mapchanger,tag=!admin] store result score @s item_tele run cle
 execute as @a[tag=mapchanger,tag=!admin] if score @s item_tele matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick
 execute as @a[tag=mapchanger,scores={map=0},tag=!admin] unless score @s item_tele matches 1 run replaceitem entity @s container.5 carrot_on_a_stick{CustomModelData:2,display:{Name:"{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"Go to the Duel map\"}"}} 1
 execute as @a[tag=mapchanger,scores={map=1},tag=!admin] unless score @s item_tele matches 1 run replaceitem entity @s container.5 carrot_on_a_stick{CustomModelData:3,display:{Name:"{\"color\":\"dark_green\",\"italic\":false,\"text\":\"Go to the Party map\"}"}} 1
+execute as @a[tag=!mapchanger,tag=!admin] run clear @s[tag=!admin] minecraft:carrot_on_a_stick
 
 # Set `item_cross` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it

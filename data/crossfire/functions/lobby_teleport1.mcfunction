@@ -13,7 +13,3 @@ scoreboard players set gametimer1 gametimer -1
 scoreboard players set postgametimer1 postgametimer -1
 scoreboard players set starttimer1 starttimer -1
 scoreboard players add round1 round 1
-
-# Reset winners
-scoreboard objectives remove winner1
-scoreboard objectives add winner1 dummy
