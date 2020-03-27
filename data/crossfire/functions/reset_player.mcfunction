@@ -76,9 +76,7 @@ scoreboard players set @s isreloading 0
 scoreboard players set @s timer 0
 
 # Teleport people back
-gamerule sendCommandFeedback false
 gamemode adventure @s[tag=!admin]
-gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
 function crossfire:give_armor
 effect clear @s[tag=!admin]

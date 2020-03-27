@@ -9,9 +9,7 @@ tp @s[team=orange] 529.5 71 276.0 0 0
 # Fix attributes
 effect clear @s minecraft:levitation
 effect clear @s minecraft:invisibility
-gamerule sendCommandFeedback false
 gamemode adventure @s
-gamerule sendCommandFeedback true
 clear @s[tag=!admin] #crossfire:obtainableitems
 tag @s add givecrossbow
 execute if score started0 started matches 1 if score starttimer0 starttimer matches ..0 run tag @s add reloadcrossbow

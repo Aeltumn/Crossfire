@@ -24,11 +24,9 @@ execute as @a unless entity @s[tag=!spectateplayer1,tag=!spectateplayer2,tag=!sp
 execute as @a if entity @s[tag=!spectateplayer1,tag=!spectateplayer2,tag=!spectateplayer3,tag=!spectateplayer4,tag=!spectateplayer5,tag=!spectateplayer6,tag=!spectateplayer7,tag=!spectateplayer8,tag=!spectateplayer9,tag=!spectateplayer10,tag=!spectateplayer11] run tag @s add spectatoradventure
 
 # Set into the proper gamemode
-gamerule sendCommandFeedback false
 execute as @a[tag=spectatoradventure,tag=spectating,tag=!admin] unless score @s intro matches 0.. run gamemode adventure
 execute as @a[tag=!spectatoradventure,tag=spectating,tag=!admin] run gamemode spectator
 execute as @a[scores={intro=0..}] run gamemode spectator
-gamerule sendCommandFeedback true
 
 # Put into spectate camera's for intro
 execute as @a[scores={intro=0..30}] run spectate @e[tag=camera0,limit=1] @s
