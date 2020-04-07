@@ -29,4 +29,4 @@ tellraw @a[tag=temp] [{"text":"Or "},{"text":"click here","color":"red","hoverEv
 tag @a remove temp
 
 # Rerun this function
-schedule function crossfire:team_deny_info 3s replace
+schedule function crossfire:team_deny_info 3t replace
