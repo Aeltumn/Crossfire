@@ -29,9 +29,9 @@ execute as @a[tag=!spectatoradventure,tag=spectating,tag=!admin] run gamemode sp
 execute as @a[scores={intro=0..}] run gamemode spectator
 
 # Put into spectate camera's for intro
-execute as @a[scores={intro=0..30}] run spectate @e[tag=camera0,limit=1] @s
-execute as @a[scores={intro=31..65}] run spectate @e[tag=camera1,limit=1] @s
-execute as @a[scores={intro=65..}] run spectate @e[tag=camera2,limit=1] @s
+execute as @a[scores={intro=0..7}] run spectate @e[tag=camera0,limit=1] @s
+execute as @a[scores={intro=8..15}] run spectate @e[tag=camera1,limit=1] @s
+execute as @a[scores={intro=16..}] run spectate @e[tag=camera2,limit=1] @s
 
 # Actually make player spectate if applicable
 execute as @a[tag=spectateplayer1,tag=spectating,gamemode=spectator] run spectate @e[limit=1,tag=player1,tag=!spectating] @s
