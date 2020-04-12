@@ -62,7 +62,7 @@ bossbar set crossfire:postgame1 players @a[scores={map=1}]
 # Set the post game timer to its start value
 scoreboard players set postgametimer1 postgametimer 25
 # Reset all players in this map
-execute as @a[scores={map=1}] run function crossfire:reset_player
+execute as @a[scores={map=1},tag=spectating] run function crossfire:reset_player
 # Reset all players in this map
 function crossfire:timer1-3
 # Cleanup

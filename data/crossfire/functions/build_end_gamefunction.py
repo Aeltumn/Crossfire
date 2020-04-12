@@ -107,7 +107,7 @@ for xi in [0, 1]:
     file.write("# Set the post game timer to its start value\n")
     file.write("scoreboard players set postgametimer"+x+" postgametimer 25\n")
     file.write("# Reset all players in this map\n")
-    file.write("execute as @a[scores={map="+x+"}] run function crossfire:reset_player\n")
+    file.write("execute as @a[scores={map="+x+"},tag=spectating] run function crossfire:reset_player\n")
     file.write("# Reset all players in this map\n")
     file.write("function crossfire:timer"+x+"-3\n")
     file.write("# Cleanup\n")
