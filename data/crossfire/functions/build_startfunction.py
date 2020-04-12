@@ -42,16 +42,14 @@ for xi in [0, 1]:
     # This file is messy but this for loop is worth it.
     for s in range(1, 12):
         name = "player" + str(s)
-        file.write("execute if score joined"+x+" joined matches 2.. unless entity @a[tag="+name+"] if score playerscore"+x+" player matches " + str(s - 1) + " as @a[tag=!selected"+x+",tag=joined,scores={map="+x+"},limit=1] run tag @s add " + name + "\n")
+        file.write("execute if score joined"+x+" joined matches 2.. unless entity @a[tag="+name+"] as @a[tag=!selected"+x+",tag=joined,scores={map="+x+"},limit=1] run tag @s add " + name + "\n")
         file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + ",scores={map="+x+"}] run tag @s add selected\n")
         file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + ",scores={map="+x+"}] run tag @s add pregame\n")
         file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + ",scores={map="+x+"}] run tag @s remove mapchanger\n")
         file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + ",scores={map="+x+"}] run tag @s add selected"+x+"\n")
-        file.write("execute if score joined"+x+" joined matches 2.. as @a[tag=" + name + ",scores={map="+x+"}] run scoreboard players add playerscore"+x+" player 1\n")
         file.write("\n")
 
     file.write("\n")
-    file.write("execute if score joined"+x+" joined matches 2.. run scoreboard players reset playerscore"+x+" player")
     file.write("\n")
     file.write("execute if score joined"+x+" joined matches 2.. run scoreboard players set starttimer"+x+" starttimer 5\n")
     file.write("execute if score joined"+x+" joined matches 2.. run function crossfire:timer"+x+"\n")

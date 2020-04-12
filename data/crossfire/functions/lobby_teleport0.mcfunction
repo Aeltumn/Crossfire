@@ -9,7 +9,6 @@ team empty yellow
 team empty green
 
 # Reset some scoreboard values
-scoreboard players set playerscore0 player 0
 scoreboard players set started0 started 0
 scoreboard players set joined0 joined 0
 scoreboard players set gametimer0 gametimer -1
