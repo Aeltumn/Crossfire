@@ -8,10 +8,10 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:glass_bottle"}}] run kill @s
 # Remove illegal items from your inventory
 clear @a[tag=!admin] #crossfire:illegalitems
 
-# Remove pregame/postgame tag if you're spectating
-tag @a[tag=spectating] remove postgame
-tag @a[tag=spectating] remove pregame
-tag @a[tag=spectating] add mapchanger
+# Remove pregame/postgame tag if you're spectating and not in the game
+tag @a[tag=spectating,tag=!joined] remove postgame
+tag @a[tag=spectating,tag=!joined] remove pregame
+tag @a[tag=spectating,tag=!joined] add mapchanger
 
 # Take givecrossbow and reloadcrossbow tags from spectators and admins tag @s remove givecrossbow
 execute as @a[tag=givecrossbow] unless entity @s[tag=!spectating,tag=!died,tag=!admin] run tag @s remove givecrossbow
