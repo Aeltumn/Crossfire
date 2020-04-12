@@ -34,7 +34,7 @@ scoreboard objectives add winner dummy
 scoreboard objectives add introCompleted dummy
 
 scoreboard objectives add intro trigger
-scoreboard objectives add introCompletedTrigger trigger
+scoreboard objectives add introComplTr trigger
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add powerup minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add kills dummy {"text":"Kills"}

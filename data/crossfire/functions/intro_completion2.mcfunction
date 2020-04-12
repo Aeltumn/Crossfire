@@ -1,5 +1,5 @@
 # Update scoreboard values
-scoreboard players set @s introCompletedTrigger 0
+scoreboard players set @s introComplTr 0
 scoreboard players set @s introCompleted 1
 
 # Send message

@@ -34,7 +34,7 @@ tellraw @a[tag=temp] [{"text":""}]
 tellraw @a[tag=temp] [{"text":""}]
 tellraw @a[tag=temp] [{"text":""}]
 tellraw @a[tag=temp] [{"text":"You can't join a team until you "},{"text":"complete the tutorial","color":"aqua","hoverEvent":{"action":"show_text","value":"Click here to start the tutorial!"},"clickEvent":{"action":"run_command","value":"/trigger intro set 0"}},{"text":"."}]
-tellraw @a[tag=temp] [{"text":"Or "},{"text":"click here","color":"red","hoverEvent":{"action":"show_text","value":"Click here to skip the tutorial."},"clickEvent":{"action":"run_command","value":"/trigger introCompletedTrigger set 1"}},{"text":" to skip the tutorial."}]
+tellraw @a[tag=temp] [{"text":"Or "},{"text":"click here","color":"red","hoverEvent":{"action":"show_text","value":"Click here to skip the tutorial."},"clickEvent":{"action":"run_command","value":"/trigger introComplTr set 1"}},{"text":" to skip the tutorial."}]
 
 # Cleanup
 tag @a remove temp
