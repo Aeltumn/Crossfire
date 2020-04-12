@@ -28,6 +28,7 @@ scoreboard objectives add song dummy
 scoreboard objectives add wins dummy
 scoreboard objectives add cooldown dummy
 scoreboard objectives add item_tele dummy
+scoreboard objectives add item_tele2 dummy
 scoreboard objectives add item_leave dummy
 scoreboard objectives add item_cross dummy
 scoreboard objectives add winner dummy
