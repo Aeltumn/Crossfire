@@ -22,7 +22,7 @@ s("scoreboard players set temp result 0")
 # 4 - multi shot
 for xi in [0, 1, 2, 3, 4]:
     x = str(xi)
-    for si in [4, 5, 6]:
+    for si in [3, 4, 5]:
         sj = str(si)
         if xi == 0:
             t = "potion{CustomPotionEffects:[{Id:1,Amplifier:1,Duration:400}],CustomPotionColor:10806260,display:{Name:\"{\\\"color\\\":\\\"aqua\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Swiftness II Potion\\\"}\"}}"

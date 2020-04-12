@@ -13,4 +13,7 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Cu
 # Map switch items
 scoreboard players set temp3 result 0
 execute store success score temp3 result if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:3}}}] as @s run function crossfire:change_map
-execute if score temp3 result matches 0 if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:2}}}] as @s run function crossfire:change_map
+execute store success score temp3 result if score temp3 result matches 0 if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:2}}}] as @s run function crossfire:change_map
+
+# Quit game item
+execute if score temp3 result matches 0 if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:4}}}] as @s run function crossfire:reset_player
