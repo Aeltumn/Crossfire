@@ -1,5 +1,6 @@
 bossbar set crossfire:timer0 players
 bossbar set crossfire:postgame0 players
+scoreboard players reset game0 bar
 
 # Empty teams
 team empty blue

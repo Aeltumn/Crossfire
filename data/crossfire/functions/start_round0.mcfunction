@@ -18,6 +18,7 @@ title @a[scores={map=0}] subtitle {"text":""}
 title @a[scores={map=0}] title {"text":"GO","bold":true,"color":"gold"}
 bossbar set crossfire:timer0 players
 bossbar set crossfire:timer0 players @a[scores={map=0}]
+scoreboard players set game0 bar 1
 scoreboard players set gametimer0 gametimer 300
 function crossfire:timer0-2
 

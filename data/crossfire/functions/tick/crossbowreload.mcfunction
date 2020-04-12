@@ -22,12 +22,13 @@ execute as @a[tag=mapchanger,scores={map=0},tag=!admin] if score @s item_tele ma
 execute as @a[tag=mapchanger,scores={map=0},tag=!admin] unless score @s item_tele matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:2,display:{Name:"{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"Go to the Duel map\"}"}} 1
 
 # If you can't switch maps, you can quit. So we give you the quit item.
-execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame] store result score @s item_leave run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4} 0
-execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame] if score @s item_leave matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
-execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame] unless score @s item_leave matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:4,display:{Name:"{\"color\":\"red\",\"italic\":false,\"text\":\"Leave Game\"}"}} 1
+execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame,tag=!pregame] store result score @s item_leave run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4} 0
+execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame,tag=!pregame] if score @s item_leave matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
+execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame,tag=!pregame] unless score @s item_leave matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:4,display:{Name:"{\"color\":\"red\",\"italic\":false,\"text\":\"Leave Game\"}"}} 1
 
 # Remove leave items in postgame
 execute as @a[tag=!mapchanger,tag=!admin,tag=postgame] run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
+execute as @a[tag=!mapchanger,tag=!admin,tag=pregame] run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
 
 # Set `item_cross` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it

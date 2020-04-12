@@ -104,6 +104,7 @@ for xi in [0, 1]:
     file.write("# Show the postgame bossbar\n")
     file.write("bossbar set crossfire:postgame"+x+" players\n")
     file.write("bossbar set crossfire:postgame"+x+" players @a[scores={map="+x+"}]\n")
+    file.write("scoreboard players set game"+x+" bar 2\n")
     file.write("# Set the post game timer to its start value\n")
     file.write("scoreboard players set postgametimer"+x+" postgametimer 25\n")
     file.write("# Reset all players in this map\n")

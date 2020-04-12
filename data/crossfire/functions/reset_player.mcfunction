@@ -54,6 +54,7 @@ tag @s remove reloadcrossbow
 tag @s remove joined0
 tag @s remove joined1
 tag @s remove shootrange
+tag @s remove pregame
 
 # We always give people crossbows, a bit dangerous, but alright.
 tag @s add givecrossbow
@@ -109,3 +110,14 @@ effect give @s[tag=!admin] minecraft:jump_boost 1000000 1 true
 effect give @s[tag=!admin] minecraft:speed 1000000 0 true
 effect give @s[tag=!admin] minecraft:weakness 1000000 255 true
 effect give @s[tag=!admin] minecraft:resistance 1000000 255 true
+
+# Update bossbars
+bossbar set crossfire:timer0 players
+bossbar set crossfire:postgame0 players
+execute if score game0 bar matches 1 run bossbar set crossfire:timer0 players @a[scores={map=0}]
+execute if score game0 bar matches 2 run bossbar set crossfire:postgame0 players @a[scores={map=0}]
+
+bossbar set crossfire:timer1 players
+bossbar set crossfire:postgame1 players
+execute if score game1 bar matches 1 run bossbar set crossfire:timer1 players @a[scores={map=1}]
+execute if score game1 bar matches 2 run bossbar set crossfire:postgame1 players @a[scores={map=1}]

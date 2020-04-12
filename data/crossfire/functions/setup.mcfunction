@@ -33,6 +33,7 @@ scoreboard objectives add item_leave dummy
 scoreboard objectives add item_cross dummy
 scoreboard objectives add winner dummy
 scoreboard objectives add introCompleted dummy
+scoreboard objectives add bar dummy
 
 scoreboard objectives add intro trigger
 scoreboard objectives add introComplTr trigger
