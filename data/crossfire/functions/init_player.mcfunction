@@ -11,13 +11,13 @@ effect clear @s[tag=!admin] minecraft:levitation
 effect clear @s[tag=!admin] minecraft:invisibility
 gamemode adventure @s
 clear @s[tag=!admin] #crossfire:crossbow
-tag @s add givecrossbow
+function crossfire:give_armor
 tag @s remove mapchanger
 tag @s remove pregame
 tag @s remove shootrange
-execute if score started0 started matches 1 if score starttimer0 starttimer matches ..0 run tag @s add reloadcrossbow
-execute if score started1 started matches 1 if score starttimer1 starttimer matches ..0 run tag @s add reloadcrossbow
-function crossfire:give_armor
+tag @s add givecrossbow
+execute if score started0 started matches 1 if score starttimer0 starttimer matches ..0 run tag @s[scores={map=0}] add reloadcrossbow
+execute if score started1 started matches 1 if score starttimer1 starttimer matches ..0 run tag @s[scores={map=1}] add reloadcrossbow
 
 # Give game effects
 effect give @s minecraft:resistance 1000000 255 true
