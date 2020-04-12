@@ -12,6 +12,7 @@ effect clear @s[tag=!admin] minecraft:invisibility
 gamemode adventure @s
 clear @s[tag=!admin] #crossfire:crossbow
 tag @s add givecrossbow
+tag @s remove mapchanger
 tag @s remove pregame
 tag @s remove shootrange
 execute if score started0 started matches 1 if score starttimer0 starttimer matches ..0 run tag @s add reloadcrossbow

@@ -11,6 +11,7 @@ clear @a[tag=!admin] #crossfire:illegalitems
 # Remove pregame/postgame tag if you're spectating
 tag @a[tag=spectating] remove postgame
 tag @a[tag=spectating] remove pregame
+tag @a[tag=spectating] add mapchanger
 
 # Take givecrossbow and reloadcrossbow tags from spectators and admins tag @s remove givecrossbow
 execute as @a[tag=givecrossbow] unless entity @s[tag=!spectating,tag=!died,tag=!admin] run tag @s remove givecrossbow
