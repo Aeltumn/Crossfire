@@ -5,22 +5,24 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}] run kill 
 execute as @e[type=item,nbt={Item:{id:"minecraft:potion"}}] run kill @s
 execute as @e[type=item,nbt={Item:{id:"minecraft:glass_bottle"}}] run kill @s
 
-# Remove glass bottles from your inventory
-clear @a[tag=!admin] minecraft:glass_bottle
+# Remove illegal items from your inventory
+clear @a[tag=!admin] #crossfire:illegalitems
 
 # Take givecrossbow and reloadcrossbow tags from spectators and admins tag @s remove givecrossbow
 execute as @a[tag=givecrossbow] unless entity @s[tag=!spectating,tag=!died,tag=!admin] run tag @s remove givecrossbow
 execute as @a[tag=reloadcrossbow] unless entity @s[tag=!spectating,tag=!died,tag=!admin] run tag @s remove reloadcrossbow
 
 # Make sure you have the map switch item_tele
-execute as @a[tag=mapchanger,tag=!admin] store result score @s item_tele run clear @s[tag=!admin] minecraft:carrot_on_a_stick 0
+execute as @a[tag=mapchanger,tag=!admin] store result score @s item_tele run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:2} 0
+execute as @a[tag=mapchanger,tag=!admin] if score @s item_tele matches 0 run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:3} 0
 execute as @a[tag=mapchanger,tag=!admin] if score @s item_tele matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick
 execute as @a[tag=mapchanger,scores={map=0},tag=!admin] unless score @s item_tele matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:2,display:{Name:"{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"Go to the Duel map\"}"}} 1
 execute as @a[tag=mapchanger,scores={map=1},tag=!admin] unless score @s item_tele matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:3,display:{Name:"{\"color\":\"dark_green\",\"italic\":false,\"text\":\"Go to the Party map\"}"}} 1
 
 # If you can't switch maps, you can quit. So we give you the quit item.
-execute as @a[tag=!mapchanger,tag=!admin] store result score @s item_tele run clear @s[tag=!admin] minecraft:carrot_on_a_stick 0
-execute as @a[tag=!mapchanger,tag=!admin] unless score @s item_tele matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:4,display:{Name:"{\"color\":\"dark_red\",\"italic\":false,\"text\":\"Leave Game\"}"}} 1
+execute as @a[tag=!mapchanger,tag=!admin] store result score @s item_leave run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4} 0
+execute as @a[tag=!mapchanger,tag=!admin] if score @s item_leave matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick
+execute as @a[tag=!mapchanger,tag=!admin] unless score @s item_leave matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:4,display:{Name:"{\"color\":\"dark_red\",\"italic\":false,\"text\":\"Leave Game\"}"}} 1
 
 # Set `item_cross` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it

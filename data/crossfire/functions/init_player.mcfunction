@@ -7,17 +7,14 @@ tp @s[team=magenta] 529.5 71 317.0 180 0
 tp @s[team=orange] 529.5 71 276.0 0 0
 
 # Fix attributes
-effect clear @s minecraft:levitation
-effect clear @s minecraft:invisibility
+effect clear @s[tag=!admin] minecraft:levitation
+effect clear @s[tag=!admin] minecraft:invisibility
 gamemode adventure @s
-clear @s[tag=!admin] #crossfire:obtainableitems
+clear @s[tag=!admin] #crossfire:crossbow
 tag @s add givecrossbow
 execute if score started0 started matches 1 if score starttimer0 starttimer matches ..0 run tag @s add reloadcrossbow
 execute if score started1 started matches 1 if score starttimer1 starttimer matches ..0 run tag @s add reloadcrossbow
 function crossfire:give_armor
-
-# Remove current potion effects
-effect clear @s[tag=!admin]
 
 # Give game effects
 effect give @s minecraft:resistance 1000000 255 true

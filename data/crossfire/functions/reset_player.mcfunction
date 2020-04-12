@@ -73,9 +73,14 @@ execute if entity @s[scores={map=1}] unless score postgametimer1 postgametimer m
 # Remove from your team
 team leave @s
 
+# Clear your items
+clear @s[tag=!admin] #crossfire:crossbow
+clear @s[tag=!admin] minecraft:potion
+clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:0}
+clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:1}
+
 # Teleport people back
 gamemode adventure @s[tag=!admin]
-clear @s[tag=!admin] #crossfire:obtainableitems
 function crossfire:give_armor
 effect clear @s[tag=!admin]
 team join lobby @s
