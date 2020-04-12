@@ -23,7 +23,7 @@ execute as @a[tag=mapchanger,scores={map=1},tag=!admin] unless score @s item_tel
 # If you can't switch maps, you can quit. So we give you the quit item.
 execute as @a[tag=!mapchanger,tag=!admin] store result score @s item_leave run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4} 0
 execute as @a[tag=!mapchanger,tag=!admin] if score @s item_leave matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
-execute as @a[tag=!mapchanger,tag=!admin] unless score @s item_leave matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:4,display:{Name:"{\"color\":\"dark_red\",\"italic\":false,\"text\":\"Leave Game\"}"}} 1
+execute as @a[tag=!mapchanger,tag=!admin] unless score @s item_leave matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:4,display:{Name:"{\"color\":\"red\",\"italic\":false,\"text\":\"Leave Game\"}"}} 1
 
 # Set `item_cross` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it
