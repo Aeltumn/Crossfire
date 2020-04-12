@@ -28,11 +28,13 @@ scoreboard objectives add song dummy
 scoreboard objectives add wins dummy
 scoreboard objectives add cooldown dummy
 scoreboard objectives add item_tele dummy
+scoreboard objectives add item_leave dummy
 scoreboard objectives add item_cross dummy
 scoreboard objectives add winner dummy
+scoreboard objectives add introCompleted dummy
 
 scoreboard objectives add intro trigger
-scoreboard objectives add introCompleted trigger
+scoreboard objectives add introCompletedTrigger trigger
 scoreboard objectives add crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add powerup minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add kills dummy {"text":"Kills"}
