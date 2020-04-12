@@ -17,7 +17,7 @@ execute as @a[tag=mapchanger,scores={map=1},tag=!admin] store result score @s it
 execute as @a[tag=mapchanger,scores={map=1},tag=!admin] if score @s item_tele2 matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:3}
 execute as @a[tag=mapchanger,scores={map=1},tag=!admin] unless score @s item_tele2 matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:3,display:{Name:"{\"color\":\"dark_green\",\"italic\":false,\"text\":\"Go to the Party map\"}"}} 1
 
-execute as @a[tag=mapchanger,scores={map=0},tag=!admin] if score @s item_tele matches 0 run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:2} 0
+execute as @a[tag=mapchanger,scores={map=0},tag=!admin] store result score @s item_tele run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:2} 0
 execute as @a[tag=mapchanger,scores={map=0},tag=!admin] if score @s item_tele matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:2}
 execute as @a[tag=mapchanger,scores={map=0},tag=!admin] unless score @s item_tele matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:2,display:{Name:"{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"Go to the Duel map\"}"}} 1
 
