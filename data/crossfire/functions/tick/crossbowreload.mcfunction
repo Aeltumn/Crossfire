@@ -26,9 +26,9 @@ execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame,tag=!pregame] store resul
 execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame,tag=!pregame] if score @s item_leave matches 2.. run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
 execute as @a[tag=!mapchanger,tag=!admin,tag=!postgame,tag=!pregame] unless score @s item_leave matches 1 run replaceitem entity @s container.8 carrot_on_a_stick{CustomModelData:4,display:{Name:"{\"color\":\"red\",\"italic\":false,\"text\":\"Leave Game\"}"}} 1
 
-# Remove leave items in postgame
-execute as @a[tag=!mapchanger,tag=!admin,tag=postgame] run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
-execute as @a[tag=!mapchanger,tag=!admin,tag=pregame] run clear @s[tag=!admin] minecraft:carrot_on_a_stick{CustomModelData:4}
+# Remove slot items in pre/postgame
+execute as @a[tag=!admin,tag=postgame] run replaceitem entity @s[tag=!admin] container.8 minecraft:air
+execute as @a[tag=!admin,tag=pregame] run replaceitem entity @s[tag=!admin] container.8 minecraft:air
 
 # Set `item_cross` to the amount of crossbows the player has
 # Give or take crossbow if the player should(n't) have it

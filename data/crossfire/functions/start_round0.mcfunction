@@ -4,6 +4,9 @@ scoreboard players set @a[scores={map=0}] respawnshield 5
 # Give everyone the tag to allow crossbow reloading
 tag @a[scores={map=0}] add reloadcrossbow
 
+# Remove pregame tag
+tag @a[scores={map=0}] remove pregame
+
 # Reset winners
 scoreboard players reset Red winner
 scoreboard players reset Yellow winner
