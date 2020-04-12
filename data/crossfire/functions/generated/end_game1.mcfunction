@@ -59,6 +59,7 @@ bossbar set crossfire:timer1 players
 # Show the postgame bossbar
 bossbar set crossfire:postgame1 players
 bossbar set crossfire:postgame1 players @a[scores={map=1}]
+scoreboard players set game1 bar 2
 # Set the post game timer to its start value
 scoreboard players set postgametimer1 postgametimer 25
 # Reset all players in this map
