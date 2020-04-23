@@ -9,7 +9,7 @@ scoreboard players set iron result 0
 execute if predicate crossfire:coin_flip run scoreboard players add iron result 1
 execute if score iron result matches 0 if predicate crossfire:coin_flip run scoreboard players add iron result 2
 
-# Inform about powerup drop
+# Inform about power-up drop
 execute if score iron result matches 0 run tellraw @a[scores={map=1}] ["",{"text":"The ","color":"white"},{"text":"Swiftness II Potion","color":"aqua","hoverEvent":{"action":"show_text","value":["",{"text":"Gives the user the Swiftness II potion effect for 20 seconds.","color":"white"}]}},{"text":" power-up has been dropped by a crate!","color":"white"}]
 execute if score iron result matches 1 run tellraw @a[scores={map=1}] ["",{"text":"The ","color":"white"},{"text":"Jump Boost V Potion","color":"green","hoverEvent":{"action":"show_text","value":["",{"text":"Gives the user the Jump Boost V potion effect for 20 seconds.","color":"white"}]}},{"text":" power-up has been dropped by a crate!","color":"white"}]
 execute if score iron result matches 2 run tellraw @a[scores={map=1}] ["",{"text":"The ","color":"white"},{"text":"Slow Falling I Potion","color":"gray","hoverEvent":{"action":"show_text","value":["",{"text":"Gives the user the Slow Falling I potion effect for 20 seconds.","color":"white"}]}},{"text":" power-up has been dropped by a crate!","color":"white"}]

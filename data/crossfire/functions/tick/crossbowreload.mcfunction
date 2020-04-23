@@ -1,6 +1,6 @@
 # Kill all dropped crossbows
 execute as @e[type=item,nbt={Item:{id:"minecraft:crossbow"}}] run kill @s
-# Kill all powerups
+# Kill all power-ups
 execute as @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}] run kill @s
 execute as @e[type=item,nbt={Item:{id:"minecraft:potion"}}] run kill @s
 execute as @e[type=item,nbt={Item:{id:"minecraft:glass_bottle"}}] run kill @s

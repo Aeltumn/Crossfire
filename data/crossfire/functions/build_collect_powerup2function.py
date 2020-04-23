@@ -6,8 +6,8 @@ def s(txt):
 s("# Make it clear that a power up was collected")
 s("execute if entity @s[tag=0] run playsound minecraft:block.note_block.chime master @a[scores={map=0}] ~ ~ ~ 1 0.5")
 s("execute if entity @s[tag=1] run playsound minecraft:block.note_block.chime master @a[scores={map=1}] ~ ~ ~ 1 0.5")
-s("execute if entity @s[tag=0] run tellraw @a[scores={map=0}] [\"\",{\"text\":\"A powerup was picked up, watch out!\"}]")
-s("execute if entity @s[tag=1] run tellraw @a[scores={map=1}] [\"\",{\"text\":\"A powerup was picked up, watch out!\"}]")
+s("execute if entity @s[tag=0] run tellraw @a[scores={map=0}] [\"\",{\"text\":\"A power-up was picked up, watch out!\"}]")
+s("execute if entity @s[tag=1] run tellraw @a[scores={map=1}] [\"\",{\"text\":\"A power-up was picked up, watch out!\"}]")
 s("")
 s("# Destroy the drop")
 s("kill @e[type=!player,tag=drop,distance=..1,limit=1]")
@@ -31,9 +31,9 @@ for xi in [0, 1, 2, 3, 4]:
         if xi == 2:
             t = "potion{CustomPotionEffects:[{Id:28,Duration:400}],CustomPotionColor:16777215,display:{Name:\"{\\\"color\\\":\\\"gray\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Slow Falling I Potion\\\"}\"}}"
         if xi == 3:
-            t = "carrot_on_a_stick{CustomModelData:0,display:{Name:\"{\\\"color\\\":\\\"gold\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Rapid Fire Powerup\\\"}\"}}"
+            t = "carrot_on_a_stick{CustomModelData:0,display:{Name:\"{\\\"color\\\":\\\"gold\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Rapid Fire Power-up\\\"}\"}}"
         if xi == 4:
-            t = "carrot_on_a_stick{CustomModelData:1,display:{Name:\"{\\\"color\\\":\\\"light_purple\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Multishot Powerup\\\"}\"}}"
+            t = "carrot_on_a_stick{CustomModelData:1,display:{Name:\"{\\\"color\\\":\\\"light_purple\\\",\\\"italic\\\":false,\\\"text\\\":\\\"Multishot Power-up\\\"}\"}}"
 
         s("execute if score temp result matches 0 if entity @s[tag=drop"+x+"] store success score temp result run execute if entity @a[distance=..1,nbt=!{Inventory:[{Slot:"+sj+"b}]}] run replaceitem entity @a[distance=..1,nbt=!{Inventory:[{Slot:"+sj+"b}]},limit=1] container."+sj+" "+t+" 1")
     s("")

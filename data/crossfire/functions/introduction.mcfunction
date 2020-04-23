@@ -25,7 +25,7 @@ execute as @a if score @s intro matches 11 run tellraw @s [{"text":""}]
 
 # PHASE 3 - Game
 execute as @a if score @s intro matches 16 run tellraw @s [{"text":""}]
-execute as @a if score @s intro matches 16 run tellraw @s ["",{"text":"During the game there will sometimes be some "},{"text":"loot crates","color":"gold"},{"text":" that will spawn in the skies. If they are hit with fireworks they will fall down and drop their contents. "},{"text":"These crates contain powerful powerups that can change the tide of battle.","color":"red"}]
+execute as @a if score @s intro matches 16 run tellraw @s ["",{"text":"During the game there will sometimes be some "},{"text":"loot crates","color":"gold"},{"text":" that will spawn in the skies. If they are hit with fireworks they will fall down and drop their contents. "},{"text":"These crates contain powerful power-ups that can change the tide of battle.","color":"red"}]
 execute as @a if score @s intro matches 16 run tellraw @s [{"text":""}]
 
 execute as @a if score @s intro matches 22 run tellraw @s [{"text":""}]

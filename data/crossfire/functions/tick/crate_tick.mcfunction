@@ -1,4 +1,4 @@
-# Kill powerups after 50s
+# Kill power-ups after 50s
 kill @e[tag=sparkling,scores={age=1000..}]
 
 # Increase copter age

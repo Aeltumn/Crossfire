@@ -8,9 +8,9 @@ playsound minecraft:entity.generic.explode block @a[scores={map=0}] ~ ~ ~
 scoreboard players set gold result 0
 execute if predicate crossfire:coin_flip run scoreboard players add gold result 1
 
-# Inform about powerup drop
-execute if score gold result matches 0 run tellraw @a[scores={map=0}] ["",{"text":"The ","color":"white"},{"text":"Rapid Fire Powerup","color":"gold","hoverEvent":{"action":"show_text","value":["",{"text":"Increases the user's fire rate tremendously.","color":"white"}]}},{"text":" power-up has been dropped by a shiny crate!","color":"white"}]
-execute if score gold result matches 1 run tellraw @a[scores={map=0}] ["",{"text":"The ","color":"white"},{"text":"Multishot Powerup","color":"light_purple","hoverEvent":{"action":"show_text","value":["",{"text":"Makes the user's crossbow shoot 3 arrows at a time.","color":"white"}]}},{"text":" power-up has been dropped by a shiny crate!","color":"white"}]
+# Inform about powe0-rup drop
+execute if score gold result matches 0 run tellraw @a[scores={map=0}] ["",{"text":"The ","color":"white"},{"text":"Rapid Fire Power-up","color":"gold","hoverEvent":{"action":"show_text","value":["",{"text":"Increases the user's fire rate tremendously.","color":"white"}]}},{"text":" power-up has been dropped by a shiny crate!","color":"white"}]
+execute if score gold result matches 1 run tellraw @a[scores={map=0}] ["",{"text":"The ","color":"white"},{"text":"Multishot Power-up","color":"light_purple","hoverEvent":{"action":"show_text","value":["",{"text":"Makes the user's crossbow shoot 3 arrows at a time.","color":"white"}]}},{"text":" power-up has been dropped by a shiny crate!","color":"white"}]
 
 # Summon items
 execute if score gold result matches 0 run summon minecraft:armor_stand ~ ~ ~ {Tags:["cleanup","sparkling","drop3","drop","0"],Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:carrot_on_a_stick",CustomModelData:0,Count:1b}],Invisible:1}
